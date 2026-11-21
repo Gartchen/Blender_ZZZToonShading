@@ -1,0 +1,592 @@
+{
+ "clip_hash": "1797a4b7e0108b3b4212ab86c50bca8709f0d08e2a3e9510b448bc1afc76fddc",
+ "reference_frame": 144,
+ "capture_bones": [
+  "Ctr_B_Skirt_A_01",
+  "Ctr_B_Skirt_A_02",
+  "Skn_L_Skirt_C_01",
+  "Skn_L_Skirt_C_02",
+  "Skn_L_Skirt_B_01",
+  "Ctr_B_Skirt_A_03",
+  "Ctr_L_Skirt_D_02",
+  "Ctr_L_Skirt_D_03",
+  "Ctr_L_Skirt_D_04",
+  "Ctr_L_Skirt_D_05",
+  "Ctr_L_Skirt_D_01",
+  "Skn_L_Skirt_C_03",
+  "Skn_L_Skirt_C_04",
+  "Ctr_L_Skirt_D_06",
+  "Skn_L_Skirt_C_05",
+  "Skn_L_Skirt_C_06",
+  "Skn_L_Skirt_C_07",
+  "Skn_L_Skirt_A_01",
+  "Skn_L_Skirt_A_02",
+  "Skn_L_Skirt_A_03",
+  "Skn_R_Skirt_A_02",
+  "Skn_R_Skirt_A_01",
+  "Skn_R_Skirt_C_06",
+  "Skn_R_Skirt_C_07",
+  "Skn_R_Skirt_C_01",
+  "Skn_R_Skirt_B_01",
+  "Ctr_R_Skirt_D_01",
+  "Skn_R_Skirt_C_02",
+  "Ctr_R_Skirt_D_02",
+  "Ctr_R_Skirt_D_03",
+  "Ctr_R_Skirt_D_04",
+  "Ctr_R_Skirt_D_05",
+  "Ctr_R_Skirt_D_06",
+  "Skn_R_Skirt_C_03",
+  "Skn_R_Skirt_C_04",
+  "Skn_R_Skirt_C_05",
+  "Skn_R_Skirt_A_03",
+  "Skn_B_Skirt_B_01",
+  "Skn_B_Skirt_B_02",
+  "Skn_B_Skirt_B_03",
+  "Skn_B_Skirt_B_04",
+  "Skn_Wep_A_String01",
+  "Skn_Wep_A_String10",
+  "Skn_Wep_A_String11",
+  "Skn_Wep_A_String02",
+  "Skn_Wep_A_String03",
+  "Skn_Wep_A_String04",
+  "Skn_Wep_A_String05",
+  "Skn_Wep_A_String06",
+  "Skn_Wep_A_String07",
+  "Skn_Wep_A_String08",
+  "Skn_Wep_A_String09"
+ ],
+ "assets": [
+  {
+   "asset": "Velina_LongHair1_UI.cloth",
+   "sha256": "32c82cd638abb742539e3e15b21715734307d6f6485980d0b0d48ce2c0d93785",
+   "chains": [
+    [
+     "Ctr_R_Hair_B_02",
+     "Ctr_R_Hair_B_03",
+     "Ctr_R_Hair_B_04",
+     "Ctr_R_Hair_B_05",
+     "Ctr_R_Hair_B_05_End"
+    ],
+    [
+     "Ctr_L_Hair_B_02",
+     "Ctr_L_Hair_B_03",
+     "Ctr_L_Hair_B_04",
+     "Ctr_L_Hair_B_05",
+     "Ctr_L_Hair_B_05_End"
+    ]
+   ],
+   "fixed": [
+    "Ctr_R_Hair_B_02",
+    "Ctr_L_Hair_B_02"
+   ],
+   "particles": {
+    "Ctr_R_Hair_B_02": {
+     "radius": 0.01,
+     "damping": 0.6,
+     "inertia": 0.5
+    },
+    "Ctr_R_Hair_B_03": {
+     "radius": 0.0137,
+     "damping": 0.5751,
+     "inertia": 0.5
+    },
+    "Ctr_R_Hair_B_04": {
+     "radius": 0.0175,
+     "damping": 0.5501,
+     "inertia": 0.5
+    },
+    "Ctr_R_Hair_B_05": {
+     "radius": 0.0212,
+     "damping": 0.5251,
+     "inertia": 0.5
+    },
+    "Ctr_R_Hair_B_05_End": {
+     "radius": 0.025,
+     "damping": 0.5,
+     "inertia": 0.5
+    },
+    "Ctr_L_Hair_B_02": {
+     "radius": 0.01,
+     "damping": 0.6,
+     "inertia": 0.5
+    },
+    "Ctr_L_Hair_B_03": {
+     "radius": 0.0137,
+     "damping": 0.5751,
+     "inertia": 0.5
+    },
+    "Ctr_L_Hair_B_04": {
+     "radius": 0.0175,
+     "damping": 0.5501,
+     "inertia": 0.5
+    },
+    "Ctr_L_Hair_B_05": {
+     "radius": 0.0212,
+     "damping": 0.525,
+     "inertia": 0.5
+    },
+    "Ctr_L_Hair_B_05_End": {
+     "radius": 0.025,
+     "damping": 0.5,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [
+    {
+     "bone": "Bip001 L UpperArm",
+     "start": [
+      0.0,
+      0.01,
+      0.0
+     ],
+     "end": [
+      -0.24,
+      0.0,
+      0.0
+     ],
+     "radii": [
+      0.035,
+      0.03
+     ],
+     "mode": "Inner"
+    },
+    {
+     "bone": "Bip001 R UpperArm",
+     "start": [
+      0.0,
+      0.01,
+      0.0
+     ],
+     "end": [
+      -0.24,
+      0.0,
+      0.0
+     ],
+     "radii": [
+      0.035,
+      0.03
+     ],
+     "mode": "Inner"
+    },
+    {
+     "bone": "Bip001 R Forearm",
+     "start": [
+      0.0,
+      0.01,
+      0.0
+     ],
+     "end": [
+      -0.24,
+      0.0,
+      0.0
+     ],
+     "radii": [
+      0.03,
+      0.05
+     ],
+     "mode": "Inner"
+    }
+   ],
+   "turn_limit_degrees": 8.0
+  },
+  {
+   "asset": "Velina_WpnTape_UI.cloth",
+   "sha256": "ae2d1fac72d0297bcbc40fe68086654179cbf2d8b61f52622b13e0188f67d910",
+   "chains": [
+    [
+     "Skn_Wep_A_String02",
+     "Skn_Wep_A_String03",
+     "Skn_Wep_A_String04",
+     "Skn_Wep_A_String05",
+     "Skn_Wep_A_String06",
+     "Skn_Wep_A_String07",
+     "Skn_Wep_A_String08",
+     "Skn_Wep_A_String09",
+     "Skn_Wep_A_String10",
+     "Skn_Wep_A_String11",
+     "Skn_Wep_A_String11_DE"
+    ]
+   ],
+   "fixed": [
+    "Skn_Wep_A_String02"
+   ],
+   "particles": {
+    "Skn_Wep_A_String02": {
+     "radius": 0.02,
+     "damping": 0.7,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String03": {
+     "radius": 0.021,
+     "damping": 0.68,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String04": {
+     "radius": 0.022,
+     "damping": 0.66,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String05": {
+     "radius": 0.023,
+     "damping": 0.64,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String06": {
+     "radius": 0.024,
+     "damping": 0.62,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String07": {
+     "radius": 0.025,
+     "damping": 0.6,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String08": {
+     "radius": 0.026,
+     "damping": 0.58,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String09": {
+     "radius": 0.027,
+     "damping": 0.56,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String10": {
+     "radius": 0.028,
+     "damping": 0.54,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String11": {
+     "radius": 0.029,
+     "damping": 0.52,
+     "inertia": 0.5
+    },
+    "Skn_Wep_A_String11_DE": {
+     "radius": 0.03,
+     "damping": 0.5,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [
+    {
+     "bone": "Bone_Root",
+     "start": [
+      0.0,
+      -0.3,
+      0.0
+     ],
+     "end": [
+      0.0,
+      1.5,
+      0.0
+     ],
+     "radii": [
+      0.4,
+      0.3
+     ],
+     "mode": "Inner"
+    }
+   ],
+   "turn_limit_degrees": 10.0
+  },
+  {
+   "asset": "Velina_Skirt_UI.cloth",
+   "sha256": "e8163d7ed297ed3d18c4ec705eb20e453bade07a82f864b5b643cc29400e06a7",
+   "chains": [
+    [
+     "Skn_R_Skirt_C_01",
+     "Skn_R_Skirt_C_02"
+    ],
+    [
+     "Skn_R_Skirt_C_02",
+     "Skn_R_Skirt_C_03"
+    ],
+    [
+     "Skn_R_Skirt_C_03",
+     "Skn_R_Skirt_C_04"
+    ],
+    [
+     "Skn_R_Skirt_C_04",
+     "Skn_R_Skirt_C_05"
+    ],
+    [
+     "Skn_R_Skirt_C_05",
+     "Skn_R_Skirt_C_06",
+     "Skn_R_Skirt_C_07",
+     "Ctr_R_Skirt_C_07_End"
+    ],
+    [
+     "Ctr_R_Skirt_D_01",
+     "Ctr_R_Skirt_D_02",
+     "Ctr_R_Skirt_D_03",
+     "Ctr_R_Skirt_D_04",
+     "Ctr_R_Skirt_D_05",
+     "Ctr_R_Skirt_D_06",
+     "Ctr_R_Skirt_D_06_End"
+    ],
+    [
+     "Ctr_B_Skirt_A_01",
+     "Ctr_B_Skirt_A_02",
+     "Ctr_B_Skirt_A_03",
+     "Ctr_B_Skirt_A_03_End"
+    ],
+    [
+     "Ctr_L_Skirt_D_01",
+     "Ctr_L_Skirt_D_02",
+     "Ctr_L_Skirt_D_03",
+     "Ctr_L_Skirt_D_04",
+     "Ctr_L_Skirt_D_05",
+     "Ctr_L_Skirt_D_06",
+     "Ctr_L_Skirt_D_06_End"
+    ],
+    [
+     "Skn_L_Skirt_C_01",
+     "Skn_L_Skirt_C_02"
+    ],
+    [
+     "Skn_L_Skirt_C_02",
+     "Skn_L_Skirt_C_03"
+    ],
+    [
+     "Skn_L_Skirt_C_03",
+     "Skn_L_Skirt_C_04"
+    ],
+    [
+     "Skn_L_Skirt_C_04",
+     "Skn_L_Skirt_C_05"
+    ],
+    [
+     "Skn_L_Skirt_C_05",
+     "Skn_L_Skirt_C_06",
+     "Skn_L_Skirt_C_07",
+     "Ctr_L_Skirt_C_07_End"
+    ]
+   ],
+   "fixed": [
+    "Skn_R_Skirt_C_01",
+    "Ctr_R_Skirt_D_01",
+    "Ctr_B_Skirt_A_01",
+    "Ctr_L_Skirt_D_01",
+    "Skn_L_Skirt_C_01"
+   ],
+   "particles": {
+    "Skn_R_Skirt_C_01": {
+     "radius": 0.02,
+     "damping": 0.75,
+     "inertia": 0.5
+    },
+    "Skn_R_Skirt_C_02": {
+     "radius": 0.02,
+     "damping": 0.7286,
+     "inertia": 0.5
+    },
+    "Skn_R_Skirt_C_03": {
+     "radius": 0.02,
+     "damping": 0.7072,
+     "inertia": 0.5
+    },
+    "Skn_R_Skirt_C_04": {
+     "radius": 0.02,
+     "damping": 0.6858,
+     "inertia": 0.5
+    },
+    "Skn_R_Skirt_C_05": {
+     "radius": 0.02,
+     "damping": 0.6643,
+     "inertia": 0.5
+    },
+    "Skn_R_Skirt_C_06": {
+     "radius": 0.02,
+     "damping": 0.6428,
+     "inertia": 0.5
+    },
+    "Skn_R_Skirt_C_07": {
+     "radius": 0.02,
+     "damping": 0.6214,
+     "inertia": 0.5
+    },
+    "Ctr_R_Skirt_C_07_End": {
+     "radius": 0.02,
+     "damping": 0.6,
+     "inertia": 0.5
+    },
+    "Ctr_R_Skirt_D_01": {
+     "radius": 0.02,
+     "damping": 0.75,
+     "inertia": 0.5
+    },
+    "Ctr_R_Skirt_D_02": {
+     "radius": 0.02,
+     "damping": 0.7292,
+     "inertia": 0.5
+    },
+    "Ctr_R_Skirt_D_03": {
+     "radius": 0.02,
+     "damping": 0.7084,
+     "inertia": 0.5
+    },
+    "Ctr_R_Skirt_D_04": {
+     "radius": 0.02,
+     "damping": 0.6876,
+     "inertia": 0.5
+    },
+    "Ctr_R_Skirt_D_05": {
+     "radius": 0.02,
+     "damping": 0.6668,
+     "inertia": 0.5
+    },
+    "Ctr_R_Skirt_D_06": {
+     "radius": 0.02,
+     "damping": 0.646,
+     "inertia": 0.5
+    },
+    "Ctr_R_Skirt_D_06_End": {
+     "radius": 0.02,
+     "damping": 0.6252,
+     "inertia": 0.5
+    },
+    "Ctr_B_Skirt_A_01": {
+     "radius": 0.02,
+     "damping": 0.75,
+     "inertia": 0.5
+    },
+    "Ctr_B_Skirt_A_02": {
+     "radius": 0.02,
+     "damping": 0.731,
+     "inertia": 0.5
+    },
+    "Ctr_B_Skirt_A_03": {
+     "radius": 0.02,
+     "damping": 0.7119,
+     "inertia": 0.5
+    },
+    "Ctr_B_Skirt_A_03_End": {
+     "radius": 0.02,
+     "damping": 0.6939,
+     "inertia": 0.5
+    },
+    "Ctr_L_Skirt_D_01": {
+     "radius": 0.02,
+     "damping": 0.75,
+     "inertia": 0.5
+    },
+    "Ctr_L_Skirt_D_02": {
+     "radius": 0.02,
+     "damping": 0.7292,
+     "inertia": 0.5
+    },
+    "Ctr_L_Skirt_D_03": {
+     "radius": 0.02,
+     "damping": 0.7084,
+     "inertia": 0.5
+    },
+    "Ctr_L_Skirt_D_04": {
+     "radius": 0.02,
+     "damping": 0.6876,
+     "inertia": 0.5
+    },
+    "Ctr_L_Skirt_D_05": {
+     "radius": 0.02,
+     "damping": 0.6668,
+     "inertia": 0.5
+    },
+    "Ctr_L_Skirt_D_06": {
+     "radius": 0.02,
+     "damping": 0.646,
+     "inertia": 0.5
+    },
+    "Ctr_L_Skirt_D_06_End": {
+     "radius": 0.02,
+     "damping": 0.6252,
+     "inertia": 0.5
+    },
+    "Skn_L_Skirt_C_01": {
+     "radius": 0.02,
+     "damping": 0.75,
+     "inertia": 0.5
+    },
+    "Skn_L_Skirt_C_02": {
+     "radius": 0.02,
+     "damping": 0.7286,
+     "inertia": 0.5
+    },
+    "Skn_L_Skirt_C_03": {
+     "radius": 0.02,
+     "damping": 0.7072,
+     "inertia": 0.5
+    },
+    "Skn_L_Skirt_C_04": {
+     "radius": 0.02,
+     "damping": 0.6858,
+     "inertia": 0.5
+    },
+    "Skn_L_Skirt_C_05": {
+     "radius": 0.02,
+     "damping": 0.6643,
+     "inertia": 0.5
+    },
+    "Skn_L_Skirt_C_06": {
+     "radius": 0.02,
+     "damping": 0.6428,
+     "inertia": 0.5
+    },
+    "Skn_L_Skirt_C_07": {
+     "radius": 0.02,
+     "damping": 0.6214,
+     "inertia": 0.5
+    },
+    "Ctr_L_Skirt_C_07_End": {
+     "radius": 0.02,
+     "damping": 0.6,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [
+    {
+     "bone": "Bip001 L Calf",
+     "start": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "end": [
+      -0.4,
+      0.0,
+      0.0
+     ],
+     "radii": [
+      0.04,
+      0.05
+     ],
+     "mode": "Inner"
+    },
+    {
+     "bone": "Bip001 R Calf",
+     "start": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "end": [
+      -0.4,
+      0.0,
+      0.0
+     ],
+     "radii": [
+      0.04,
+      0.05
+     ],
+     "mode": "Inner"
+    }
+   ],
+   "turn_limit_degrees": 4.0,
+   "blocked_turn_sign": {
+    "Ctr_R_Skirt_D_02": 1,
+    "Ctr_B_Skirt_A_02": 1
+   }
+  }
+ ]
+}

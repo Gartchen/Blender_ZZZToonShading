@@ -1,0 +1,159 @@
+{
+ "Remielle": [
+  "Eff_MatCap_019.png",
+  "Eff_MatCap_077.png",
+  "Eff_Matcap_092.png",
+  "Eff_Matcap_112.png",
+  "Eff_Matcap_115.png",
+  "Eye_E.png",
+  "Female_Face_Lightmap_02.png",
+  "Remielle_Face_D.png",
+  "Remielle_Hair_A.png",
+  "Remielle_Hair_D.png",
+  "Remielle_Hair_M.png",
+  "Remielle_Hair_N.png",
+  "Remielle_Origin_Body_1_A.png",
+  "Remielle_Origin_Body_1_D.png",
+  "Remielle_Origin_Body_1_M.png",
+  "Remielle_Origin_Body_1_N.png",
+  "Remielle_Origin_Body_2_A.png",
+  "Remielle_Origin_Body_2_D.png",
+  "Remielle_Origin_Body_2_M.png",
+  "Remielle_Origin_Body_2_N.png",
+  "Remielle_Ramiel_Wings_M.png",
+  "Remielle_Ramiel_Wings_N.png",
+  "Remielle_Wings_A.png",
+  "Remielle_Wings_D.png"
+ ],
+ "Velina": [
+  "Eff_MatCap_006.png",
+  "Eff_MatCap_021.png",
+  "Eff_MatCap_073.png",
+  "Eff_MatCap_121.png",
+  "Eff_Matcap_Socks_03.png",
+  "Eye_E_02.png",
+  "Female_Face_Lightmap_02.png",
+  "Velina_Body_Map1_A.png",
+  "Velina_Body_Map1_D.png",
+  "Velina_Body_Map1_M.png",
+  "Velina_Body_Map1_N.png",
+  "Velina_Body_Map2_A.png",
+  "Velina_Body_Map2_D.png",
+  "Velina_Body_Map2_M.png",
+  "Velina_Body_Map2_N.png",
+  "Velina_Face_D.png",
+  "Velina_Hair_Map_A.png",
+  "Velina_Hair_Map_D.png",
+  "Velina_Hair_Map_M.png",
+  "Velina_Hair_Map_N.png",
+  "Velina_Weapon_Map_A.png",
+  "Velina_Weapon_Map_D.png",
+  "Velina_Weapon_Map_M.png",
+  "Velina_Weapon_Map_N.png"
+ ],
+ "Vivian": [
+  "Eff_MatCap_021.png",
+  "Eff_MatCap_035.png",
+  "Eff_MatCap_065.png",
+  "Eff_MatCap_077.png",
+  "Eff_MatCap_Gem.png",
+  "Eff_Matcap_025.png",
+  "Eff_Matcap_Socks.png",
+  "Eff_Matcap_Socks3.png",
+  "Eye_E.png",
+  "Female_Face_Lightmap.png",
+  "Vivian_Body_1_A.png",
+  "Vivian_Body_1_D.png",
+  "Vivian_Body_1_M.png",
+  "Vivian_Body_1_N.png",
+  "Vivian_Body_2_A.png",
+  "Vivian_Body_2_D.png",
+  "Vivian_Body_2_M.png",
+  "Vivian_Body_2_N.png",
+  "Vivian_Face_D.png",
+  "Vivian_Weapon_A.png",
+  "Vivian_Weapon_D.png",
+  "Vivian_Weapon_M.png",
+  "Vivian_Weapon_N.png"
+ ],
+ "matcaps": {
+  "Remielle": {
+   "Eff_Matcap_115.png": {
+    "parts": "服装 1",
+    "slots": "服装 1 槽 5"
+   },
+   "Eff_MatCap_019.png": {
+    "parts": "服装 2",
+    "slots": "服装 2 槽 2"
+   },
+   "Eff_Matcap_112.png": {
+    "parts": "服装 2",
+    "slots": "服装 2 槽 3"
+   },
+   "Eff_Matcap_092.png": {
+    "parts": "服装 2",
+    "slots": "服装 2 槽 4"
+   },
+   "Eff_MatCap_077.png": {
+    "parts": "服装 2",
+    "slots": "服装 2 槽 5"
+   }
+  },
+  "Velina": {
+   "Eff_MatCap_121.png": {
+    "parts": "服装 1、服装 2",
+    "slots": "服装 1 槽 1；服装 2 槽 1"
+   },
+   "Eff_MatCap_021.png": {
+    "parts": "服装 1、服装 2、头发、武器",
+    "slots": "服装 1 槽 3；服装 2 槽 3, 5；头发 槽 3；武器 槽 4"
+   },
+   "Eff_MatCap_073.png": {
+    "parts": "服装 1",
+    "slots": "服装 1 槽 5"
+   },
+   "Eff_Matcap_Socks_03.png": {
+    "parts": "服装 2",
+    "slots": "服装 2 槽 4"
+   },
+   "Eff_MatCap_006.png": {
+    "parts": "武器",
+    "slots": "武器 槽 3"
+   }
+  },
+  "Vivian": {
+   "Eff_MatCap_065.png": {
+    "parts": "服装 1",
+    "slots": "服装 1 槽 2"
+   },
+   "Eff_MatCap_021.png": {
+    "parts": "服装 1、服装 2、头发",
+    "slots": "服装 1 槽 3；服装 2 槽 4；头发 槽 5"
+   },
+   "Eff_MatCap_077.png": {
+    "parts": "服装 1",
+    "slots": "服装 1 槽 4"
+   },
+   "Eff_Matcap_025.png": {
+    "parts": "服装 1",
+    "slots": "服装 1 槽 5"
+   },
+   "Eff_Matcap_Socks3.png": {
+    "parts": "服装 2",
+    "slots": "服装 2 槽 2"
+   },
+   "Eff_MatCap_Gem.png": {
+    "parts": "宝石",
+    "slots": "宝石 槽 1"
+   },
+   "Eff_Matcap_Socks.png": {
+    "parts": "头发",
+    "slots": "头发 槽 2"
+   },
+   "Eff_MatCap_035.png": {
+    "parts": "武器",
+    "slots": "武器 槽 4"
+   }
+  }
+ }
+}

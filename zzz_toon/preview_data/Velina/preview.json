@@ -1,0 +1,3265 @@
+{
+ "inputs": {
+  "native_light_profile": {
+   "schema": "zzz-toon-light-snapshot/1",
+   "scope": "Single outfit-preview capture on 2026-11-17; not a character-wide or animation default.",
+   "source": {
+    "capture": "FrameAnalysis-2026-11-17-152541",
+    "event": "000029",
+    "pixel_shader": "a24c103adbe204f1",
+    "vertex_shader": "c280f6945b23a42a",
+    "decoded_evidence": "vertex_constants.json"
+   },
+   "unity_to_blender_world": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ]
+   ],
+   "body": [
+    0.5675780177116394,
+    0.3522742986679077,
+    -0.7441493272781372
+   ],
+   "hair": [
+    0.4962451159954071,
+    -0.08987854421138763,
+    -0.8635176420211792
+   ]
+  },
+  "native_globals": {
+   "post_shallow": [
+    1.0,
+    0.949999988079071,
+    0.9660000205039978,
+    1.0
+   ],
+   "post_shallow_fade": [
+    0.800000011920929,
+    0.7200000286102295,
+    0.7483870983123779,
+    1.0
+   ],
+   "post_shadow": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929,
+    1.0
+   ],
+   "post_shadow_fade": [
+    0.702528715133667,
+    0.6741176843643188,
+    0.7490196228027344,
+    1.0
+   ],
+   "post_front": [
+    1.0,
+    0.9850000143051147,
+    0.9200000166893005,
+    1.0
+   ],
+   "post_sss": [
+    1.0,
+    0.875,
+    0.8500000238418579,
+    1.0
+   ],
+   "skin_shallow": [
+    1.0,
+    0.949999988079071,
+    0.9660000205039978,
+    1.0
+   ],
+   "skin_shallow_fade": [
+    0.800000011920929,
+    0.7200000286102295,
+    0.7483870983123779,
+    1.0
+   ],
+   "skin_shadow": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929,
+    1.0
+   ],
+   "skin_shadow_fade": [
+    0.702528715133667,
+    0.6741176843643188,
+    0.7490196228027344,
+    1.0
+   ],
+   "skin_front": [
+    1.0,
+    0.9850000143051147,
+    0.9200000166893005,
+    1.0
+   ],
+   "skin_sss": [
+    1.0,
+    0.875,
+    0.8500000238418579,
+    1.0
+   ],
+   "entity_info_y": true,
+   "entity_7": 1.0,
+   "entity_8": 1.0,
+   "entity_13": 0.9775923490524292,
+   "avatar_light_alpha": 1.0,
+   "rim_style": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rim_intensity": 1.0,
+   "rim_color": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "native_head_sphere": {
+   "schema": "zzz-toon-head-sphere/1",
+   "bone": "Bip001 Head",
+   "center_bone_local": [
+    0.07822406925674841,
+    -0.01838460637600292,
+    -2.2396046119865787e-05
+   ],
+   "radius": 0.13152770698070526,
+   "source": {
+    "head_buffer": "000030-vs-cb1=30cb248b-vs=bd0cf06981a8f054-ps=3969ce67a7c8092e.buf",
+    "capture_center": [
+     600.0101318359375,
+     1.5714268684387207,
+     0.06214570626616478,
+     0.13152770698070526
+    ],
+    "head_world_matrix": [
+     [
+      0.12591767311096191,
+      -0.18172121047973633,
+      0.9752552509307861,
+      600.0166625976562
+     ],
+     [
+      -0.966084361076355,
+      -0.24587345123291016,
+      0.07892000675201416,
+      1.4913372993469238
+     ],
+     [
+      0.2254473865032196,
+      -0.9521158933639526,
+      -0.206518292427063,
+      0.062272217124700546
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ]
+   },
+   "scope": "Measured single-frame head-local sphere; head-bone binding verified on these exports. Local constancy across game animations is not established."
+  },
+  "native_environment": {
+   "schema": "zzz-toon-environment/1",
+   "source": {
+    "capture": "FrameAnalysis-2026-11-17-152541",
+    "draw": "000029",
+    "shader": {
+     "path": "ref\\native_v06\\decoded\\miHoYo_Character_NapAvatarUI\\0_CharacterToonDeferred_progFragment_1119.dxbc",
+     "sha256": "8f1293fe94999b33e0794f6f40dd7bd6a513a3477b221a3c716ff74afbf88851",
+     "bytes": 22396
+    },
+    "constant_buffers": [
+     "000029-ps-cb0=fd81742e-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf",
+     "000029-ps-cb1=30cb248b-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf",
+     "000029-ps-cb2=161a5c12-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf",
+     "000029-ps-cb3=4785ce09-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf"
+    ]
+   },
+   "scope": "Measured single frame. World registration: blender=C*(unity-(600,0,0)); not a universal environment.",
+   "main_color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "entity_color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "entity_position": [
+    19.91070556640625,
+    -15.040434837341309,
+    0.9735950231552124
+   ],
+   "entity_range": 50.0,
+   "gradient_direction": [
+    -0.39931774139404297,
+    0.30090752243995667,
+    0.0
+   ],
+   "gradient_offset": -0.47649383544921875,
+   "gradient_enabled": true,
+   "gradient_color": [
+    0.7019608020782471,
+    0.7790642380714417,
+    0.8392156958580017,
+    0.19999998807907104
+   ],
+   "ambient_color": [
+    0.04672480374574661,
+    0.07053221017122269,
+    0.09433960914611816
+   ]
+  },
+  "native_character_lut": {
+   "schema": "zzz-toon-character-lut/1",
+   "enabled": true,
+   "size": 32,
+   "exposure": 1.0,
+   "texture": "@files/a329ff3141ffca56e9fc/Velina_character_lut.exr",
+   "layout": "linear-strip-dds-row0-at-uv0",
+   "source": {
+    "capture": {
+     "path": "000057-ps-t5=45fd291e-vs=c85e3fc3d2f75d34-ps=f1f227ccc44b3309.dds",
+     "sha256": "42fd6aedb691cbec4b7af542ca2654d346d3a4fe82b5f85347596daf12d0ed1b"
+    },
+    "shader_hash": "f1f227ccc44b3309",
+    "draw": 57,
+    "decoded_shader": "0_DeferredShadingForCharacter_progFragment_26"
+   },
+   "scope": "Velina captured outfit preview frame only; not a universal scene default."
+  },
+  "native_outline": {
+   "schema": "zzz-toon-outline/1",
+   "source": "FrameAnalysis 2026-11-17 Velina opaque outline VS4/PS12; capture_v17/outline_manifest.json",
+   "scope": "This captured outfit-screen environment only; not a generic scene default",
+   "post_tint": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929
+   ],
+   "vertex_ambient": [
+    0,
+    0,
+    0
+   ],
+   "clip_offset": [
+    0.0,
+    0.0
+   ],
+   "visibility": 1.0,
+   "mesh_inputs": {
+    "Velina_Body1": {
+     "path": "@files/34f5568616fdb4c9b3af/Velina_Body1.json",
+     "source_sha256": "34f5568616fdb4c9b3affb93d806c86bcc10aa430f93a336ea6be599b3a182e5"
+    },
+    "Velina_Body2": {
+     "path": "@files/a90857c286c8086088ee/Velina_Body2.json",
+     "source_sha256": "a90857c286c8086088eef31821c15ad3b02da1dd0a75ca56303b90ec7ca574ed"
+    },
+    "Velina_Hair1": {
+     "path": "@files/07ecae76fa208b42e4f1/Velina_Hair1.json",
+     "source_sha256": "07ecae76fa208b42e4f1d6a795f74251112339de1fe3d582f7d615fb2b514318"
+    },
+    "Velina_Hair2": {
+     "path": "@files/9a4a495ae46d3a5cd756/Velina_Hair2.json",
+     "source_sha256": "9a4a495ae46d3a5cd756ab2950a9c12c036092d806af9e1ce34d5bd1ca4702c7"
+    },
+    "Velina_Weapon1": {
+     "path": "@files/3314ec9131063179d821/Velina_Weapon1.json",
+     "source_sha256": "3314ec9131063179d82115c8436abc801ab8fc6357b5a2020594742c72fbb2b7"
+    },
+    "Velina_Weapon2": {
+     "path": "@files/057be25efa1c98935872/Velina_Weapon2.json",
+     "source_sha256": "057be25efa1c989358726d9dbf74458dd8edf1a684679384bde6ab5645bb9246"
+    }
+   },
+   "visibility_evidence": "Screen shadow red=1, UI self-shadow=0, additional lights=0 in these captures"
+  },
+  "native_surface": {
+   "schema": "zzz-toon-surface/1",
+   "source": "Original DXBC VS44/PS1119 and original mesh inputs; v34 CPU/GPU checks, v36 import-frame audit; original weapon inputs and verified rigid VS draw",
+   "scope": "Verified body and weapon meshes. The nonuniform import frame uses measured rigid-draw probe semantics only where explicitly declared. Animation and scene calibration are separate.",
+   "mesh_inputs": {
+    "Velina_Body1": {
+     "fallback": "Imported geometric N/T with packed XY=0 only at unmatched vertices; not recovered game values",
+     "fallback_vertices": 0,
+     "path": "@files/5f98b2e7195ded6e2e9d/Velina_Body1_outline_inputs.npz",
+     "source": "@files/34f5568616fdb4c9b3af/Velina_Body1.json",
+     "source_sha256": "34f5568616fdb4c9b3affb93d806c86bcc10aa430f93a336ea6be599b3a182e5",
+     "verified_vertices": 14159
+    },
+    "Velina_Body2": {
+     "fallback": "Imported geometric N/T with packed XY=0 only at unmatched vertices; not recovered game values",
+     "fallback_vertices": 0,
+     "path": "@files/b707da996e441f7f70c5/Velina_Body2_outline_inputs.npz",
+     "source": "@files/a90857c286c8086088ee/Velina_Body2.json",
+     "source_sha256": "a90857c286c8086088eef31821c15ad3b02da1dd0a75ca56303b90ec7ca574ed",
+     "verified_vertices": 8685
+    },
+    "Velina_Weapon2": {
+     "fallback": "Imported geometric N/T with packed XY=0 only at unmatched vertices; not recovered game values",
+     "fallback_vertices": 0,
+     "path": "@files/81c92118b590eac4093b/Velina_Weapon2_outline_inputs.npz",
+     "source": "@files/057be25efa1c98935872/Velina_Weapon2.json",
+     "source_sha256": "057be25efa1c989358726d9dbf74458dd8edf1a684679384bde6ab5645bb9246",
+     "verified_vertices": 4016,
+     "direction_frame": "rigid_draw",
+     "frame_source": {
+      "source_buffer": {
+       "path": "000024-vs-cb1=30cb248b-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf",
+       "sha256": "6ec8313c1fa216f9e16f2c17d22ecab5cf5be128584ac192d95db7fc9e043694"
+      },
+      "vertex_shader": "c280f6945b23a42a",
+      "audit": "renders/v47_weapon_frame/vertex_audit.json"
+     }
+    },
+    "Velina_Weapon1": {
+     "fallback": "Imported geometric N/T with packed XY=0 only at unmatched vertices; not recovered game values",
+     "fallback_vertices": 0,
+     "path": "@files/c3c2dca05ce464f016f4/Velina_Weapon1_outline_inputs.npz",
+     "source": "@files/3314ec9131063179d821/Velina_Weapon1.json",
+     "source_sha256": "3314ec9131063179d82115c8436abc801ab8fc6357b5a2020594742c72fbb2b7",
+     "verified_vertices": 11594
+    }
+   }
+  },
+  "native_sampling": {
+   "schema": "zzz-toon-sampling/1",
+   "source": "PS1119 raw DXBC sample_b cb0[199].x; captured bias -2; original game authored mip payloads",
+   "scope": "Velina body and weapon opaque material render-camera sampling; no face, hair, outline or MatCap change",
+   "sampler_provenance": "Asset m_FilterMode=1, m_Aniso=1, m_MipBias=0, repeat; runtime D3D sampler descriptor and resource LOD clamps NOT captured. Ideal isotropic D3D reference LOD; not exact GPU approximation.",
+   "meshes": [
+    "Velina_Body1",
+    "Velina_Body2",
+    "Velina_Weapon1",
+    "Velina_Weapon2"
+   ],
+   "materials": {
+    "ZZZ_Velina_Weapon_UI": {
+     "Velina_Weapon_Map_D.png": {
+      "atlas": "@files/49325af9064a172d63d2/Velina_Weapon_Map_D_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Weapon_Map_D.bin",
+      "atlas_sha256": "49325af9064a172d63d2c738126cf23e86a4ae5432dc94f60715a7080fd11581",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": false
+     },
+     "Velina_Weapon_Map_N.png": {
+      "atlas": "@files/332f5fe58ae9bff27ff2/Velina_Weapon_Map_N_mips_f32.exr",
+      "width": 1024,
+      "height": 1024,
+      "mip_count": 11,
+      "source": "Velina_Weapon_Map_N.bin",
+      "atlas_sha256": "332f5fe58ae9bff27ff2e6ee73e53c7b7b5f648a418cb39a499cc1e3b2af0357",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Velina_Weapon_Map_M.png": {
+      "atlas": "@files/e0d0ad38d1294ec1cb5c/Velina_Weapon_Map_M_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Weapon_Map_M.bin",
+      "atlas_sha256": "e0d0ad38d1294ec1cb5cba0050a28c39410719596f2f7719f834a1d383211696",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Velina_Weapon_Map_A.png": {
+      "atlas": "@files/d3a5ab8b60100099d3e4/Velina_Weapon_Map_A_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Weapon_Map_A.bin",
+      "atlas_sha256": "d3a5ab8b60100099d3e417c66782f4279bfe88508ebd4a822b3e77a615932a5b",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     }
+    },
+    "ZZZ_Velina_Body_2_UI": {
+     "Velina_Body_Map2_D.png": {
+      "atlas": "@files/bf9f0af2a45cf82b4d2a/Velina_Body_Map2_D_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Body_Map2_D.bin",
+      "atlas_sha256": "bf9f0af2a45cf82b4d2ad1b27407a40244123fe67c9b454044d0dd4bc896268b",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": false
+     },
+     "Velina_Body_Map2_N.png": {
+      "atlas": "@files/27bf2c325465b79dde10/Velina_Body_Map2_N_mips_f32.exr",
+      "width": 1024,
+      "height": 1024,
+      "mip_count": 11,
+      "source": "Velina_Body_Map2_N.bin",
+      "atlas_sha256": "27bf2c325465b79dde10d12c6b900ddfb41b60ca3d510c7961a279e6ff1ed629",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Velina_Body_Map2_M.png": {
+      "atlas": "@files/ac702339716c5de3fdaf/Velina_Body_Map2_M_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Body_Map2_M.bin",
+      "atlas_sha256": "ac702339716c5de3fdaff72d58f1a905092818f95103aaf4774fe45e1f66e4d4",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Velina_Body_Map2_A.png": {
+      "atlas": "@files/c6328fb5a2c5739628d7/Velina_Body_Map2_A_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Body_Map2_A.bin",
+      "atlas_sha256": "c6328fb5a2c5739628d719ac5ba55ebd6d696b0215111e075ec05620af906d91",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     }
+    },
+    "ZZZ_Velina_Body_1_UI": {
+     "Velina_Body_Map1_D.png": {
+      "atlas": "@files/2c5463642dcb3778a99b/Velina_Body_Map1_D_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Body_Map1_D.bin",
+      "atlas_sha256": "2c5463642dcb3778a99be9a2fe47c4097ffce7aafc05ebc18fe8327f50fe2ed3",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": false
+     },
+     "Velina_Body_Map1_N.png": {
+      "atlas": "@files/b27b0c91bec28f61b5e9/Velina_Body_Map1_N_mips_f32.exr",
+      "width": 1024,
+      "height": 1024,
+      "mip_count": 11,
+      "source": "Velina_Body_Map1_N.bin",
+      "atlas_sha256": "b27b0c91bec28f61b5e90faaf43b96f966f7dc16894d5e6be3ac3e578aa6e2af",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Velina_Body_Map1_M.png": {
+      "atlas": "@files/367eaafbd6dfa8f50a77/Velina_Body_Map1_M_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Body_Map1_M.bin",
+      "atlas_sha256": "367eaafbd6dfa8f50a77ab49086db056aab562c0db9aad42e1e3222ecaa498d4",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Velina_Body_Map1_A.png": {
+      "atlas": "@files/4b337b2d2d9bf3c34d03/Velina_Body_Map1_A_mips_f32.exr",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "source": "Velina_Body_Map1_A.bin",
+      "atlas_sha256": "4b337b2d2d9bf3c34d03a4cf62b21ed9c7ea3c7c3f3996ed383b3fd3996a8b58",
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     }
+    }
+   }
+  },
+  "native_face": {
+   "schema": "zzz-toon-native-face/1",
+   "source": {
+    "draw": "000030",
+    "shaders": {
+     "vs": "bd0cf06981a8f054",
+     "ps": "3969ce67a7c8092e"
+    }
+   },
+   "scope": "Verified captured Face base pass, fixed measured middle point and visibility; native stencil coverage and moving-root re-registration not implemented",
+   "bone": "Bip001 Head",
+   "materials": {
+    "MAT_Velina_Face_UI": {
+     "schema": "zzz-toon-native-face/1",
+     "source": {
+      "draw": "000030",
+      "shaders": {
+       "vs": "bd0cf06981a8f054",
+       "ps": "3969ce67a7c8092e"
+      }
+     },
+     "scope": "Captured UI Face base pass; stencil coverage excluded, no fitted parameters",
+     "pixel": {
+      "_CharacterAmbient": [
+       0.04672480374574661,
+       0.07053221017122269,
+       0.09433960914611816,
+       1.0
+      ],
+      "_PostShallowTint": [
+       1.0,
+       0.949999988079071,
+       0.9660000205039978,
+       1.0
+      ],
+      "_PostShallowFadeTint": [
+       0.800000011920929,
+       0.7200000286102295,
+       0.7483870983123779,
+       1.0
+      ],
+      "_PostShadowTint": [
+       0.7760000228881836,
+       0.7599999904632568,
+       0.800000011920929,
+       1.0
+      ],
+      "_PostFrontTint": [
+       1.0,
+       0.9850000143051147,
+       0.9200000166893005,
+       1.0
+      ],
+      "_PostSssTint": [
+       1.0,
+       0.875,
+       0.8500000238418579,
+       1.0
+      ],
+      "_PostShadowFadeTint": [
+       0.702528715133667,
+       0.6741176843643188,
+       0.7490196228027344,
+       1.0
+      ],
+      "_SkinFrontTint": [
+       1.0,
+       0.9850000143051147,
+       0.9200000166893005,
+       1.0
+      ],
+      "_SkinShallowTint": [
+       1.0,
+       0.949999988079071,
+       0.9660000205039978,
+       1.0
+      ],
+      "_SkinShallowFadeTint": [
+       0.800000011920929,
+       0.7200000286102295,
+       0.7483870983123779,
+       1.0
+      ],
+      "_SkinShadowTint": [
+       0.7760000228881836,
+       0.7599999904632568,
+       0.800000011920929,
+       1.0
+      ],
+      "_SkinSssTint": [
+       1.0,
+       0.875,
+       0.8500000238418579,
+       1.0
+      ],
+      "_SkinShadowFadeTint": [
+       0.702528715133667,
+       0.6741176843643188,
+       0.7490196228027344,
+       1.0
+      ],
+      "_AmbientGradientColor": [
+       0.7019608020782471,
+       0.7790642380714417,
+       0.8392156958580017,
+       0.19999998807907104
+      ],
+      "_CharacterUISelfShadow": [
+       0.0
+      ],
+      "_PerObjectShadowOnFace": [
+       0.0
+      ],
+      "_WorldSpaceCameraPos": [
+       600.0,
+       1.2799999713897705,
+       -2.5199999809265137
+      ],
+      "_ScreenSize": [
+       2448.0,
+       1368.0,
+       0.00040849673678167164,
+       0.0007309941574931145
+      ],
+      "_RenderedEntityCount": [
+       1
+      ],
+      "_IsStencilReceiverPass": [
+       0.0
+      ],
+      "_AvatarMainLightColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_CharacterSampleTextureBias": [
+       -2.0
+      ],
+      "_PerObjectShadowAtlas_TexelSize": [
+       0.5,
+       0.5,
+       2.0,
+       2.0
+      ],
+      "unity_MatrixVP": [
+       2.6463541984558105,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       -4.704629898071289,
+       0.0,
+       0.0,
+       0.00025533352163620293,
+       -0.0005144497845321894,
+       -0.006036221981048584,
+       1.0,
+       -1587.8118896484375,
+       6.020629405975342,
+       0.28659960627555847,
+       2.5199999809265137
+      ],
+      "unity_MotionVectorsParams": [
+       1.0,
+       1.0,
+       -0.0010000000474974513,
+       1.0
+      ],
+      "_PackedParams1": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_AmbientGradientShape": [
+       -0.39931774139404297,
+       0.0,
+       0.30090752243995667,
+       -240.067138671875
+      ],
+      "_HeadMatrixWS2OS0": [
+       0.12591812014579773,
+       -0.9660840630531311,
+       0.2254471480846405,
+       -74.12625122070312
+      ],
+      "_HeadMatrixWS2OS1": [
+       -0.1817212849855423,
+       -0.2458728849887848,
+       -0.9521157741546631,
+       109.4617691040039
+      ],
+      "_HeadMatrixWS2OS2": [
+       0.975255012512207,
+       0.0789199247956276,
+       -0.20651771128177643,
+       -585.2741088867188
+      ],
+      "_PerObjectShadowData": [
+       1.0,
+       0.0,
+       256.0,
+       0.0
+      ],
+      "_PerObjectShadowResolve_ST": [
+       0.12109375,
+       0.109375,
+       0.0,
+       0.0
+      ],
+      "_PerObjectShadowOffsetWS": [
+       599.935302734375,
+       0.8569850325584412,
+       0.447987824678421,
+       0.0
+      ],
+      "_EntityInfo": [
+       0.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_PerObjectShadowUvMatrix": [
+       0.31028205156326294,
+       0.0,
+       0.21128372848033905,
+       0.0,
+       -0.0,
+       0.569412350654602,
+       0.0,
+       0.0,
+       0.411758154630661,
+       0.0,
+       -0.15921372175216675,
+       0.0,
+       0.5,
+       0.5,
+       0.25,
+       1.0
+      ],
+      "_Color": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_ShallowColor": [
+       1.0,
+       0.9046613574028015,
+       0.8879231810569763,
+       1.0
+      ],
+      "_ShallowColor2": [
+       0.8900055289268494,
+       0.8900055289268494,
+       0.8900055289268494,
+       1.0
+      ],
+      "_ShallowColor3": [
+       0.6038274168968201,
+       0.6038274168968201,
+       0.6038274168968201,
+       1.0
+      ],
+      "_ShadowColor": [
+       0.8796225786209106,
+       0.7835380434989929,
+       0.7835380434989929,
+       1.0
+      ],
+      "_ShadowColor2": [
+       0.7874123454093933,
+       0.7874123454093933,
+       0.7874123454093933,
+       1.0
+      ],
+      "_ShadowColor3": [
+       0.3185468316078186,
+       0.3185468316078186,
+       0.3185468316078186,
+       1.0
+      ],
+      "_OutlineColor": [
+       1.0,
+       0.5972020030021667,
+       0.5972020030021667,
+       1.0
+      ],
+      "_OutlineColor2": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_OutlineColor3": [
+       1.0,
+       0.5,
+       0.5,
+       1.0
+      ],
+      "_OverrideMainLightBody": [
+       0.5675780177116394,
+       0.3522742986679077,
+       -0.7441493272781372,
+       0.0
+      ],
+      "_OverrideMainLight": [
+       1
+      ],
+      "_AlbedoSmoothness": [
+       0.05000000074505806
+      ],
+      "_AlbedoSmoothness2": [
+       0.05000000074505806
+      ],
+      "_AlbedoSmoothness3": [
+       0.05000000074505806
+      ],
+      "_ShadowNormalBias": [
+       0.009999999776482582
+      ],
+      "_UseOverlayTex": [
+       0.0
+      ],
+      "_OverlayTexScale": [
+       1000.0
+      ],
+      "_NoseLineHoriDisp": [
+       0.8799999952316284
+      ],
+      "_NoseLineLkDnDisp": [
+       0.6200000047683716
+      ]
+     },
+     "vertex": {
+      "_ClipSpaceOffset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_WorldSpaceCameraPos": [
+       600.0,
+       1.2799999713897705,
+       -2.5199999809265137
+      ],
+      "_RenderedEntityCount": [
+       1
+      ],
+      "_GlobalAdditionalLightIntensity": [
+       0.10000000149011612
+      ],
+      "unity_MatrixVP": [
+       2.6463541984558105,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       -4.704629898071289,
+       0.0,
+       0.0,
+       0.00025533352163620293,
+       -0.0005144497845321894,
+       -0.006036221981048584,
+       1.0,
+       -1587.8118896484375,
+       6.020629405975342,
+       0.28659960627555847,
+       2.5199999809265137
+      ],
+      "_PrevViewProjMatrix": [
+       2.6463541984558105,
+       -0.0,
+       0.0,
+       0.0,
+       0.0,
+       -4.704629898071289,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       -0.006036221981048584,
+       1.0,
+       -1587.8125,
+       6.021925926208496,
+       0.28659960627555847,
+       2.5199999809265137
+      ],
+      "_NonJitteredViewProjMatrix": [
+       2.6463541984558105,
+       -0.0,
+       0.0,
+       0.0,
+       0.0,
+       -4.704629898071289,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       -0.006036221981048584,
+       1.0,
+       -1587.8125,
+       6.021925926208496,
+       0.28659960627555847,
+       2.5199999809265137
+      ],
+      "unity_MotionVectorsParams": [
+       1.0,
+       1.0,
+       -0.0010000000474974513,
+       1.0
+      ],
+      "unity_ObjectToWorld": [
+       0.12591767311096191,
+       -0.966084361076355,
+       0.2254473865032196,
+       0.0,
+       -0.18172121047973633,
+       -0.24587345123291016,
+       -0.9521158933639526,
+       0.0,
+       0.9752552509307861,
+       0.07892000675201416,
+       -0.206518292427063,
+       0.0,
+       600.0166625976562,
+       1.4913372993469238,
+       0.062272217124700546,
+       1.0
+      ],
+      "unity_WorldToObject": [
+       0.1259181797504425,
+       -0.1817215234041214,
+       0.975254476070404,
+       0.0,
+       -0.9660834074020386,
+       -0.24587269127368927,
+       0.07891953736543655,
+       0.0,
+       0.2254476100206375,
+       -0.9521148800849915,
+       -0.2065175324678421,
+       0.0,
+       -74.12628936767578,
+       109.46190643310547,
+       -585.2737426757812,
+       1.0
+      ],
+      "unity_MatrixPreviousM": [
+       0.1257483959197998,
+       -0.966117262840271,
+       0.2254004180431366,
+       0.0,
+       -0.1815895140171051,
+       -0.24578094482421875,
+       -0.9521647691726685,
+       0.0,
+       0.9753015041351318,
+       0.07880309224128723,
+       -0.2063436508178711,
+       0.0,
+       600.0166625976562,
+       1.491307258605957,
+       0.06228090077638626,
+       1.0
+      ],
+      "_MiddlePointPosition": [
+       599.94482421875,
+       0.9735950231552124,
+       0.004941284656524658,
+       1.0
+      ],
+      "_PackedParams1": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_AmbientLights": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "entity": [
+      1.0,
+      1.0,
+      1.0,
+      50.0,
+      619.9107055664062,
+      0.9735950231552124,
+      -15.040434837341309,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9775923490524292,
+      0.7139342427253723,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      619.9107055664062,
+      0.9735950231552124,
+      -15.040436744689941,
+      0.0,
+      0.04672480374574661,
+      0.07053221017122269,
+      0.09433960914611816,
+      0.0,
+      0.04672480374574661,
+      0.07053221017122269,
+      0.09433960914611816,
+      0.0
+     ],
+     "environment": {
+      "schema": "zzz-toon-environment/1",
+      "source": {
+       "capture": "FrameAnalysis-2026-11-17-152541",
+       "draw": "000029",
+       "shader": {
+        "path": "ref\\native_v06\\decoded\\miHoYo_Character_NapAvatarUI\\0_CharacterToonDeferred_progFragment_1119.dxbc",
+        "sha256": "8f1293fe94999b33e0794f6f40dd7bd6a513a3477b221a3c716ff74afbf88851",
+        "bytes": 22396
+       },
+       "constant_buffers": [
+        "000029-ps-cb0=fd81742e-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf",
+        "000029-ps-cb1=30cb248b-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf",
+        "000029-ps-cb2=161a5c12-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf",
+        "000029-ps-cb3=4785ce09-vs=c280f6945b23a42a-ps=a24c103adbe204f1.buf"
+       ]
+      },
+      "scope": "Measured single frame. World registration: blender=C*(unity-(600,0,0)); not a universal environment.",
+      "main_color": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "entity_color": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "entity_position": [
+       19.91070556640625,
+       -15.040434837341309,
+       0.9735950231552124
+      ],
+      "entity_range": 50.0,
+      "gradient_direction": [
+       -0.39931774139404297,
+       0.30090752243995667,
+       0.0
+      ],
+      "gradient_offset": -0.47649383544921875,
+      "gradient_enabled": true,
+      "gradient_color": [
+       0.7019608020782471,
+       0.7790642380714417,
+       0.8392156958580017,
+       0.19999998807907104
+      ],
+      "ambient_color": [
+       0.04672480374574661,
+       0.07053221017122269,
+       0.09433960914611816
+      ]
+     },
+     "middle_world": [
+      -0.05517578125,
+      0.004941284656524658,
+      0.9735950231552124
+     ],
+     "vertex_ambient": [
+      0,
+      0,
+      0
+     ],
+     "visibility": 1.0,
+     "override_body_world": [
+      0.5675780177116394,
+      -0.7441493272781372,
+      0.3522742986679077
+     ],
+     "blush_neutral": true
+    }
+   },
+   "mesh_inputs": {
+    "Velina_Face": {
+     "path": "@files/8cd861e2cdad0f0beb57/Velina_face_inputs.npz",
+     "source": "UV0 and original UV3 where available matched to capture, flags checked by DXBC assembly"
+    }
+   },
+   "receiver": {
+    "schema": "zzz-toon-stencil-coverage/1",
+    "source": {
+     "audit": "caster_audit.json",
+     "draw": "000044"
+    },
+    "scope": "Explicit outfit capture inputs; current-pose CPU coverage approximation, not complete runtime stencil state",
+    "vs": "bcddceab76ee10ce",
+    "ps": "c07b54c6554b2591",
+    "caster": "Velina_HairShadow",
+    "inputs": {
+     "_WorldSpaceCameraPos": [
+      600.0,
+      1.2799999713897705,
+      -2.5199999809265137
+     ],
+     "_AvatarMainLightPosition": [
+      0.7986354827880859,
+      -0.0,
+      -0.6018150448799133,
+      0.0
+     ],
+     "_StencilShadowBlendDebugMode": [
+      0.0
+     ],
+     "_ClipSpaceOffset": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "unity_MatrixVP": [
+      2.6463541984558105,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -4.704629898071289,
+      0.0,
+      0.0,
+      0.00025533352163620293,
+      -0.0005144497845321894,
+      -0.006036221981048584,
+      1.0,
+      -1587.8118896484375,
+      6.020629405975342,
+      0.28659960627555847,
+      2.5199999809265137
+     ],
+     "unity_ObjectToWorld": [
+      0.031622886657714844,
+      -0.9936971664428711,
+      0.10754820704460144,
+      0.0,
+      -0.18985655903816223,
+      -0.11161530017852783,
+      -0.9754471778869629,
+      0.0,
+      0.9813027381896973,
+      0.010428041219711304,
+      -0.19218981266021729,
+      0.0,
+      600.0188598632812,
+      1.4232701063156128,
+      0.06963913887739182,
+      1.0
+     ],
+     "_Length": [
+      1.0
+     ],
+     "_XOffsetNew": [
+      0.0
+     ],
+     "_YOffset": [
+      0.699999988079071
+     ],
+     "_ZOffset": [
+      0.5
+     ],
+     "_XOffsetEnter": [
+      -0.699999988079071
+     ],
+     "_YOffsetEnter": [
+      0.75
+     ],
+     "_OverrideHairShadowMainLight": [
+      0
+     ],
+     "_OverrideHairShadowMainLightDir": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "_PackedParams0": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "unity_to_blender": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      -600.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "red_path": "@files/5c90d29c0aa6e82de515/Velina_caster.npz",
+    "excluded_modifier": "ZZZ_CasterOffset"
+   }
+  },
+  "native_face_layers": {
+   "schema": "zzz-toon-face-layers/1",
+   "source": {
+    "eye_ps": "720a454f81097a64",
+    "hair_ps": "050d63a297594dff",
+    "audit": "draw_audit.json"
+   },
+   "scope": "Verified UI shader variants and head-local Y mapping in this capture; not a universal scene preset or complete stencil replay.",
+   "bone": "Bip001 Head",
+   "inverse_head_row": 1,
+   "eye_ps": "720a454f81097a64",
+   "hair_ps": "050d63a297594dff",
+   "eye_inputs": {
+    "Velina_Face": {
+     "path": "@files/082e22cd4dcb54f6ebaf/Velina_eye_inputs.npz",
+     "source": "Capture Eye draw: UV0-matched lookup byte, all candidates agree; topology checked on destination"
+    }
+   },
+   "hair_materials": [
+    "MAT_Velina_Hair_T_UI"
+   ],
+   "composite": "premultiplied_features_v1"
+  },
+  "native_bloom": {
+   "schema": "zzz-toon-native-bloom/1",
+   "enabled": true,
+   "source": {
+    "capture_events": {
+     "Remielle": [
+      94,
+      106,
+      108
+     ],
+     "Velina": [
+      83,
+      95,
+      97
+     ]
+    },
+    "audit": "ref/capture_v24/bloom_audit.json"
+   },
+   "scope": "Captured outfit-preview parameters, explicit opt-in; normalized-height resizing is Blender adaptation, not recovered game CPU logic.",
+   "resolution_policy": "normalized-height",
+   "output_alpha": "native",
+   "reference_resolution": [
+    2448,
+    1368
+   ],
+   "base_size": [
+    344,
+    192
+   ],
+   "compose_size": [
+    857,
+    479
+   ],
+   "threshold": 0.44999998807907104,
+   "prefilter_gain": 0.800000011920929,
+   "intensity": 1.2999999523162842,
+   "weights": [
+    0.30000001192092896,
+    0.30000001192092896,
+    0.25999999046325684,
+    0.15000000596046448
+   ],
+   "layers": [
+    {
+     "size": [
+      153,
+      85
+     ],
+     "kernel": 9
+    },
+    {
+     "size": [
+      90,
+      50
+     ],
+     "kernel": 16
+    },
+    {
+     "size": [
+      36,
+      20
+     ],
+     "kernel": 20
+    }
+   ],
+   "intermediate_storage": "r11g11b10_truncate",
+   "atlas": {
+    "size": [
+     153,
+     161
+    ],
+    "rows_from_v0": [
+     76,
+     24,
+     2
+    ]
+   }
+  },
+  "native_transparency": {
+   "schema": "zzz-toon-transparent/1",
+   "source": {
+    "audit": "transparent_audit.json",
+    "draw": "000082"
+   },
+   "scope": "Explicit captured outfit-preview variant and neutral grading; EEVEE depth/coverage approximation, not native half-resolution resolve.",
+   "ps": "d72591ee44f3a191",
+   "mode": "coverage_after_character_lut",
+   "alpha_blend_params": [
+    -1.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "neutral_grading": true,
+   "materials": [
+    "MAT_Velina_Body_1_T_UI"
+   ]
+  }
+ },
+ "stage": {
+  "camera": {
+   "world": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     5.296124527376378e-06
+    ],
+    [
+     0.0,
+     -4.371138828673793e-08,
+     -1.0,
+     -2.5199999809265137
+    ],
+    [
+     0.0,
+     1.0,
+     -4.371138828673793e-08,
+     1.279999852180481
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "optics": {
+    "lens": 56.45555877685547,
+    "sensor_fit": "VERTICAL",
+    "sensor_height": 24.0,
+    "sensor_width": 36.0,
+    "shift_x": -0.00022696313681080937,
+    "shift_y": -0.0002572248922660947,
+    "clip_start": 0.10000000149011612,
+    "clip_end": 1000.0
+   }
+  },
+  "render": {
+   "resolution_x": 2448,
+   "resolution_y": 1368,
+   "pixel_aspect_x": 1.0,
+   "pixel_aspect_y": 1.0065789222717285
+  },
+  "samples": 32,
+  "key_dir": [
+   0.8099389672279358,
+   -0.4173200726509094,
+   0.4121198356151581
+  ],
+  "rig_world": [
+   [
+    1.0000001192092896,
+    6.668109335805639e-07,
+    -4.4703408974555714e-08,
+    1.3176745596865658e-05
+   ],
+   [
+    -4.4703433843551466e-08,
+    3.899774014826107e-08,
+    -1.0000001192092896,
+    -1.58917155204108e-05
+   ],
+   [
+    -6.668109904239827e-07,
+    1.0,
+    3.899777212268418e-08,
+    -3.110338184342254e-06
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "lights": {
+   "ZZZ_KeyLight": {
+    "world": [
+     [
+      0.4580248296260834,
+      -0.3663495182991028,
+      0.8099390268325806,
+      0.0
+     ],
+     [
+      0.888939380645752,
+      0.18876099586486816,
+      -0.41732004284858704,
+      0.0
+     ],
+     [
+      9.511867204992086e-08,
+      0.9111295938491821,
+      0.4121197760105133,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "energy": 3.1415927410125732,
+    "color": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "ZZZ_HairShadowLight": {
+    "world": [
+     [
+      0.9952467083930969,
+      0.00961199589073658,
+      -0.09690980613231659,
+      0.0071604251861572266
+     ],
+     [
+      -0.09712585061788559,
+      0.02537817321717739,
+      -0.9949484467506409,
+      -2.251993417739868
+     ],
+     [
+      -0.007104045711457729,
+      0.9996316432952881,
+      0.02619110606610775,
+      1.4974960088729858
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "energy": 394.7841796875,
+    "color": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "objects": {
+   "Velina_Body1": {
+    "world": [
+     [
+      1.0000001192092896,
+      4.470343029083779e-08,
+      6.668109335805639e-07,
+      1.3176744687370956e-05
+     ],
+     [
+      -4.4703401869128356e-08,
+      1.0000001192092896,
+      -3.6500168221209606e-08,
+      -1.5987083315849304e-05
+     ],
+     [
+      -6.668109904239827e-07,
+      3.650012914135914e-08,
+      1.0,
+      -3.1103379569685785e-06
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_NativeOutlineNormals",
+     "ZZZ_SampleFootprint",
+     "ZZZ_Outline"
+    ]
+   },
+   "Velina_Body2": {
+    "world": [
+     [
+      1.0000001192092896,
+      4.470343029083779e-08,
+      6.668109335805639e-07,
+      1.3176744687370956e-05
+     ],
+     [
+      -4.4703401869128356e-08,
+      1.0000001192092896,
+      -3.6500168221209606e-08,
+      -1.58917155204108e-05
+     ],
+     [
+      -6.668109904239827e-07,
+      3.650012914135914e-08,
+      1.0,
+      -3.1103379569685785e-06
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_NativeOutlineNormals",
+     "ZZZ_SampleFootprint",
+     "ZZZ_Outline"
+    ]
+   },
+   "Velina_Eyebrow": {
+    "world": [
+     [
+      1.0000001192092896,
+      4.470343029083779e-08,
+      6.668109335805639e-07,
+      1.3176744687370956e-05
+     ],
+     [
+      -4.4703401869128356e-08,
+      1.0000001192092896,
+      -3.6500168221209606e-08,
+      -1.58917155204108e-05
+     ],
+     [
+      -6.668109904239827e-07,
+      3.650012914135914e-08,
+      1.0,
+      -3.1103379569685785e-06
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": []
+   },
+   "Velina_Face": {
+    "world": [
+     [
+      1.0000001192092896,
+      4.470343029083779e-08,
+      6.668109335805639e-07,
+      1.3176744687370956e-05
+     ],
+     [
+      -4.4703401869128356e-08,
+      1.0000001192092896,
+      -3.6500168221209606e-08,
+      -1.58917155204108e-05
+     ],
+     [
+      -6.668109904239827e-07,
+      3.650012914135914e-08,
+      1.0,
+      -3.1103379569685785e-06
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {
+     "Fac_Mth_Up": 0.027524828910827637,
+     "Fac_Mth_R_Up": 0.033832624554634094,
+     "Fac_Mth_R_Out": 0.4251304268836975,
+     "Fac_Mth_L_Up": 0.2388903796672821,
+     "Fac_Mth_L_Out": 0.45504167675971985,
+     "Fac_Eye_R_Wink": 2.403259259153856e-06,
+     "Fac_Eye_L_Wink": 2.403259259153856e-06
+    },
+    "modifiers": [
+     "ZZZ_FaceVectors",
+     "ZZZ_Outline"
+    ]
+   },
+   "Velina_Hair1": {
+    "world": [
+     [
+      1.0000001192092896,
+      4.470343029083779e-08,
+      6.668109335805639e-07,
+      1.3176744687370956e-05
+     ],
+     [
+      -4.4703401869128356e-08,
+      1.0000001192092896,
+      -3.6500168221209606e-08,
+      -1.58917155204108e-05
+     ],
+     [
+      -6.668109904239827e-07,
+      3.650012914135914e-08,
+      1.0,
+      -3.1103379569685785e-06
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_NativeOutlineNormals",
+     "ZZZ_Outline"
+    ]
+   },
+   "Velina_Hair2": {
+    "world": [
+     [
+      1.0000001192092896,
+      4.470343029083779e-08,
+      6.668109335805639e-07,
+      1.3176744687370956e-05
+     ],
+     [
+      -4.4703401869128356e-08,
+      1.0000001192092896,
+      -3.6500168221209606e-08,
+      -1.58917155204108e-05
+     ],
+     [
+      -6.668109904239827e-07,
+      3.650012914135914e-08,
+      1.0,
+      -3.1103379569685785e-06
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_NativeOutlineNormals",
+     "ZZZ_Outline"
+    ]
+   },
+   "Velina_HairShadow": {
+    "world": [
+     [
+      1.0000001192092896,
+      4.470343029083779e-08,
+      6.668109335805639e-07,
+      1.3176744687370956e-05
+     ],
+     [
+      -4.4703401869128356e-08,
+      1.0000001192092896,
+      -3.6500168221209606e-08,
+      -1.58917155204108e-05
+     ],
+     [
+      -6.668109904239827e-07,
+      3.650012914135914e-08,
+      1.0,
+      -3.1103379569685785e-06
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_CasterOffset"
+    ]
+   },
+   "Velina_Weapon1": {
+    "world": [
+     [
+      1.0000001192092896,
+      4.470343029083779e-08,
+      6.668109335805639e-07,
+      1.3176744687370956e-05
+     ],
+     [
+      -4.4703401869128356e-08,
+      1.0000001192092896,
+      -3.6500168221209606e-08,
+      -1.58917155204108e-05
+     ],
+     [
+      -6.668109904239827e-07,
+      3.650012914135914e-08,
+      1.0,
+      -3.1103379569685785e-06
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_NativeOutlineNormals",
+     "ZZZ_SampleFootprint",
+     "ZZZ_Outline"
+    ]
+   },
+   "Velina_Weapon2": {
+    "world": [
+     [
+      1.0100440979003906,
+      5.0069804302665943e-08,
+      6.816174504820083e-07,
+      -0.595568060874939
+     ],
+     [
+      -4.515240092928252e-08,
+      1.1200441122055054,
+      -3.731065589818172e-08,
+      0.0006966249784454703
+     ],
+     [
+      -6.735084525644197e-07,
+      4.0881751317556336e-08,
+      1.0222049951553345,
+      0.16167239844799042
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_NativeOutlineNormals",
+     "ZZZ_SampleFootprint",
+     "ZZZ_Outline"
+    ]
+   }
+  },
+  "pose": {
+   "Skn_Wep_A_String01": [
+    [
+     -0.2619307041168213,
+     0.9592385292053223,
+     0.1060776561498642,
+     -0.03921112045645714
+    ],
+    [
+     -0.8395053744316101,
+     -0.1722504049539566,
+     -0.5153229236602783,
+     -5.586468432738911e-06
+    ],
+    [
+     -0.4760437309741974,
+     -0.22403161227703094,
+     0.8504078388214111,
+     5.07248223584611e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String02": [
+    [
+     -0.1381426453590393,
+     0.9742695689201355,
+     0.17823080718517303,
+     1.597959635546431e-05
+    ],
+    [
+     -0.9184707999229431,
+     -0.19335569441318512,
+     0.34500810503959656,
+     8.013477781787515e-06
+    ],
+    [
+     0.37058377265930176,
+     -0.11604233086109161,
+     0.9215221405029297,
+     8.546938261133619e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String03": [
+    [
+     0.9939606785774231,
+     0.05224641039967537,
+     0.09651079028844833,
+     4.4102642277721316e-05
+    ],
+    [
+     -0.03780096396803856,
+     0.9885805249214172,
+     -0.145863339304924,
+     7.7957574831089e-06
+    ],
+    [
+     -0.10302974283695221,
+     0.14133374392986298,
+     0.9845865964889526,
+     3.082870171056129e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String04": [
+    [
+     0.9976736307144165,
+     0.0046829222701489925,
+     0.06797948479652405,
+     4.357136276667006e-05
+    ],
+    [
+     0.0018972593825310469,
+     0.9953437447547913,
+     -0.0964108407497406,
+     1.1604598512349185e-05
+    ],
+    [
+     -0.06811390072107315,
+     0.09631592780351639,
+     0.9930194020271301,
+     6.097709774621762e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String05": [
+    [
+     0.8827601075172424,
+     -0.4693346917629242,
+     0.01998765580356121,
+     1.4483951417787466e-05
+    ],
+    [
+     0.4697584807872772,
+     0.8811154961585999,
+     -0.05270839110016823,
+     8.564134077460039e-07
+    ],
+    [
+     0.007127242628484964,
+     0.05591202527284622,
+     0.9984091520309448,
+     1.5268849892891012e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String06": [
+    [
+     0.6262086629867554,
+     -0.7707489728927612,
+     -0.11808463931083679,
+     1.3334049072000198e-05
+    ],
+    [
+     0.76856529712677,
+     0.6356755495071411,
+     -0.07314413785934448,
+     -8.16719932572596e-07
+    ],
+    [
+     0.13143526017665863,
+     -0.04495326057076454,
+     0.9903101921081543,
+     4.1563433228475333e-07
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String07": [
+    [
+     0.9269052743911743,
+     -0.3750234842300415,
+     0.011034191586077213,
+     1.043202587425185e-06
+    ],
+    [
+     0.3746882677078247,
+     0.9268202185630798,
+     0.02377142757177353,
+     1.3468888937495649e-06
+    ],
+    [
+     -0.019141191616654396,
+     -0.017899995669722557,
+     0.9996516704559326,
+     1.2555230568978004e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String08": [
+    [
+     0.6942506432533264,
+     0.6644185185432434,
+     0.2768245041370392,
+     1.7689724700176157e-05
+    ],
+    [
+     -0.6776642203330994,
+     0.7330471873283386,
+     -0.05923417583107948,
+     -1.3520894981411402e-07
+    ],
+    [
+     -0.24223452806472778,
+     -0.14649802446365356,
+     0.9590972661972046,
+     1.53260425577173e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String09": [
+    [
+     0.44383519887924194,
+     0.794209897518158,
+     -0.4148433804512024,
+     -1.536300260340795e-05
+    ],
+    [
+     -0.6095045804977417,
+     0.6068826913833618,
+     0.5100057125091553,
+     9.969987786462298e-07
+    ],
+    [
+     0.6568850874900818,
+     0.02648787945508957,
+     0.7535151839256287,
+     3.062450923607685e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String10": [
+    [
+     -0.5137053728103638,
+     -0.05681564286351204,
+     -0.856087327003479,
+     -4.7997786168707535e-05
+    ],
+    [
+     -0.5079500079154968,
+     0.8244072794914246,
+     0.25009071826934814,
+     8.561144113627961e-07
+    ],
+    [
+     0.6914711594581604,
+     0.5633947253227234,
+     -0.4522865414619446,
+     -6.136689626146108e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_Wep_A_String11": [
+    [
+     -0.1311548799276352,
+     -0.12017229199409485,
+     -0.9840458035469055,
+     0.00019601336680352688
+    ],
+    [
+     -0.7479723691940308,
+     0.6633856892585754,
+     0.018680399283766747,
+     2.8124921300332062e-05
+    ],
+    [
+     0.6505562663078308,
+     0.7384955883026123,
+     -0.17691011726856232,
+     -8.798106136964634e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_B_Skirt_A_01": [
+    [
+     0.9995812773704529,
+     0.02845008485019207,
+     0.005456269718706608,
+     1.1087578059232328e-05
+    ],
+    [
+     -0.028609802946448326,
+     0.9990851283073425,
+     0.03186219185590744,
+     6.839354682597332e-06
+    ],
+    [
+     -0.0045447880402207375,
+     -0.03200498968362808,
+     0.9994776248931885,
+     1.645295384378187e-07
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_B_Skirt_A_02": [
+    [
+     0.9979416131973267,
+     0.003861656878143549,
+     -0.06399969011545181,
+     -6.313116045930656e-06
+    ],
+    [
+     -0.004099284764379263,
+     0.9999839067459106,
+     -0.0035820354241877794,
+     1.4290169019659515e-05
+    ],
+    [
+     0.06398484855890274,
+     0.003837013151496649,
+     0.9979435801506042,
+     -6.101605322328396e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_B_Skirt_A_03": [
+    [
+     0.9908162355422974,
+     -0.03153020516037941,
+     -0.13148227334022522,
+     7.270862624864094e-06
+    ],
+    [
+     0.030972780659794807,
+     0.9994984269142151,
+     -0.00628327764570713,
+     -1.5207681826723274e-05
+    ],
+    [
+     0.1316145956516266,
+     0.0021531993988901377,
+     0.9912987351417542,
+     -1.8086699071773182e-07
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_B_01": [
+    [
+     0.9978921413421631,
+     -0.05683453753590584,
+     0.03136908635497093,
+     7.914788966445485e-07
+    ],
+    [
+     0.056845877319574356,
+     0.9983828067779541,
+     0.0005335108144208789,
+     -3.915082743333187e-06
+    ],
+    [
+     -0.03134872391819954,
+     0.0012508153449743986,
+     0.9995077252388,
+     -2.6364023142377846e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_A_01": [
+    [
+     0.9677724242210388,
+     -0.027749326080083847,
+     0.2503019869327545,
+     -1.9700450138770975e-05
+    ],
+    [
+     0.036631543189287186,
+     0.9988511204719543,
+     -0.03089621663093567,
+     0.004363093990832567
+    ],
+    [
+     -0.2491576224565506,
+     0.03906935453414917,
+     0.9676748514175415,
+     -1.9811932361335494e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_A_02": [
+    [
+     0.9851706027984619,
+     0.07537558674812317,
+     0.15412744879722595,
+     -2.083294475596631e-06
+    ],
+    [
+     -0.07423754036426544,
+     0.9971557855606079,
+     -0.01313293818384409,
+     -3.053927139262669e-05
+    ],
+    [
+     -0.15467830002307892,
+     0.0014961434062570333,
+     0.9879652857780457,
+     -1.0829010577140252e-08
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_A_03": [
+    [
+     0.9912497401237488,
+     -0.0856017991900444,
+     0.10048231482505798,
+     -2.981651505251648e-06
+    ],
+    [
+     0.08755555748939514,
+     0.9960412979125977,
+     -0.01518687792122364,
+     3.056248533539474e-05
+    ],
+    [
+     -0.0987849161028862,
+     0.02385173738002777,
+     0.9948215484619141,
+     -2.581428049097667e-08
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_A_01": [
+    [
+     0.9717604517936707,
+     -0.050638481974601746,
+     0.23046955466270447,
+     5.626933852909133e-05
+    ],
+    [
+     0.017168927937746048,
+     0.989288866519928,
+     0.14497248828411102,
+     -5.1181392336729914e-05
+    ],
+    [
+     -0.23534159362316132,
+     -0.13692204654216766,
+     0.9622192978858948,
+     1.027348389470717e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_A_02": [
+    [
+     0.9847620129585266,
+     0.04776216298341751,
+     0.16722792387008667,
+     2.8563246814883314e-05
+    ],
+    [
+     -0.04676539823412895,
+     0.9988558292388916,
+     -0.009896380826830864,
+     -6.0993832448730245e-05
+    ],
+    [
+     -0.1675095558166504,
+     0.0019250940531492233,
+     0.9858692288398743,
+     6.109752575866878e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_A_03": [
+    [
+     0.992868959903717,
+     0.10073111206293106,
+     0.06375843286514282,
+     1.2418914593581576e-05
+    ],
+    [
+     -0.10084981471300125,
+     0.9949002265930176,
+     -0.0013634082861244678,
+     -3.04638688248815e-05
+    ],
+    [
+     -0.06357075273990631,
+     -0.005076342262327671,
+     0.9979631304740906,
+     -1.2530223614248825e-07
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_B_01": [
+    [
+     0.9965372085571289,
+     -0.05248736962676048,
+     0.06449908018112183,
+     3.210309660062194e-05
+    ],
+    [
+     0.0524013414978981,
+     0.9986202716827393,
+     0.0030275522731244564,
+     -1.049503907779581e-06
+    ],
+    [
+     -0.06456912308931351,
+     0.0003627690894063562,
+     0.9979131817817688,
+     1.4631466001446825e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_L_Skirt_D_01": [
+    [
+     0.9999235272407532,
+     0.011959999799728394,
+     0.0032972381450235844,
+     0.0001225901214638725
+    ],
+    [
+     -0.011958648450672626,
+     0.9999265074729919,
+     -0.0004374900017865002,
+     4.248044569976628e-05
+    ],
+    [
+     -0.0033022346906363964,
+     0.00039802497485652566,
+     0.9999948143959045,
+     -3.992697020294145e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_L_Skirt_D_02": [
+    [
+     0.9927100539207458,
+     -0.01767531782388687,
+     0.11923003196716309,
+     -8.588399214204401e-05
+    ],
+    [
+     -0.017170632258057594,
+     0.9583640694618225,
+     0.2850354015827179,
+     0.00011138121044496074
+    ],
+    [
+     -0.119303859770298,
+     -0.2850048840045929,
+     0.9510723948478699,
+     1.6953219528659247e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_L_Skirt_D_03": [
+    [
+     0.9873208999633789,
+     -0.10208258032798767,
+     -0.12157072871923447,
+     -5.238154699327424e-05
+    ],
+    [
+     0.10616481304168701,
+     0.9939669370651245,
+     0.027571452781558037,
+     2.9974129574839026e-05
+    ],
+    [
+     0.11802271008491516,
+     -0.04012834280729294,
+     0.9922006130218506,
+     2.792571649479214e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_L_Skirt_D_04": [
+    [
+     0.950023889541626,
+     -0.2015305459499359,
+     -0.23840875923633575,
+     4.728575277113123e-06
+    ],
+    [
+     0.20679602026939392,
+     0.9783788323402405,
+     -0.0029866937547922134,
+     -3.123437153362829e-08
+    ],
+    [
+     0.23385615646839142,
+     -0.04646458104252815,
+     0.9711595773696899,
+     -3.4408830629217846e-07
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_L_Skirt_D_05": [
+    [
+     0.9491735696792603,
+     -0.19773779809474945,
+     -0.244883194565773,
+     -5.988086195429787e-05
+    ],
+    [
+     0.18869704008102417,
+     0.9801945686340332,
+     -0.060090627521276474,
+     -7.057491166051477e-05
+    ],
+    [
+     0.25191545486450195,
+     0.010827713645994663,
+     0.9676880240440369,
+     -5.059506656834856e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_L_Skirt_D_06": [
+    [
+     0.9870226383209229,
+     0.15792116522789001,
+     -0.029126040637493134,
+     1.75589848367963e-05
+    ],
+    [
+     -0.15256667137145996,
+     0.9787814021110535,
+     0.13678163290023804,
+     3.172807555529289e-05
+    ],
+    [
+     0.05010879412293434,
+     -0.13056273758411407,
+     0.9901730418205261,
+     -2.6205739231954794e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_R_Skirt_D_01": [
+    [
+     0.999749481678009,
+     0.019018037244677544,
+     0.011811037547886372,
+     1.146304657595465e-05
+    ],
+    [
+     -0.01902282051742077,
+     0.9998206496238708,
+     0.00029535818612203,
+     -0.0008496170630678535
+    ],
+    [
+     -0.011803274042904377,
+     -0.000519963854458183,
+     0.9999310374259949,
+     1.1269914466538467e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_R_Skirt_D_02": [
+    [
+     0.9727464318275452,
+     0.21990658342838287,
+     -0.07353407144546509,
+     -7.253079729707679e-06
+    ],
+    [
+     -0.22542084753513336,
+     0.9711591601371765,
+     -0.07768554985523224,
+     1.3759300600213464e-05
+    ],
+    [
+     0.054329849779605865,
+     0.0921444445848465,
+     0.9942613840103149,
+     1.8510357904233388e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_R_Skirt_D_03": [
+    [
+     0.9842409491539001,
+     0.10363680124282837,
+     -0.14327764511108398,
+     9.014193892653566e-06
+    ],
+    [
+     -0.08639296889305115,
+     0.9887933135032654,
+     0.12174948304891586,
+     -3.032239510503132e-05
+    ],
+    [
+     0.15428957343101501,
+     -0.10745249688625336,
+     0.9821663498878479,
+     -5.516151873052877e-07
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_R_Skirt_D_04": [
+    [
+     0.9698299169540405,
+     0.20186185836791992,
+     -0.13666917383670807,
+     9.549676178721711e-06
+    ],
+    [
+     -0.185357466340065,
+     0.9747646450996399,
+     0.12440265715122223,
+     -3.794096483034082e-05
+    ],
+    [
+     0.15833231806755066,
+     -0.09531698375940323,
+     0.9827736616134644,
+     -6.567210220964625e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_R_Skirt_D_05": [
+    [
+     0.9873749017715454,
+     0.15504877269268036,
+     -0.03240419179201126,
+     -2.7791115826403257e-06
+    ],
+    [
+     -0.15052640438079834,
+     0.9821507334709167,
+     0.1127946600317955,
+     6.056180427549407e-05
+    ],
+    [
+     0.04931439459323883,
+     -0.10649294406175613,
+     0.9930905103683472,
+     7.348380677285604e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Ctr_R_Skirt_D_06": [
+    [
+     0.9723639488220215,
+     -0.21348094940185547,
+     0.09452767670154572,
+     1.0278411537001375e-05
+    ],
+    [
+     0.198716402053833,
+     0.9692843556404114,
+     0.14491921663284302,
+     -4.85245323034178e-07
+    ],
+    [
+     -0.12256168574094772,
+     -0.1221301406621933,
+     0.9849172830581665,
+     3.0998406145954505e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_C_01": [
+    [
+     0.9942811131477356,
+     -0.10306832194328308,
+     0.02794315293431282,
+     -1.841424023041327e-06
+    ],
+    [
+     0.10278398543596268,
+     0.9946377277374268,
+     0.011430729180574417,
+     -4.231714774505235e-05
+    ],
+    [
+     -0.028971416875720024,
+     -0.008493241854012012,
+     0.9995453357696533,
+     -3.892161475960165e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_C_02": [
+    [
+     0.9810678958892822,
+     -0.15933480858802795,
+     0.11008600145578384,
+     -4.554886254481971e-05
+    ],
+    [
+     0.09191863238811493,
+     0.8834235072135925,
+     0.4594723582267761,
+     5.639030860038474e-05
+    ],
+    [
+     -0.17046253383159637,
+     -0.4406551122665405,
+     0.8813426494598389,
+     -9.155308362096548e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_C_03": [
+    [
+     0.9830225706100464,
+     -0.17979109287261963,
+     -0.03665203973650932,
+     1.4649409422418103e-05
+    ],
+    [
+     0.18182753026485443,
+     0.9813089966773987,
+     0.0630083903670311,
+     0.00012449658242985606
+    ],
+    [
+     0.024638671427965164,
+     -0.06860291957855225,
+     0.9973395466804504,
+     2.8099241262680152e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_C_04": [
+    [
+     0.9847013354301453,
+     -0.16440434753894806,
+     -0.057743851095438004,
+     5.647402213071473e-05
+    ],
+    [
+     0.16723790764808655,
+     0.9847363829612732,
+     0.04821907728910446,
+     -2.8635156922973692e-05
+    ],
+    [
+     0.04893505200743675,
+     -0.05713832750916481,
+     0.9971663951873779,
+     -1.537202660983894e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_C_05": [
+    [
+     0.9895223379135132,
+     0.11176750063896179,
+     -0.09140180796384811,
+     1.768549373082351e-05
+    ],
+    [
+     -0.10925097018480301,
+     0.9934974908828735,
+     0.032101429998874664,
+     -2.916937773989048e-05
+    ],
+    [
+     0.0943952277302742,
+     -0.02177937515079975,
+     0.9952966570854187,
+     5.972619305794069e-07
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_C_06": [
+    [
+     0.8330146670341492,
+     0.5433782339096069,
+     -0.10404521226882935,
+     5.224709821050055e-05
+    ],
+    [
+     -0.5374529957771301,
+     0.8394115567207336,
+     0.08082696050405502,
+     5.683670224243542e-06
+    ],
+    [
+     0.13125599920749664,
+     -0.011410658247768879,
+     0.9912832975387573,
+     -1.531089401396457e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_L_Skirt_C_07": [
+    [
+     0.914752721786499,
+     0.3926202952861786,
+     -0.09527376294136047,
+     1.3812240467814263e-05
+    ],
+    [
+     -0.37541571259498596,
+     0.913173496723175,
+     0.15867599844932556,
+     6.216772453626618e-05
+    ],
+    [
+     0.14930088818073273,
+     -0.10938213020563126,
+     0.982722818851471,
+     -2.2074455046094954e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_C_01": [
+    [
+     0.9981493353843689,
+     0.04775802046060562,
+     0.03768268972635269,
+     5.8830799389397725e-05
+    ],
+    [
+     -0.0478203110396862,
+     0.9988576769828796,
+     0.0007536468910984695,
+     0.0004821569309569895
+    ],
+    [
+     -0.03760361298918724,
+     -0.0025542506482452154,
+     0.9992898106575012,
+     2.624925400596112e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_C_02": [
+    [
+     0.9332911372184753,
+     0.2700417935848236,
+     0.2367357611656189,
+     -1.250839795829961e-05
+    ],
+    [
+     -0.3264411687850952,
+     0.9126829504966736,
+     0.2458464801311493,
+     2.9625014576595277e-05
+    ],
+    [
+     -0.14967644214630127,
+     -0.3067260682582855,
+     0.9399541616439819,
+     3.7508975765376817e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_C_03": [
+    [
+     0.9877870082855225,
+     0.153690904378891,
+     -0.02562893182039261,
+     -1.553280344523955e-05
+    ],
+    [
+     -0.1503818929195404,
+     0.9834178686141968,
+     0.10135328024625778,
+     0.00012076256825821474
+    ],
+    [
+     0.04078112542629242,
+     -0.09626126289367676,
+     0.9945193529129028,
+     1.2165009138698224e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_C_04": [
+    [
+     0.9652727842330933,
+     0.2427815943956375,
+     -0.09646298736333847,
+     -5.0825010475819e-06
+    ],
+    [
+     -0.23323924839496613,
+     0.9672238826751709,
+     0.10039319843053818,
+     -6.004489705446758e-07
+    ],
+    [
+     0.11767452210187912,
+     -0.07440776377916336,
+     0.990263044834137,
+     -4.5497145606532285e-07
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_C_05": [
+    [
+     0.9685407280921936,
+     0.20400206744670868,
+     -0.14253291487693787,
+     -2.195467459387146e-05
+    ],
+    [
+     -0.1919829249382019,
+     0.9769154787063599,
+     0.09367091953754425,
+     5.80310334044043e-05
+    ],
+    [
+     0.15835249423980713,
+     -0.06335997581481934,
+     0.9853469729423523,
+     1.8124004782293923e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_C_06": [
+    [
+     0.9929873943328857,
+     -0.10951528698205948,
+     -0.04450445622205734,
+     -2.8873862447653664e-06
+    ],
+    [
+     0.11380275338888168,
+     0.9874827861785889,
+     0.10921663045883179,
+     -3.112691410933621e-05
+    ],
+    [
+     0.031986430287361145,
+     -0.11351564526557922,
+     0.9930214285850525,
+     -1.4099059626460075e-06
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_R_Skirt_C_07": [
+    [
+     0.7621452808380127,
+     -0.6368653774261475,
+     -0.11634697020053864,
+     5.294148650136776e-05
+    ],
+    [
+     0.6470780372619629,
+     0.7436426877975464,
+     0.16818226873874664,
+     -2.3746188162476756e-05
+    ],
+    [
+     -0.020588867366313934,
+     -0.20346486568450928,
+     0.9788662195205688,
+     -2.8625874620047398e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_B_Skirt_B_01": [
+    [
+     0.9979695081710815,
+     -0.05130680277943611,
+     0.0377635695040226,
+     0.0034102986101061106
+    ],
+    [
+     0.05372852832078934,
+     0.9963600039482117,
+     -0.06618311256170273,
+     -0.0017422751989215612
+    ],
+    [
+     -0.03423048555850983,
+     0.06807764619588852,
+     0.9970928430557251,
+     0.005554313771426678
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_B_Skirt_B_02": [
+    [
+     0.979850709438324,
+     -0.011753501370549202,
+     -0.1993965357542038,
+     4.353092299425043e-05
+    ],
+    [
+     0.013180917128920555,
+     0.9998898506164551,
+     0.005832178518176079,
+     -5.694142964784987e-05
+    ],
+    [
+     0.19930775463581085,
+     -0.008342822082340717,
+     0.9799015522003174,
+     5.6657889047073695e-08
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_B_Skirt_B_03": [
+    [
+     0.9541672468185425,
+     -0.1509723961353302,
+     -0.25840067863464355,
+     9.545880857331213e-06
+    ],
+    [
+     0.14099247753620148,
+     0.9883905053138733,
+     -0.05683133006095886,
+     -2.963514816656243e-05
+    ],
+    [
+     0.26397716999053955,
+     0.017794283106923103,
+     0.9643647074699402,
+     3.9553757602561745e-08
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "Skn_B_Skirt_B_04": [
+    [
+     0.9813395142555237,
+     -0.13095271587371826,
+     -0.14079326391220093,
+     -1.825077379180584e-05
+    ],
+    [
+     0.12180378288030624,
+     0.9899411797523499,
+     -0.07179275900125504,
+     3.122115595033392e-05
+    ],
+    [
+     0.14878050982952118,
+     0.05330326780676842,
+     0.9874318838119507,
+     -3.0133212931104936e-05
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  }
+ },
+ "prepare": {}
+}
