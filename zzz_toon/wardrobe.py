@@ -275,14 +275,6 @@ def build(scene,request):
     aux=Path(extra.get('uv',DATA/role/'uv.fbx')) if spec['uv'] else None
     if aux and not aux.is_file():
         aux = None
-    from .public_inputs import resolve_support
-    availability = resolve_support(cfg, index['common'], request)
-    scene['zzz_local_inputs'] = json.dumps(availability, ensure_ascii=False)
-    if not bg and not all(Path(extra.get(key, DATA/(key+'.png'))).is_file()
-                          for key in ('large', 'small', 'screen_shade')):
-        if any(key in extra for key in ('large', 'small', 'screen_shade')):
-            raise ValueError('Select all three page layers or one complete background image.')
-        bg = DATA/'studio-tile.png'
     props=scene.zzz_toon
     wardrobe_slots.save_inputs(props,request)
     props.preview_pose=False
@@ -297,6 +289,11 @@ def build(scene,request):
         reference=json.loads((DATA/role/'geometry.json').read_text(encoding='utf8'))
         if asset_signature(objects)!=reference:
             raise ValueError('模型的骨架、蒙皮、网格或材质槽与所选服装不匹配：'+role)
+    from .fbx_support import recover
+    from .public_inputs import resolve_support
+    generated = recover(source, spec['fbx'], objects, cfg) if verified_file else []
+    availability = resolve_support(cfg, index['common'], request, generated)
+    scene['zzz_local_inputs'] = json.dumps(availability, ensure_ascii=False)
     arm,=[o for o in objects if o.type=='ARMATURE']
     stage=cfg['stage']
     # The reference camera and lighting are in the registered preview world.
@@ -367,7 +364,7 @@ def build(scene,request):
     scene.frame_set(1)
     wardrobe_page.attach(scene,DATA,page,role,bg,extra)
     scene['zzz_wardrobe']=json.dumps(dict(role=role,clip=str(action),bones=bone_count,shape_curves=shapes,
-                  frames=scene.frame_end,background=str(bg or 'Captured outfit artwork'),camera=limits),ensure_ascii=False)
+                  frames=scene.frame_end,background=str(bg or 'Layered wardrobe page'),camera=limits),ensure_ascii=False)
     setup_view()
 
 

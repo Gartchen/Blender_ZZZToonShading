@@ -510,6 +510,17 @@ def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key
             if surface_uv.supported(prm, kind, mode, *maps):
                 users = [o for o in meshes if g in slots(o.data)]
                 inputs = (P.get("native_surface") or {}).get("mesh_inputs", {})
+                if P.get('wardrobe_texture_files'):
+                    # A local outline Mesh can carry the original backside UV
+                    # as well. Prefer an explicitly bound surface source or FBX UV.
+                    inputs = dict(inputs)
+                    outline_inputs = (P.get('native_outline') or {}).get('mesh_inputs', {})
+                    for ob in users:
+                        stream = outline_inputs.get(ob.name, {})
+                        uv = ob.data.get('zzz_texcoord3_uv', 'UV3')
+                        if uv not in ob.data.uv_layers and stream.get('path', '').lower().endswith('.json'):
+                            if not inputs.get(ob.name, {}).get('source', '').lower().endswith('.json'):
+                                inputs[ob.name] = dict(stream, source=stream['path'])
                 warnings, sources = surface_uv.bind(users, inputs, prm)
                 rep.setdefault("surface_texcoord3", {})[g] = sources
                 if warnings:

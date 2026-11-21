@@ -321,5 +321,5 @@ def draw(layout,settings):
         for item in items:
             row=body.column(align=True)
             row.label(translate=False,text=tr(item.title)+'  ·  '+(item.default.name if item.default else item.name))
-            placeholder='自动匹配或生成' if group=='采样图集' else ('使用内置文件' if item.default and item.default.is_file() else '选择文件')
+            placeholder='自动匹配或生成' if group in ('采样图集','滚动背景') or item.prop=='lut' else ('使用内置文件' if item.default and item.default.is_file() else '选择文件')
             row.prop(assets,item.prop,text='',placeholder=tr(placeholder))

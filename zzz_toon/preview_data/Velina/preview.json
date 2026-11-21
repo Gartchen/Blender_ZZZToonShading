@@ -244,7 +244,8 @@
     "draw": 57,
     "decoded_shader": "0_DeferredShadingForCharacter_progFragment_26"
    },
-   "scope": "Velina captured outfit preview frame only; not a universal scene default."
+   "scope": "Velina captured outfit preview frame only; not a universal scene default.",
+   "fallback_model": "wardrobe-log-grade-v1"
   },
   "native_outline": {
    "schema": "zzz-toon-outline/1",
@@ -3261,5 +3262,20 @@
    ]
   }
  },
- "prepare": {}
+ "prepare": {},
+ "fbx_recovery": {
+  "Velina_Body2": {
+   "handedness": "uv0",
+   "sha256": "ebbd35e438e9dea2a992f7583be469d61225f1f27898a1d0b4bbd3f6cb83ee30"
+  },
+  "Velina_Weapon1": {
+   "handedness": "uv0",
+   "sha256": "bf921d8cd62749161856fc9e608f4e0cf5a8c9623658e1e22dafb50cae7a26bd"
+  },
+  "Velina_Weapon2": {
+   "handedness": "uv0",
+   "sha256": "75422ee1f781055e42b895a6438ff1fa0307bd202e2f05454e85ddee517f3221"
+  }
+ },
+ "face_corner_signature": "3e1cc85a0bf2a998a6f546e0ddd7c997269dc1db83039ea3ed5531c9ed4df36e"
 }

@@ -9,6 +9,9 @@ import math,os
 def _image(profile):
     import bpy
     size = profile['size']
+    if profile.get('source_format') == 'wardrobe-log-grade-v1':
+        from .wardrobe_grade import image
+        return image(size)
     if profile.get('source_format') == 'dds-rgba16f':
         import hashlib
         from pathlib import Path
@@ -45,7 +48,8 @@ def validate(p):
     if not isinstance(p.get('enabled'),bool):raise ValueError('Character LUT enabled must be explicit')
     if type(p.get('size')) is not int or not 2<=p['size']<=128:raise ValueError('Invalid LUT size')
     if not isinstance(p.get('exposure'),(int,float)) or not math.isfinite(p['exposure']) or p['exposure']<=0:raise ValueError('Invalid LUT exposure')
-    if not isinstance(p.get('texture'),str) or not os.path.isfile(p['texture']):raise ValueError('Character LUT texture is missing')
+    if p.get('source_format') != 'wardrobe-log-grade-v1':
+        if not isinstance(p.get('texture'),str) or not os.path.isfile(p['texture']):raise ValueError('Character LUT texture is missing')
     if p.get('layout')!='linear-strip-dds-row0-at-uv0':raise ValueError('Unsupported character LUT layout')
     return p
 
@@ -86,7 +90,7 @@ def build(tree,src,weight,alpha,profile):
     class Target:node_tree=tree
     b=NB(Target());o=Ops(b);size=p['size']
     im=_image(p)
-    texture=b.node('CompositorNodeImage');texture.image=im;texture.label='Captured native character LUT (linear)'
+    texture=b.node('CompositorNodeImage');texture.image=im;texture.label='Wardrobe character grade (linear)'
     sep=b.node('ShaderNodeSeparateXYZ');b.link(src,sep.inputs[0])
     q=[o.mul(size-1,o.sat(o.add(o.mul(.0734997839,o.m('LOGARITHM',o.m('MAXIMUM',1e-30,o.add(o.mul(x,p['exposure']*5.55555582),.0479959995)),2.)),.386036009))) for x in sep.outputs]
     blue=o.m('FLOOR',q[2]);fraction=o.sub(q[2],blue)

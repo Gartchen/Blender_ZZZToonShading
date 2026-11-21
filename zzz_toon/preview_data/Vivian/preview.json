@@ -184,7 +184,8 @@
     "capture": "000061-ps-t5=45fd291e-vs=c85e3fc3d2f75d34-ps=f1f227ccc44b3309.dds",
     "sha256": "42fd6aedb691cbec4b7af542ca2654d346d3a4fe82b5f85347596daf12d0ed1b"
    },
-   "scope": "Vivian default outfit; measured frame 2026-11-20 20:08:37 only."
+   "scope": "Vivian default outfit; measured frame 2026-11-20 20:08:37 only.",
+   "fallback_model": "wardrobe-log-grade-v1"
   },
   "native_outline": {
    "schema": "zzz-toon-outline/1",
@@ -864,5 +865,9 @@
     }
    }
   }
- }
+ },
+ "fbx_recovery": {},
+ "primary_uv_is_back_uv": [
+  "Vivian_Body_2"
+ ]
 }

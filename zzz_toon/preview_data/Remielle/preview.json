@@ -244,7 +244,8 @@
     "draw": 69,
     "decoded_shader": "0_DeferredShadingForCharacter_progFragment_26"
    },
-   "scope": "Remielle captured outfit preview frame only; not a universal scene default."
+   "scope": "Remielle captured outfit preview frame only; not a universal scene default.",
+   "fallback_model": "wardrobe-log-grade-v1"
   },
   "native_outline": {
    "schema": "zzz-toon-outline/1",
@@ -3434,5 +3435,14 @@
     3553
    ]
   }
- }
+ },
+ "fbx_recovery": {
+  "Remielle_Origin_Body_2": {
+   "handedness": "negative_binormal",
+   "sha256": "707e1f96a03d247dd07537ac377d51821eb63c577c9eb70f3ccd5b2db51a12dc",
+   "m_UV1": "UV3",
+   "m_UV3": "UV1"
+  }
+ },
+ "face_corner_signature": "bd7b33ade7c611d1e07ea65af779ccaa4377f186b5a1e2d3b3647b4a1c9412a3"
 }

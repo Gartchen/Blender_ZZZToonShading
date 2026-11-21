@@ -2,7 +2,7 @@
 bl_info = {
     "name": "ZZZ Toon",
     "author": "ZZZToonShading project",
-    "version": (0, 47, 5),
+    "version": (0, 47, 6),
     "blender": (5, 3, 0),
     "location": "3D View > Sidebar > ZZZ Toon",
     "description": "用逐项指定的模型、贴图和待机动画生成 Remielle、Velina、Vivian 的服装预览",

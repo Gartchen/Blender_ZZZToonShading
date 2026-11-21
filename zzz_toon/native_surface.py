@@ -40,7 +40,10 @@ def apply(objs,scene,p):
  mats={m for ob in selected for m in ob.data.materials if m and m.use_nodes and (m.get('zzz_surface_tbn_v34') or any(n.type=='NORMAL_MAP' and n.outputs[0].is_linked for n in m.node_tree.nodes))}
  for ob in selected:
   preflight(ob,p['mesh_inputs'][ob.name].get('direction_frame','object_normal'))
-  with np.load(p['mesh_inputs'][ob.name]['path']) as a:
+  path=p['mesh_inputs'][ob.name]['path']
+  if path.lower().endswith('.json'):
+   continue  # load_inputs verifies the original mesh indices, UVs and rest positions.
+  with np.load(path) as a:
    if 'valid' not in a or a['valid'].shape!=(len(ob.data.vertices),) or not np.equal(a['valid'],True).all():raise ValueError('Unverified surface vertices: '+ob.name)
  for mat in mats:
   if any(ob.type=='MESH' and mat.name in ob.data.materials and ob not in selected for ob in bpy.data.objects):raise ValueError('Surface material also used by an unprepared mesh: '+mat.name)

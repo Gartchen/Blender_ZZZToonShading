@@ -263,7 +263,9 @@ def material(name,te,prm,p,settings):
 
 def apply(ob,scene,te,prm,profile,settings):
     p=validate(profile)
-    if not p or not load_inputs(ob,p):return False
+    if not p or (ob.get('zzz_surface_only_frame') and ob.name not in p.get('mesh_inputs', {})):
+        return False
+    if not load_inputs(ob,p):return False
     if scene.camera is None or scene.camera.data.type!='PERSP':raise ValueError('Native outline production path currently requires a perspective camera')
     prepare_skin(ob);mat=material('ZZZ_NativeOutline_'+ob.name,te,prm,p,settings);fl=prm['floats']
     required=('_OutlineWidth','_OutlineWidthUIAdjustment','_MaxOutlineZOffset')

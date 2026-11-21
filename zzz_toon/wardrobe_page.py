@@ -37,12 +37,19 @@ def attach(scene,folder,page,role,custom=None,art=None):
     def artwork(path,linear_mask):
         key=(path,linear_mask)
         if key not in images:
-            im=bpy.data.images.load(str(path),check_existing=False)
+            if path.is_file():
+                im=bpy.data.images.load(str(path),check_existing=False)
+            elif path.parent == folder and path.stem in ('large', 'small', 'screen_shade'):
+                from .studio_page import layer
+                im=layer(path.stem)
+            else:
+                raise ValueError('Cannot find background image '+str(path))
             if min(im.size)<=0:
                 raise ValueError('Cannot decode background image '+str(path))
             if linear_mask:
                 im.colorspace_settings.name='Non-Color'
-            im.pack()
+            if not im.packed_file:
+                im.pack()
             images[key]=im
         return images[key]
     def image(path,coords,repeat=False,linear_mask=False,label=None):

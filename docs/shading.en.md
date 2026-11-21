@@ -46,13 +46,15 @@ Each of the five material IDs can select different shallow-shadow, deep-shadow, 
 | Optional file | Contract and fallback |
 | --- | --- |
 | Secondary UV FBX | Matches the primary mesh and polygon corners. Without it, the available UVs on the main FBX are used. |
-| Character LUT | A linear EXR strip, N² wide and N high. These presets use N=32. The captured DDS row zero corresponds to the bottom UV row of the strip. An empty field skips this grade. |
+| Character LUT | A linear EXR strip, N² wide and N high. These presets use N=32. The captured DDS row zero corresponds to the bottom UV row of the strip. An empty field synthesizes the strip from a fitted numeric model. Supplying a local strip overrides that model. |
 | Mip atlas | A W×2W linear atlas for a square source of width W. Level zero occupies the bottom square and each subsequent level halves in size. In its absence the source is downsampled. |
-| Surface, outline, face and eye files | Each slot accepts its named original mesh JSON or a project-generated NPZ with the expected arrays. The relevant loaders check positions, triangle indices or UV correspondence. The base FBX or basic material remains available with empty slots. |
-| Background and fine detail | One seamless color image gives a scrolling page. For the original layout supply the large lettering, small lettering and shading plate. The fine-detail input belongs to the material that requested it. |
+| Surface, outline, face and eye files | Each slot accepts its named original mesh JSON or a project-generated NPZ with the expected arrays. The relevant loaders check positions, triangle indices or UV correspondence. Empty slots trigger extraction of verified tangent, color and UV streams from the matching FBX where available. Remaining parts use base shading. |
+| Background and fine detail | One seamless color image gives a scrolling page. For the original layout supply the large lettering, small lettering and shading plate. Missing page layers use original procedural art. The fine-detail input belongs to the material that requested it. |
 
 ## 5 · Locate a mismatch
 
 Hold camera, pose and light fixed and change one input at a time. Check silhouette and occlusion, then base color, then shadow weight. Isolate ordinary specular, MatCap and composition last. Matching base color at the same UV with a moving shadow boundary points to normals, vertex colors or skinning. A matching character target with a different final page suggests inspecting color space, LUT and Bloom order. Check role-specific adjustments after a discrepancy repeats for the same outfit.
 
 A GPU capture identifies the bindings, constants and intermediate values for one draw. A recording shows whether the result holds up during motion. Device sampling, real-time AA, secondary motion and per-role video color adjustments have different sources of uncertainty. Wardrobe-specific appearance adjustments live in the [role presets](../zzz_toon/wardrobe_data) and are applied only to the selected outfit.
+
+See the [public input audit](inputs.en.md) for automatic reconstruction, local overrides and remaining dependencies in each outfit preset.
