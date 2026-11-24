@@ -1,38 +1,55 @@
-# Wardrobe inputs and material inspection
+# Which file goes where?
 
-[简体中文](inputs.zh-CN.md) · [Installation and quick start](../README.md) · [Shader walkthrough](shading.en.md)
+[简体中文](inputs.zh-CN.md) · [Back to setup](../README.md)
 
-## Choosing inputs
+**To watch a character move**, get the model, textures and idle animation for the same outfit. **To find a part on the model**, choose **Generic**. You can start with just the model.
 
-| Input | How v0.52.0 uses it |
+## The files to find first
+
+| File | Where to put it | What it does |
+| --- | --- | --- |
+| The character’s `.fbx` file | Model FBX | Gives the character its shape and the bones that move it. |
+| The matching `.anim` file or an exported AnimationClip JSON | Idle animation | Tells the character how to stand, breathe or sway. The add-on reads Unity’s text form of `.anim`. |
+| Images for the face, hair, clothes and other parts | The image box for that part | Supply color, shadow and shine. Pick the file named beside the box. |
+| A background image that tiles smoothly | Scrolling background | Fill this to use your own backdrop. Leave it empty to use the built-in scrolling pattern. |
+
+For example, `Vivian_Weapon_D.png` goes in the base color box under **Vivian → Weapon and wings**. Her parasol is her weapon. If you renamed an image, you can still pick it by hand.
+
+## Two extra inputs in Generic
+
+- A **Material JSON** is a list of settings from the game. It says which pictures a piece of cloth uses and what color its shadow should be. Pick that file in the material’s box. The add-on looks for its images in nearby export folders. If two files have the same name, pick the right one yourself. An animation JSON goes in the idle box.
+- A **FrameAnalysis folder** is a record of how the game drew one frame. If you have one for the same outfit, pick the folder that contains the draw files. You can build a preview without it, using estimated lighting. An ordinary screenshot or video only shows the finished picture.
+
+<a id="generic-material-slot-inspector"></a>
+
+## How to read the results
+
+1. Choose **Generic → Read FBX slots → All model slots** and select a row. Click the magnifier to see whether it belongs to a sleeve, some hair or an accessory. Click **Clear highlight** when done.
+2. After changing a file, click **Check input files**. In a project you have already built, first turn on **Show current input check**. Build the scene again to see how the change looks.
+3. To see what went into the preview, open the row’s details in the generated project. **Located file** means the add-on found an image on disk. **Used** means the add-on used it to shade that part.
+
+![The magnifier highlights the faces on Vivian that belong to the selected slot](media/generic-slot-inspector.jpg)
+
+| What the panel says | What it means | What to do |
+| --- | --- | --- |
+| Missing | A file the material needs could not be found. | Pick the file named in the message. |
+| Ambiguous | Several files have the same name. | Pick the one for this outfit. |
+| Outside | The part or effect goes beyond the shading shared by the four outfits. | Use the magnifier to find it. To see a full outfit for one of the three preset characters, choose the character’s name. |
+| Enabled in draw | The game switched the effect on when it drew that part. | Check the game image to see where it shows up. |
+| Inactive in draw | The switch was off, or its input had no effect in that draw. | This message alone doesn’t call for another image. |
+| No verified draw for this slot | The record doesn’t tell us whether the effect was active here. | If you need to know, check that the capture is for the same outfit. |
+
+**For example**, the game draws a frame in pieces, and each draw has a number. On Remielle’s face, the blush input was zero in draws 44 and 57. Those draws added no blush. On Vivian’s body, draw 37 switched on an extra layer of color. Each result describes that draw in that frame.
+
+## I filled in the images. Why does one part still look wrong?
+
+Some parts use a second set of **UVs**. UVs tell Blender which patch of a flat picture goes on each face of a 3D model. Look inside Vivian’s parasol below. The left view uses the basic files. The middle one adds the matching UV model. The right one uses the full reference files.
+
+![Inside Vivian’s parasol with the basic files, then with extra UVs, then with the full reference files](media/vivian-parasol-uv.jpg)
+
+| What you see | What to check first |
 | --- | --- |
-| Main FBX | Supplies the rig, mesh names, material slots, vertex colors and available UVs. Generic can scan and locate slots before you provide other files. |
-| Idle animation | Use the matching Unity text `.anim` or parsed AnimationClip JSON to build a playable scene. Bone paths must match the rig. |
-| Textures and material table | The three dedicated outfits expose named image slots. Generic reads the selected local material JSON and searches adjacent export folders for its image references. Assign a path manually for missing or ambiguous matches. |
-| Secondary UVs and surface streams | A matching multi-UV FBX can recover face and back-face coordinates. Dedicated slots also accept the listed surface, eye, outline, LUT and mip files. Choose the original exports for the same model. |
-| Background | Use the generated scrolling page, a seamless color image or the page-layer inputs exposed by the selected preset. |
-| Wardrobe capture for Generic | Choose the FrameAnalysis directory containing the draws for the same model and outfit. The importer checks geometry and UVs before reading supported light, eye-index and fringe data. With assets alone, the preview uses an approximate wardrobe environment. |
-
-For Remielle’s wing or body outlines, check the source mesh inputs. For Velina’s face, check the secondary UVs. For Vivian’s parasol, check the front and back UVs and the parasol texture slots. The three preset galleries use complete local inputs.
-
-## Generic material slot inspector
-
-In v0.52.0, **Generic** inspects the four tested wardrobe outfits through the same six shading paths. A model can vary in its colors, textures, MatCap assignments and captured light values. A slot that cannot be mapped to a shared part remains in the inventory. If its name is unfamiliar, expand the material and choose **Shared part** when you know its role. Clothing or hair can use the shared path while an extra effect is reported separately.
-
-![Vivian Body 1 highlighted from the material slot list](media/generic-slot-inspector.jpg)
-
-1. Select **Generic**, choose the main FBX, then click **Read FBX slots**. You can inspect the model before supplying any animation or textures. **All model slots** lists the mesh name, zero-based slot index and source material. Reused materials have a row for each assignment.
-2. Select a row to see its details. Click the magnifier to center and highlight its faces in solid view. This works on excluded faces of a mixed mesh and on entire hidden accessories. The scanner shows the FBX rest pose. A generated scene shows the pose at the time you click. An empty slot has a row and a message. **Clear highlight** restores the previous view. The highlight is excluded from rendering.
-3. Supply material files, images, an idle animation and, if available, a matching wardrobe capture. Use **Check input files** after editing paths. A required base color can be located and corrected here before building. Open the generated scene to inspect the saved shader bindings and draw evidence. **Show current input check** lets you check edits separately from the saved result.
-4. Expand **Material table fields** to inspect scalar and color values. **Read** means the material builder consulted the field when preparing or constructing shader nodes. Some values control which nodes are created. **Used** on a texture means the image feeds the constructed surface or a feature output, or supplies the eye color baked into the mesh. A shader connection alone cannot measure its contribution to a particular pixel.
-
-| Inspector result | What the evidence establishes |
-| --- | --- |
-| Located file | The image resolved on disk. The inspector lists its shader use separately. |
-| Missing or ambiguous | A required or referenced file is unavailable, or more than one file matches. Assign the correct local file and check again. An empty optional binding has no file requirement. An omitted material table leaves its original bindings unverified. |
-| Outside | The slot has no shared material assignment, or this particular texture or effect falls outside its part’s shared calculation. A declaration can exist on several characters. |
-| Enabled in draw | A matching draw has the relevant switch enabled and the expected binding. For example, Vivian Body 1 draw 37 enables the extra overlay. |
-| Inactive in draw | A verified switch is off or the sampled input is neutral. Remielle’s face draws 44 and 57 have an all-zero blush input across the captured mip levels. |
-| No verified draw | The frame was omitted or the inspector could not associate a supported draw with this slot. Its activity remains unknown. |
-
-The four test models contain **75 source slots** across shared surfaces, projection helpers and excluded geometry. The dedicated outfit presets cover Remielle, Velina and Vivian. Miyabi is a Generic validation model. The inspection covers the tested wardrobe frame and supported inputs. New uniforms, unknown passes and omitted game assets can require investigation before an effect can be identified.
+| The pattern inside Vivian’s parasol is wrong | Check the weapon textures, then the matching FBX with extra UVs. |
+| The shadow on Velina’s face has the wrong shape | Check the face lightmap, then the extra UVs for her face. |
+| The outline of Remielle’s wings looks wrong | Check that the model is for the right outfit. If you have the matching source mesh files, use the named extra input boxes. |
+| The idle animation won’t play | Check that the clip belongs to the model and uses the same bone names and paths. |

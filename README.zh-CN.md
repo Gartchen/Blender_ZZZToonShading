@@ -1,71 +1,73 @@
-# ZZZ Toon · 绝区零服装预览 Blender 插件
+# ZZZ Toon · 在 Blender 里看绝区零角色
 
-[English](README.md) · [下载 v0.52.0](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip) · [输入与材质槽检查指南](docs/inputs.zh-CN.md) · [着色复现教程](docs/shading.zh-CN.md)
+[English](README.md) · [下载插件 v0.52.0](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip)
 
-用自己的模型、贴图和待机动画，在 Blender EEVEE 里生成可编辑的服装预览场景。播放时背景循环滚动，可以旋转角色，也可以在全身和近景之间连续推拉镜头。
+想在 Blender 里像游戏试衣间那样看角色？准备好角色文件，点一下 **配置并打开服装预览**，就能看角色站在滚动背景前播放待机动作。你可以转动角色，也可以拉近看脸。
 
-## v0.52.0 提供什么
+## 第一次用，先选哪一项？
 
-| 侧栏选项 | 适合什么情况 |
-| --- | --- |
-| **Remielle、Velina、Vivian** | 观看这三套已验证服装。选择角色后会应用对应的材质、光照、镜头和 Bloom 参数。下方画廊展示这三份专用预设。 |
-| **通用 / Generic** | 用上述三套服装与星见雅默认服装共有的着色流程检查模型，范围涵盖脸、眼睛、眉睫、头发、身体一和身体二。星见雅选这个入口。 |
+| 我想做什么 | 在插件里选什么 | 要准备什么 |
+| --- | --- | --- |
+| 看 Remielle、Velina 或 Vivian 的服装 | 直接选角色名。配色、灯光和镜头已经配好。 | 该套服装的模型、贴图和待机动画 |
+| 看模型里的某张图用在身上哪里 | 选 **通用 / Generic**。星见雅也从这里进。 | 先准备模型就够了 |
 
-通用入口会列出 FBX 中**每个网格的全部材质槽**，包括预览中隐藏的配件。选行可读输入，点击放大镜可高亮对应的面。给出匹配的服装预览抓帧后，还能区分某次绘制启用的效果与已验证为中性的输入。四套测试模型共 75 个槽，均通过生成前和生成后的定位测试。[如何阅读检查结果](docs/inputs.zh-CN.md#通用材质槽检查器)
+插件和示例工程都需要你自己提供角色文件。**贴图**就是贴在模型上的图片。**待机动画**就是角色站着时呼吸、轻轻晃动的那段动作。
 
-## 安装
+## 把插件装进 Blender
 
-1. 下载 [zzz_toon-0.52.0.zip](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip)。这是发布页上用于安装的插件包，已在 Windows 和 Blender 5.3.0 测试。
-2. 在 Blender 打开 **编辑 → 偏好设置 → 插件 → 右上角菜单 → 从磁盘安装**，选择该 ZIP，启用 **ZZZ Toon**。如果正在使用已启用的旧安装，更新后重启 Blender 以载入新代码。
-3. 将鼠标移到 **3D 视图**，按 **N** 打开侧栏，选择 **ZZZ Toon** 标签，切换到 **中文** 或 **English**。
+1. 下载 **zzz_toon-0.52.0.zip**，保留 ZIP 原样。我们用 Windows 上的 Blender 5.3.0 做了测试。[下载安装包](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip)
+2. 打开 Blender，点 **编辑 → 偏好设置 → 插件**。点右上角的小菜单，选 **从磁盘安装**，选中刚下载的 ZIP。
+3. 找到 **ZZZ Toon**，确认它已启用。如果之前已经装过，更新后重启 Blender。
+4. 把鼠标移到能看见模型的 **3D 视图**，按 **N**。在右边的栏里点 **ZZZ Toon → 中文**。
 
-## 用专用预设观看服装
+## 第一次看角色，跟着做一遍
 
-1. 选择 **Remielle**、**Velina** 或 **Vivian**。也可以打开对应的[起始工程](examples)，里面已选好角色，资产栏留空。
-2. 填入带蒙皮的 **FBX** 和匹配的待机动画，支持 Unity 文本 `.anim` 或受支持的 AnimationClip JSON。导出时保留网格材质槽、骨骼路径、顶点色和 UV。
-3. 按标签填写贴图，包括该预设需要的脸部光照图、眼睛查色表及 MatCap。文件改过名也可手选。可选一张无缝背景图，留空则使用生成的滚动背景。
-4. 选择可写的工程目录，点击 **配置并打开服装预览**。Blender 会生成独立、可编辑的工程。点击 **进入全屏预览** 播放待机。需要导出时选择 **渲染 → 渲染动画**。
+下面用 **Remielle** 举例。用 Velina 或 Vivian 时，换成她自己的文件即可。
 
-| 全屏操作 | 效果 |
-| --- | --- |
-| 按住鼠标左键左右拖动 | 旋转角色 |
-| 按住左键上下拖动 | 上下移动取景位置 |
-| 滚轮向上 / 向下 | 拉近 / 拉远 |
-| Esc | 返回原布局 |
+1. 在 **角色** 里选 **Remielle**。如果你打开的是[示例工程](examples)，角色名已经选好了。
+2. 在 **模型 FBX** 里选她的 `.fbx` 文件。到 **待机动画** 选这套模型对应的动作文件。
+3. 按面板显示，展开 **脸部与眼睛、头发、服装、武器与羽翼、MatCap**。把这些栏里的基本贴图填齐，例如脸部底色用 `Remielle_Face_D.png`。背景可以先留空，插件会生成滚动背景。
+4. 在 **工程目录** 选一个用来存放作品的文件夹，点 **配置并打开服装预览**。完成后，Blender 会打开新生成的 `.blend` 工程。
+5. 点 **进入全屏预览**。按住左键左右拖动可以转身，上下拖动可以改变取景高度。滚轮向上拉近、向下拉远。按 **Esc** 回到原来的界面。
 
-## 用通用入口检查模型
+想导出视频，在生成的工程里点 **渲染 → 渲染动画**。如果卡在选文件这一步，可以按后面的表逐项对照。[模型、贴图和动画分别填哪一格](docs/inputs.zh-CN.md)
 
-1. 选择 **通用 / Generic**，填入主 FBX，点击 **读取模型槽位**。这时只需要模型，就可以在静止姿态下定位部件。
-2. 在 **模型全部材质槽** 中选中一行，点击放大镜居中并高亮对应面。点 **清除高亮** 恢复之前的视图。
-3. 要生成预览，再填入对应的待机和贴图。原始材质 JSON 提供配色与贴图绑定。可选填匹配的 **角色抓帧文件夹** 以读取支持的绘制证据。修改路径后点 **检查输入文件**。
-4. 打开生成工程，选择一行可查看着色用到的贴图、读取过的原表字段、交集外输入，以及匹配的绘制编号。没有已核实的绘制时，该效果是否生效仍待确认。[输入要求和判读示例](docs/inputs.zh-CN.md)
+## 只想知道一块材质用在哪里？
 
-## 专用预设画廊
+**材质槽**就是模型上的一个位置，告诉 Blender 哪些面共用一种外观。例如一把伞可以给伞面和伞柄各留一个槽。
 
-近景在匹配机位对照游戏抓帧与预设渲染。全身图另列游戏录屏以展示完整服装，GIF 展示 Blender 中的近景转身。示例使用完整的本地参考输入。
+选 **通用 / Generic**，填主 FBX，点 **读取模型槽位**。在 **模型全部材质槽** 里点一行旁边的放大镜，对应部分就会亮起来。点 **清除高亮** 回到原来的视图。
+
+这个入口用四套已测服装都有的做法来画脸、眼睛、眉睫、头发和两组身体材质。它也会列出额外的配件或效果。想知道“缺资源”和“本次绘制未生效”各是什么意思，可以看 Vivian 和 Remielle 的例子。[怎样读检查结果](docs/inputs.zh-CN.md#怎么看检查结果)
+
+## 三套服装的效果
+
+近景图对比游戏和 Blender。全身图还放了一帧游戏录屏，方便看整套衣服。动图是 Blender 里的转身效果。这里用到了各角色完整的参考文件。
 
 ### Remielle
 
-![Remielle 原生抓帧和 Blender 近景](docs/media/remielle-close.jpg)
+![Remielle 的脸和上衣，游戏与 Blender 近景对比](docs/media/remielle-close.jpg)
 
-![Remielle 原抓帧、全身游戏录屏和 Blender](docs/media/remielle-full.jpg)
+![Remielle 全身服装对比](docs/media/remielle-full.jpg)
 
-![Remielle Blender 近景转身](docs/media/remielle-turn.gif)
+![Remielle 在 Blender 里转身](docs/media/remielle-turn.gif)
 
 ### Velina
 
-![Velina 原生抓帧和 Blender 近景](docs/media/velina-close.jpg)
+![Velina 的脸和头发，游戏与 Blender 近景对比](docs/media/velina-close.jpg)
 
-![Velina 原抓帧、全身游戏录屏和 Blender](docs/media/velina-full.jpg)
+![Velina 全身服装对比](docs/media/velina-full.jpg)
 
-![Velina Blender 近景转身](docs/media/velina-turn.gif)
+![Velina 在 Blender 里转身](docs/media/velina-turn.gif)
 
 ### Vivian
 
-![Vivian 原生抓帧和 Blender 近景](docs/media/vivian-close.jpg)
+![Vivian 的脸和头发，游戏与 Blender 近景对比](docs/media/vivian-close.jpg)
 
-![Vivian 原抓帧、全身游戏录屏和 Blender](docs/media/vivian-full.jpg)
+![Vivian 的全身和伞对比](docs/media/vivian-full.jpg)
 
-![Vivian Blender 近景转身](docs/media/vivian-turn.gif)
+![Vivian 在 Blender 里转身](docs/media/vivian-turn.gif)
 
-游戏美术与参考画面归《绝区零》创作者所有。本项目由独立开发者制作。[着色原理与输入来源](docs/shading.zh-CN.md) · [社区着色器参考](https://github.com/Hoyotoon/HoyoToon)
+好奇衣服上的阴影和金属亮光是怎么画出来的？可以从一块白布看起。[图解角色着色](docs/shading.zh-CN.md)
+
+本项目由独立开发者制作。《绝区零》的游戏美术和参考画面归原作者所有。开发时参考了社区项目 [HoyoToon](https://github.com/Hoyotoon/HoyoToon)。
