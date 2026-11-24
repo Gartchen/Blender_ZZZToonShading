@@ -1,6 +1,6 @@
 # 一件白衣服，怎么画出绝区零里的样子？
 
-[English](shading.en.md) · [返回首页](../README.zh-CN.md) · [文件填在哪一格](inputs.zh-CN.md)
+[English](shading.en.md) · [项目总览](../README.zh-CN.md) · [第一次看角色](quickstart.zh-CN.md) · [文件填在哪一格](inputs.zh-CN.md)
 
 先看 Remielle 的袖口。它是白布，但褶皱处有一片偏蓝的阴影，旁边的银环又有一道很亮的反光。**着色器（shader）** 就是 Blender 用来决定“这一点该画成什么颜色”的一套规则。插件已经把这些规则接好了，只看角色可以直接用预设。
 

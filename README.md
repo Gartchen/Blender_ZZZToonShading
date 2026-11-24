@@ -1,44 +1,47 @@
-# ZZZ Toon · View Zenless Zone Zero outfits in Blender
+# ZZZ Toon · Outfit preview rendering for Blender
 
-[简体中文](README.zh-CN.md) · [Download v0.52.0](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip)
+[简体中文](README.zh-CN.md) · [Download v0.52.0](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip) · [Installation and first preview](docs/quickstart.en.md) · [Generic mode and its limits](docs/generic-scope.en.md)
 
-Watch a character play their idle animation against a scrolling background, like the outfit screen in the game. Drag to turn the character around, or zoom in to see their face.
+ZZZ Toon is a character-rendering add-on for **Blender EEVEE**. It reconstructs the *Zenless Zone Zero* **outfit preview** from a user-supplied model, textures and idle animation. The result is an editable Blender scene with a character, scrolling background and continuous full-body to close-up framing. The outfit-selection UI is omitted so the scene can be used for material inspection, comparison with the game and rendered character showcases.
 
-## Where should I start?
+**For a first preview, choose the tested outfit for Remielle, Velina or Vivian.** The quick start covers installation, file selection, playback and export. [Build your first scene](docs/quickstart.en.md)
 
-| I want to… | Choose | Files I need |
+## Two workflows
+
+| Mode | Intended use | Inputs and result |
 | --- | --- | --- |
-| View an outfit for Remielle, Velina or Vivian | Choose the character's name. The colors, lights and camera are set up for you. | The model, textures and idle animation for that outfit |
-| See which part of a model uses an image | Choose **Generic**. Use this for Miyabi too. | Just the model to get started |
+| **Dedicated outfit presets** | Reproduce the tested outfits for Remielle, Velina and Vivian. | Choose the character and supply its matching model, textures and idle. The preset loads the outfit’s material bindings, lighting, camera range and look settings into a playable project. |
+| **Generic** | Inspect material assignments and preview shading shared by four reference outfits. Miyabi’s default outfit was tested through this mode. | An FBX alone is enough to list and locate every material slot. Textures and an idle allow a scene build. A native material table and a matching wardrobe capture can establish further bindings, draws and extra effects. |
 
-You supply the character files for both the add-on and the starter scenes. A **texture** is an image used on a model. An **idle animation** is the short move a character plays while standing still, like breathing or swaying.
+Both workflows share rendering code. The body shadow and reflection calculations can be reused across outfits. Bindings such as the UVs on the back of a parasol, eye lookup indices and draws for a separate accessory must be established for the relevant outfit. [Why a complete outfit preview needs a preset](docs/generic-scope.en.md)
 
-## Install the add-on
+## From source assets to a Blender scene
 
-1. Download **zzz_toon-0.52.0.zip** and leave it zipped. We tested it on Windows with Blender 5.3.0. [Get the ZIP](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip)
-2. Open Blender and go to **Edit → Preferences → Add-ons**. Open the menu at the top right, choose **Install from Disk** and pick the ZIP.
-3. Find **ZZZ Toon** and make sure it is enabled. If you already had it installed, restart Blender after the update.
-4. Move your mouse over the **3D Viewport**, where you see the model. Press **N** to open the sidebar. Select **ZZZ Toon → English**.
+| Stage | Implementation |
+| --- | --- |
+| Geometry and animation | Import the rigged, skinned FBX and bind the matching idle to the skeleton. Preserving mesh and material assignments, triangles, UVs and vertex colors helps map the game’s inputs to the right surfaces. |
+| Character shading | Reconstruct nodes for supported game shader operations and material tables. Body and hair use base color, normal and packed material maps. Material IDs select shadow and reflection settings. The face lightmap, eye lookup and brow/fringe coverage have distinct roles. |
+| Outlines and compositing | Where the implementation and inputs support them, apply outlines, rim lighting, transparency, character grading and Bloom. Composite the character and glow over a scrolling page, using either a generated background or a supplied tileable image. |
+| Playback and output | Build a separate `.blend` with editable materials, camera and animation. Fullscreen controls turn the character, adjust framing height and zoom. Blender can render stills or an animation from the same scene. |
 
-## View your first outfit
+**Three sources inform the reconstruction.** Original materials and meshes supply authored colors, texture references and surface data. Captures matched by geometry and UVs establish bindings and runtime constants for a specific draw. Recordings are used to judge the result at different distances and in motion. Some dedicated appearance settings are calibrated per outfit, and missing inputs can require approximations. For example, missing back-face UVs can change the pattern on a parasol even when its base color texture is correct.
 
-Try **Remielle** below. For Velina or Vivian, follow the same steps with that character’s files.
+## Assets, compatibility and validation
 
-1. Set **Character** to **Remielle**. If you open her [starter scene](examples), her name is already selected.
-2. Under **FBX**, pick her `.fbx` model. Under **Idle**, pick the idle move that belongs to it.
-3. Open **Face and eyes**, **Hair**, **Outfit**, **Weapon and wings** and **MatCap** as shown for the outfit. Fill the main image boxes with the files named there. For example, `Remielle_Face_D.png` gives her face its base color. You can leave the background empty. The add-on makes a scrolling one.
-4. Set **Output** to a folder where you can save your work. Click **Build and open outfit preview**. When it finishes, Blender opens a new `.blend` project.
-5. Click **Enter fullscreen preview**. Hold the left mouse button and drag sideways to turn the character. Drag up or down to change the height of the view. Scroll up to zoom in or down to zoom out. Press **Esc** to return.
+- **Environment.** v0.52.0 was tested on Windows with Blender 5.3.0. The installer contains the add-on, presets and resources for the generated background. Users supply character models, game textures, animation and any optional frame captures.
+- **Formats.** Use an FBX model and a matching Unity text `.anim` or supported AnimationClip JSON. Certain surfaces can take a matching multi-UV model, native material table or auxiliary file. Three [starter scenes](examples) have their character preset selected.
+- **Test coverage.** The four test FBXs contain 75 source material slots. Each slot was located before generation and after reopening the built project. Shading was assessed separately at capture-aligned cameras, with attention to face shadows, eyes, translucent fringe and body materials. The slot counts describe inspector coverage.
 
-To save a video, choose **Render → Render Animation** in the new project. If you get stuck choosing a file, use the table in the guide. [Which file goes where?](docs/inputs.en.md)
+## Documentation
 
-## Find the part of a model that uses a material
+| Reader goal | Guide |
+| --- | --- |
+| Install the add-on and play an outfit idle | [First preview, step by step](docs/quickstart.en.md) |
+| Select the right assets and understand an inspector message | [File and material inspection guide](docs/inputs.en.md) |
+| Understand the D/N/M/A maps, face shadows and metal highlights | [Illustrated shading guide](docs/shading.en.md) |
+| Decide what Generic can establish and what a new outfit needs | [Generic scope and preset design](docs/generic-scope.en.md) |
 
-A **material slot** tells Blender which faces of the model share a look. A parasol can have one slot for the canopy and another for the handle.
-
-Choose **Generic**, pick the main FBX and click **Read FBX slots**. Under **All model slots**, click the magnifier on a row. The matching faces light up. Click **Clear highlight** to return to your view.
-
-Generic uses shading shared by four tested outfits. It covers the face, eyes, brows and lashes, hair, and two body groups. The list also shows extra parts and effects. The guide uses Vivian and Remielle to explain messages like “Missing” and “Inactive in draw”. [How to read the results](docs/inputs.en.md#how-to-read-the-results)
+The rendering implementation lives in [zzz_toon](zzz_toon). Outfit parameters and input definitions are in [wardrobe_data](zzz_toon/wardrobe_data).
 
 ## Outfit gallery
 
@@ -68,6 +71,4 @@ The close-ups compare the game and Blender. The wide shots include a frame from 
 
 ![Vivian turning in Blender](docs/media/vivian-turn.gif)
 
-Curious about the shadow on a white sleeve or the shine on metal? Start with one piece of cloth. [How the shading works](docs/shading.en.md)
-
-This is an independent Blender project. Game art and reference images belong to the creators of *Zenless Zone Zero*. The project draws on the community work in [HoyoToon](https://github.com/Hoyotoon/HoyoToon).
+This is an independent Blender project. Game artwork and reference imagery belong to the creators of *Zenless Zone Zero*. The project draws on the community work in [HoyoToon](https://github.com/Hoyotoon/HoyoToon).

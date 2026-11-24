@@ -1,6 +1,6 @@
 # Which file goes where?
 
-[简体中文](inputs.zh-CN.md) · [Back to setup](../README.md)
+[简体中文](inputs.zh-CN.md) · [Project overview](../README.md) · [Set up your first preview](quickstart.en.md) · [Generic scope](generic-scope.en.md)
 
 **To watch a character move**, get the model, textures and idle animation for the same outfit. **To find a part on the model**, choose **Generic**. You can start with just the model.
 

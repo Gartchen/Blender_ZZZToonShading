@@ -1,6 +1,6 @@
 # How does a white sleeve get its game look?
 
-[简体中文](shading.zh-CN.md) · [Back to setup](../README.md) · [Which file goes where?](inputs.en.md)
+[简体中文](shading.zh-CN.md) · [Project overview](../README.md) · [Set up your first preview](quickstart.en.md) · [Which file goes where?](inputs.en.md)
 
 Look at Remielle’s cuff. The cloth is white, but there is a blue-gray shadow in the folds. A silver ring nearby catches a much brighter strip of light. A **shader** is the set of rules Blender uses to pick the color of each spot. The add-on sets up these rules for you when you build a preview.
 

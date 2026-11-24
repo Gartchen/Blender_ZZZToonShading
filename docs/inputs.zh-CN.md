@@ -1,6 +1,6 @@
 # 模型、动作和图片，分别填在哪里？
 
-[English](inputs.en.md) · [返回安装教程](../README.zh-CN.md)
+[English](inputs.en.md) · [项目总览](../README.zh-CN.md) · [第一次看角色](quickstart.zh-CN.md) · [通用入口的范围](generic-scope.zh-CN.md)
 
 **想看角色动起来**，准备同一套服装的模型、贴图和待机动画。**只想找模型上的一个部件**，选 **通用 / Generic**，先填模型就可以。
 
