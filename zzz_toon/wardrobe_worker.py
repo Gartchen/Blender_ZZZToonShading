@@ -10,6 +10,17 @@ import bpy
 def main():
     p=Path(sys.argv[-1])
     args=json.loads(p.read_text(encoding='utf8'))
+    if 'scan_model' in args:
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+            module = importlib.import_module(Path(__file__).resolve().parent.name + '.generic_assets')
+            bpy.ops.wm.read_factory_settings(use_empty=True)
+            result = module.inspect_model(args['scan_model'], args.get('scan_geometry'))
+            p.with_suffix('.result').write_text(json.dumps(result), encoding='utf8')
+        except Exception as err:
+            p.with_suffix('.error').write_text(str(err), encoding='utf8')
+            raise
+        return
     dest=Path(args['output'])
     staging=dest.with_name('.'+dest.stem+'.blend')
     try:

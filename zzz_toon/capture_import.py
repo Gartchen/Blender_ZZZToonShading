@@ -14,7 +14,7 @@ from . import native_bloom, capture_space
 BODY_PS = "a24c103adbe204f1"  # NapAvatarUI PS1119
 BODY_VS = "c280f6945b23a42a"  # VS44
 DEFERRED_PS = "f1f227ccc44b3309"  # DeferredShadingForCharacter PS26
-_FILE = re.compile(r"^(\d+)-(ib|vb1|vs-cb[01]|ps-cb[0123]|ps-t[01235])=.+?-vs=([\da-f]{16})-ps=([\da-f]{16})\.(buf|txt|dds)$", re.I)
+_FILE = re.compile(r"^(\d+)-(ib|vb1|vs-cb[0123]|ps-cb[0123]|ps-t[012356])=.+?-vs=([\da-f]{16})-ps=([\da-f]{16})\.(buf|txt|dds)$", re.I)
 _GAUSS_VS = '770187c8bda685a7'
 _BLURS = [(_GAUSS_VS, ps) for ps in ('d48dc300168dde5a','3a0dcde915eeb4c3','7edd98cc69fc523f')]
 _BLOOM = ([('6e0f6cc2a68627a1','c71aaf77e66ac72f')] + [(_GAUSS_VS,'b3358d7b5c4bf4cf')]*2
@@ -226,10 +226,11 @@ def _deferred(files):
                        source=hashlib.sha256(data).hexdigest(), scope="Selected outfit frame PS26")
 
 
-def read_frame(folder, objects, registration=None):
+def read_frame(folder, objects, registration=None, *, eye_draws=None, face_draws=None, include_overlay=True, shared_draws=None, slot_evidence=None):
     if not folder.is_dir():
         raise ValueError(f"FrameAnalysis directory missing: {folder}")
     draws, deferred, bloom, features, dispatches = {}, {}, {}, {}, {}
+    from .capture_face import FACE, CORE_FACE_PROGRAMS, CASTER
     for p in folder.iterdir():
         dispatch = capture_space.ENTITY_DISPATCH.fullmatch(p.name)
         if dispatch:
@@ -239,6 +240,13 @@ def read_frame(folder, objects, registration=None):
         if not m:
             continue
         event, slot, vs, ps, ext = m.groups()
+        if face_draws is not None:
+            if (vs, ps) in (FACE, CASTER) or (shared_draws is not None and (vs, ps) in CORE_FACE_PROGRAMS):
+                _, face_files = face_draws.setdefault(event, ((vs, ps), {}))
+                key = slot + '.' + ext
+                if key in face_files:
+                    raise ValueError(f"Ambiguous face resource {event} {key}")
+                face_files[key] = p
         if ps == DEFERRED_PS:
             bucket = deferred
         elif ps == BODY_PS and vs == BODY_VS:
@@ -259,6 +267,7 @@ def read_frame(folder, objects, registration=None):
             raise ValueError(f"Ambiguous capture resource {event} {key}")
         files[key] = p
     names = {}
+    meshes = {o.name:o.data for o in objects if o.type == "MESH"}
     for obj in objects:
         if obj.type == "MESH" and not obj.get("zzz_outline_helper"):
             names.setdefault(_mesh_key(obj.data),[]).append(obj.name)
@@ -271,7 +280,21 @@ def read_frame(folder, objects, registration=None):
                 continue
             results.append(_body_inputs(files))
             matched[event] = names[key][0]
-            if _floats(_buffer(files,'ps-cb3',2048),1696,1)[0] > .5:
+            if slot_evidence is not None:
+                # _draw_key validated every triangle and UV in source polygon order.
+                mesh_name = matched[event]
+                triangles = _draw_triangles(files)[2]
+                polys = meshes[mesh_name].polygons
+                indices = {polys[i].material_index for i in range(triangles.start, triangles.stop)}
+                if len(indices) == 1:
+                    slot = indices.pop()
+                    slot_evidence.append(dict(draw=event, mesh=mesh_name, slot=slot,
+                                              feature='PS1119', state='matched', ps=BODY_PS))
+                    enabled = _floats(_buffer(files, 'ps-cb3', 2048), 1696, 1)[0] > .5
+                    if not enabled or 'ps-t2.dds' in files:
+                        slot_evidence.append(dict(draw=event, mesh=mesh_name, slot=slot,
+                                                  feature='_UseOverlayTex', state='enabled' if enabled else 'inactive', ps=BODY_PS))
+            if include_overlay and _floats(_buffer(files,'ps-cb3',2048),1696,1)[0] > .5:
                 path = files['ps-t2.dds']
                 data = path.read_bytes()
                 overlay_pixels(data)
@@ -282,6 +305,11 @@ def read_frame(folder, objects, registration=None):
     if not results or any(r!=results[0] for r in results[1:]):
         notes.append("No unambiguous matching PS1119 lighting; check the outfit and capture files")
         return overrides, matched, notes
+    if shared_draws is not None:
+        shared_draws.update(features)
+    if eye_draws is not None:
+        eye_draws.update({n: files for n, (pair, files) in features.items()
+                          if capture_space.FEATURE_PASSES[pair] == 'eye'})
     light, g, ambient = results[0]
     overrides["native_globals"] = dict(g)
     overrides["native_character_ambient"] = ambient

@@ -2,10 +2,10 @@
 bl_info = {
     "name": "ZZZ Toon",
     "author": "ZZZToonShading project",
-    "version": (0, 47, 6),
+    "version": (0, 52, 0),
     "blender": (5, 3, 0),
     "location": "3D View > Sidebar > ZZZ Toon",
-    "description": "用逐项指定的模型、贴图和待机动画生成 Remielle、Velina、Vivian 的服装预览",
+    "description": "从模型、贴图和待机动画生成角色服装预览，支持三个已验证预设和通用导入",
     "category": "Material",
 }
 
@@ -13,13 +13,17 @@ import bpy, os, json
 from pathlib import Path
 from bpy.props import StringProperty, EnumProperty, FloatVectorProperty, FloatProperty, BoolProperty, PointerProperty
 from . import core, character, native_lighting, outfit_import, capture_import, preview, capture_preview, wardrobe
-from . import fullscreen, wardrobe_slots, wardrobe_language
+from . import fullscreen, wardrobe_slots, wardrobe_language, generic_assets
+
+
+ROLE_ITEMS = [(r, r, "") for r in wardrobe.ROLES] + [(generic_assets.ROLE, "通用 / Generic", "")]
 
 
 class ZZZToonSettings(bpy.types.PropertyGroup):
     wardrobe_language: EnumProperty(name="Language / 语言",items=[("ZH","中文",""),("EN","English","")],default="ZH")
-    wardrobe_selection: EnumProperty(name="角色",items=[(r,r,"") for r in wardrobe.ROLES])
-    wardrobe_role: EnumProperty(name="角色",items=[(r,r,"") for r in wardrobe.ROLES])
+    wardrobe_selection: EnumProperty(name="角色",items=ROLE_ITEMS)
+    wardrobe_role: EnumProperty(name="角色",items=ROLE_ITEMS)
+    assets_generic: PointerProperty(type=generic_assets.ZZZ_GenericInputs)
     assets_remielle: PointerProperty(type=wardrobe_slots.CLASSES[0])
     assets_velina: PointerProperty(type=wardrobe_slots.CLASSES[1])
     assets_vivian: PointerProperty(type=wardrobe_slots.CLASSES[2])
@@ -418,7 +422,10 @@ class ZZZTOON_PT_panel(bpy.types.Panel):
             c.prop(s,"wardrobe_zoom",translate=False,text=tr("全身 ↔ 近景"),slider=True)
             c.label(translate=False,text=tr("相机视图中滚轮推拉 · 空格播放"))
         c.prop(s,"wardrobe_selection",translate=False,text=tr("角色"))
-        wardrobe_slots.draw(self.layout,s)
+        if wardrobe_slots.input_role(s) == generic_assets.ROLE:
+            generic_assets.draw(self.layout, s)
+        else:
+            wardrobe_slots.draw(self.layout,s)
         c=self.layout.column()
         c.prop(s,"wardrobe_output",translate=False,text=tr("工程目录"))
         c.operator("zzz_toon.configure_wardrobe",translate=False,text=tr("配置并打开服装预览"),icon="SCENE_DATA")
@@ -428,7 +435,7 @@ class ZZZTOON_PT_panel(bpy.types.Panel):
             c.prop(s,"wardrobe_result",translate=False,text=tr("生成的工程"))
 
 
-CLASSES = (*wardrobe_slots.CLASSES, ZZZToonSettings, wardrobe.ZZZ_OT_wardrobe_zoom, wardrobe.ZZZ_OT_wardrobe,
+CLASSES = (*wardrobe_slots.CLASSES, *generic_assets.CLASSES, ZZZToonSettings, wardrobe.ZZZ_OT_wardrobe_zoom, wardrobe.ZZZ_OT_wardrobe,
            fullscreen.ZZZ_OT_fullscreen, ZZZTOON_PT_panel)
 
 

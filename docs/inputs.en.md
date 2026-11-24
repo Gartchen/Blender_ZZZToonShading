@@ -1,45 +1,38 @@
-# What changes between base inputs and the gallery?
+# Wardrobe inputs and material inspection
 
-[简体中文](inputs.zh-CN.md) · [User guide](../README.md) · [Shader walkthrough](shading.en.md)
+[简体中文](inputs.zh-CN.md) · [Installation and quick start](../README.md) · [Shader walkthrough](shading.en.md)
 
-The capture gallery uses the full local reference configuration. A character FBX, its base textures and an idle clip are sufficient to build both cameras. Most remaining differences come from mesh channels lost on export, character grading and page artwork. Selecting an outfit already applies its material groups, body and hair light directions, environment constants, head binding, camera stops, page motion and Bloom settings.
+## Choosing inputs
 
-![Previous public build, current public build and full reference at the same close camera](media/base-inputs-close.jpg)
-
-## Generated from local inputs
-
-| Input | What 0.47.6 does |
+| Input | How v0.52.0 uses it |
 | --- | --- |
-| Character grade | All three local reference LUT files have the same SHA-256. A shared curve with 30 independently fitted scalar coefficients generates a 32³ grade locally. The opaque and applicable translucent branches use the same transform. A supplied LUT takes precedence. The fit applies to these wardrobe presets. |
-| Texture sampling | Existing biased mip selection remains active. Without authored atlases the add-on downsamples the supplied images in linear space, generating 12 chains for Remielle, 12 for Velina and 8 for Vivian. Hand-authored lower levels still require the original atlas. |
-| Normals and highlights | The verified FBXs retain authored normals, tangents and topology. The loader checks tangent handedness before passing the directions to the skinning shader. Remielle's second body mesh also provides its packed outline coordinates and back-face UV. Velina's second body mesh and both weapon meshes provide the animated tangent basis. |
-| Face and occlusion | Remielle and Velina retain high-precision hair-shadow caster weights in their FBX red channel. Applying the projection also requires a matching face receiver. Velina's primary FBX already carries the verified eye lookup bytes. With the matching secondary UV FBX the add-on builds her face flags, alpha and directional UV, enabling the receiver. |
-| Background | Empty slots generate original lettering and a vignette. The three rows follow the preset crop, speed and phase. Supply individual page layers or one complete tiled image. The original lettering requires the corresponding local art. |
+| Main FBX | Supplies the rig, mesh names, material slots, vertex colors and available UVs. Generic can scan and locate slots before you provide other files. |
+| Idle animation | Use the matching Unity text `.anim` or parsed AnimationClip JSON to build a playable scene. Bone paths must match the rig. |
+| Textures and material table | The three dedicated outfits expose named image slots. Generic reads the selected local material JSON and searches adjacent export folders for its image references. Assign a path manually for missing or ambiguous matches. |
+| Secondary UVs and surface streams | A matching multi-UV FBX can recover face and back-face coordinates. Dedicated slots also accept the listed surface, eye, outline, LUT and mip files. Choose the original exports for the same model. |
+| Background | Use the generated scrolling page, a seamless color image or the page-layer inputs exposed by the selected preset. |
+| Wardrobe capture for Generic | Choose the FrameAnalysis directory containing the draws for the same model and outfit. The importer checks geometry and UVs before reading supported light, eye-index and fringe data. With assets alone, the preview uses an approximate wardrobe environment. |
 
-An original mesh JSON supplied locally can serve more than one input. The add-on can use it for matching surface streams and read its back-face coordinates for a two-sided material missing that UV. An explicitly supplied matching surface source or an available correct UV has priority. FBX recovery recipes apply only to verified exports. Arrays generated from the user's model stay in the Blender user data folder under `ZZZ Outfit Previews/Derived/v1`. The release contains code, numeric presets and verification fingerprints.
+For Remielle’s wing or body outlines, check the source mesh inputs. For Velina’s face, check the secondary UVs. For Vivian’s parasol, check the front and back UVs and the parasol texture slots. The three preset galleries use complete local inputs.
 
-## Remaining dependencies by outfit
+## Generic material slot inspector
 
-| Outfit | Missing from the base set | Single-input-group test |
-| --- | --- | --- |
-| Remielle | The source geometry of body mesh one, wings and hair differs from the exported FBX. Directional face UV, some eye indices and the fine face outline also need matching inputs. | Supplying only the three original mesh JSON files reduced close-up error from **3.37 to 1.91** and full-body error from **5.49 to 1.54**. |
-| Velina | The primary face FBX has only the main UV. Body mesh one still lacks verified tangent handedness, and several accessories lack packed outline directions. The fine jaw outline uses separate data. | Supplying only the secondary UV FBX restored the face data and took the errors from **2.54 to 2.32** close and **3.62 to 3.56** wide. Supplying only the exact LUT gave **1.90 / 3.16**. |
-| Vivian | The parasol uses different front and back layouts. The primary FBX lacks some of the backside coordinates, the body-detail overlay and per-mesh outline directions. Body mesh two was verified to use the same primary and back-face UV. | Adding only the secondary UV reduced error from **6.48 to 1.76** close and **5.95 to 3.31** wide. It had a larger effect here than the exact LUT alone. |
+In v0.52.0, **Generic** inspects the four tested wardrobe outfits through the same six shading paths. A model can vary in its colors, textures, MatCap assignments and captured light values. A slot that cannot be mapped to a shared part remains in the inventory. If its name is unfamiliar, expand the material and choose **Shared part** when you know its role. Clothing or hair can use the shared path while an extra effect is reported separately.
 
-![Vivian with base inputs, secondary UV only and full local reference](media/vivian-parasol-uv.jpg)
+![Vivian Body 1 highlighted from the material slot list](media/generic-slot-inspector.jpg)
 
-## How the frames were tested
+1. Select **Generic**, choose the main FBX, then click **Read FBX slots**. You can inspect the model before supplying any animation or textures. **All model slots** lists the mesh name, zero-based slot index and source material. Reused materials have a row for each assignment.
+2. Select a row to see its details. Click the magnifier to center and highlight its faces in solid view. This works on excluded faces of a mixed mesh and on entire hidden accessories. The scanner shows the FBX rest pose. A generated scene shows the pose at the time you click. An empty slot has a row and a message. **Clear highlight** restores the previous view. The highlight is excluded from rendering.
+3. Supply material files, images, an idle animation and, if available, a matching wardrobe capture. Use **Check input files** after editing paths. A required base color can be located and corrected here before building. Open the generated scene to inspect the saved shader bindings and draw evidence. **Show current input check** lets you check edits separately from the saved result.
+4. Expand **Material table fields** to inspect scalar and color values. **Read** means the material builder consulted the field when preparing or constructing shader nodes. Some values control which nodes are created. **Used** on a texture means the image feeds the constructed surface or a feature output, or supplies the eye color baked into the mesh. A shader connection alone cannot measure its contribution to a particular pixel.
 
-Each outfit was built from an empty project using the add-on operator in Blender 5.3.0 on Windows. Each generated project was reopened before rendering. The idle frame was 45, with the same near and far stops, lighting and compositor. The comparison uses the character before page composition at 576×324 with eight EEVEE samples. The score is mean absolute 8-bit RGB channel error over pixels where the previous base build, current base build and full reference all have alpha of at least 250/255. Lower values indicate closer agreement with the full Blender configuration on these images. See the README for the separate game capture comparisons.
+| Inspector result | What the evidence establishes |
+| --- | --- |
+| Located file | The image resolved on disk. The inspector lists its shader use separately. |
+| Missing or ambiguous | A required or referenced file is unavailable, or more than one file matches. Assign the correct local file and check again. An empty optional binding has no file requirement. An omitted material table leaves its original bindings unverified. |
+| Outside | The slot has no shared material assignment, or this particular texture or effect falls outside its part’s shared calculation. A declaration can exist on several characters. |
+| Enabled in draw | A matching draw has the relevant switch enabled and the expected binding. For example, Vivian Body 1 draw 37 enables the extra overlay. |
+| Inactive in draw | A verified switch is off or the sampled input is neutral. Remielle’s face draws 44 and 57 have an all-zero blush input across the captured mip levels. |
+| No verified draw | The frame was omitted or the inspector could not associate a supported draw with this slot. Its activity remains unknown. |
 
-| Outfit | Close, previous base → 0.47.6 | Full body, previous base → 0.47.6 |
-| --- | ---: | ---: |
-| Remielle | 6.35 → **3.37** | 8.29 → **5.49** |
-| Velina | 4.93 → **2.54** | 7.13 → **3.62** |
-| Vivian | 11.05 → **6.48** | 10.58 → **5.95** |
-
-Each outfit was also rebuilt from an empty project with the release ZIP and all local auxiliary inputs. After reopening, the six close and full-body character renders differed from the previous full configuration by at most one 8-bit level in any RGBA channel at any pixel.
-
-## Adapting a fourth character
-
-Only these three outfits have implemented and validated presets. Another outfit or character needs its own adapter. Inventory its meshes, materials and draw order. Map each draw to the shader variant, packed texture channels, extra UVs, head frame and skeleton it actually uses. Configure preview lighting, facial features, translucent layers, accessory-specific branches and camera limits. Reuse existing nodes where their inputs and behavior match. Validate at close range, full body and during a turn before claiming support.
+The four test models contain **75 source slots** across shared surfaces, projection helpers and excluded geometry. The dedicated outfit presets cover Remielle, Velina and Vivian. Miyabi is a Generic validation model. The inspection covers the tested wardrobe frame and supported inputs. New uniforms, unknown passes and omitted game assets can require investigation before an effect can be identified.

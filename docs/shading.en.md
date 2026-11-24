@@ -57,4 +57,4 @@ Hold camera, pose and light fixed and change one input at a time. Check silhouet
 
 A GPU capture identifies the bindings, constants and intermediate values for one draw. A recording shows whether the result holds up during motion. Device sampling, real-time AA, secondary motion and per-role video color adjustments have different sources of uncertainty. Wardrobe-specific appearance adjustments live in the [role presets](../zzz_toon/wardrobe_data) and are applied only to the selected outfit.
 
-See the [public input audit](inputs.en.md) for automatic reconstruction, local overrides and remaining dependencies in each outfit preset.
+Use the [input and inspector guide](inputs.en.md) to select local files and read slot-level draw evidence.

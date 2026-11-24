@@ -1,9 +1,13 @@
-"""Explicit UIEye PS14 / UI hair PS1121 blending corrections.
+"""UI eye and transparent hair blending from the captured output instructions.
 
 The eye/brow view-layer compositor remains a coverage approximation, not a
 Unity stencil/depth implementation. No character name or fitted gain is used.
 """
 import json
+
+# Same t6.R, inverse-head row and view-angle transmittance in both DXBC programs.
+# RGB and additional material effects are outside this equivalence.
+HAIR_COVERAGE_PS = {'050d63a297594dff', '1bccd522268b6343'}
 
 
 def validate(profile):
@@ -13,7 +17,7 @@ def validate(profile):
         raise ValueError('Unknown face-layer schema')
     if not profile.get('source') or not profile.get('scope') or not profile.get('bone'):
         raise ValueError('Face layers require source, scope and an explicit head bone')
-    if profile.get('eye_ps') != '720a454f81097a64' or profile.get('hair_ps') != '050d63a297594dff':
+    if profile.get('eye_ps') != '720a454f81097a64' or profile.get('hair_ps') not in HAIR_COVERAGE_PS:
         raise ValueError('Face-layer shader variants have not been verified')
     if profile.get('inverse_head_row') != 1:
         raise ValueError('Only the verified head local Y binding is supported')
@@ -114,3 +118,38 @@ def premultiply(b, color, alpha):
     result = Ops(b).scale(color, alpha)
     result.node.label = 'UIEye PS14: output RGB times alpha'
     return result
+
+
+def generic_ui_eye(settings, params):
+    """Recognize the original wardrobe eye material, including unnamed Unity references."""
+    if 'generic_casters' not in settings:
+        return False
+    shader = (params or {}).get('shader_ref') or {}
+    name = shader.get('Name')
+    if name:
+        return name == 'miHoYo/Character/NapAvatarUIEye'
+    return shader.get('m_PathID') == 497480590774261793
+
+
+def eye_surface(b, sampled, tint, lookup, environment):
+    """UIEye PS14 pre-light RGB for a registered entity light. EEVEE supplies the shading normal."""
+    from .native_lighting import Ops
+    o = Ops(b)
+    color = o.v('MULTIPLY', o.v('MULTIPLY', sampled, tuple(tint[:3])), lookup)
+    geo = b.node('ShaderNodeNewGeometry')
+    light = o.v('NORMALIZE', o.v('SUBTRACT', tuple(environment['entity_position']), geo.outputs['Position']))
+    # The game uses the unflipped vertex normal even on a back face.
+    normal = o.scale(geo.outputs['Normal'], o.sub(1., o.mul(2., geo.outputs['Backfacing'])))
+    ndl = o.v('DOT_PRODUCT', normal, light)
+    front = o.sat(ndl)
+    shade = o.mul(.5, o.add(front, o.mul(.5, o.add(ndl, 1.))))
+    luminance = o.v('DOT_PRODUCT', color, (.29, .60, .11))
+    exponent = o.mix(shade, o.add(1.4375, o.mul(.2875, luminance)), 1.)
+    channels = b.node('ShaderNodeSeparateXYZ')
+    b.link(color, channels.inputs[0])
+    red, green, blue = channels.outputs[:3]
+    peak = o.m('MAXIMUM', 1., o.m('MAXIMUM', red, o.m('MAXIMUM', green, blue)))
+    curved = o.cpow(o.scale(color, o.div(1., peak)), exponent)
+    surface = o.cmix(o.mul(.5, o.add(front, 1.)), color, curved)
+    surface.node.label = 'UIEye: sampled colour response before lighting'
+    return surface

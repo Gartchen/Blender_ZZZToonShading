@@ -4,6 +4,12 @@ from pathlib import Path
 import bpy
 
 
+def scroll_motion(page, role):
+    if role == 'Generic':
+        return {name: dict(phase_at_zero=0., logical_pixels_per_second=-30.) for name in page['rows']}
+    return page['motion'].get(role, page['motion']['Remielle'])
+
+
 def attach(scene,folder,page,role,custom=None,art=None):
     art=art or {}
     tree=scene.compositing_node_group
@@ -79,7 +85,7 @@ def attach(scene,folder,page,role,custom=None,art=None):
     f.expression='(frame-start)*base/fps'
     t=time.outputs[0]
     c,s=math.cos(math.pi/12),math.sin(math.pi/12)
-    motion=page['motion'].get(role,page['motion']['Remielle'])
+    motion=scroll_motion(page, role)
     if custom:
         im=artwork(custom,False)
         w,h=im.size

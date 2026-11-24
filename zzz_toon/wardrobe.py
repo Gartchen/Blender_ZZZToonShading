@@ -39,6 +39,9 @@ def _receiver_refresh():
 
 
 def locate(settings):
+    from . import generic_assets
+    if wardrobe_slots.input_role(settings) == generic_assets.ROLE:
+        return generic_assets.request(settings)
     return wardrobe_slots.request(settings)
 
 
@@ -254,7 +257,9 @@ def _load_view(*_):
 
 
 def build(scene,request):
-    from . import _apply
+    from . import _apply, generic_assets, generic_preview
+    if request['role'] == generic_assets.ROLE:
+        return generic_preview.build(scene, request)
     role=request['role']
     source,action=map(Path,(request['model'],request['clip']))
     bg=Path(request['background']) if request.get('background') else None

@@ -155,5 +155,393 @@
     "slots": "武器 槽 4"
    }
   }
+ },
+ "extra_fields": {
+  "Remielle": [
+   [
+    "lut",
+    "角色调色 LUT",
+    "Remielle_character_lut.exr"
+   ],
+   [
+    "mip_remielle_origin_body_2_d",
+    "服装 2 · 底色",
+    "Remielle_Origin_Body_2_D_mips_f32.exr"
+   ],
+   [
+    "mip_remielle_origin_body_2_n",
+    "服装 2 · 法线与光照",
+    "Remielle_Origin_Body_2_N_mips_f32.exr"
+   ],
+   [
+    "mip_remielle_origin_body_2_m",
+    "服装 2 · 材质遮罩",
+    "Remielle_Origin_Body_2_M_mips_f32.exr"
+   ],
+   [
+    "mip_remielle_origin_body_2_a",
+    "服装 2 · 辅助通道",
+    "Remielle_Origin_Body_2_A_mips_f32.exr"
+   ],
+   [
+    "mip_remielle_origin_body_1_d",
+    "服装 1 · 底色",
+    "Remielle_Origin_Body_1_D_mips_f32.exr"
+   ],
+   [
+    "mip_remielle_origin_body_1_n",
+    "服装 1 · 法线与光照",
+    "Remielle_Origin_Body_1_N_mips_f32.exr"
+   ],
+   [
+    "mip_remielle_origin_body_1_m",
+    "服装 1 · 材质遮罩",
+    "Remielle_Origin_Body_1_M_mips_f32.exr"
+   ],
+   [
+    "mip_remielle_origin_body_1_a",
+    "服装 1 · 辅助通道",
+    "Remielle_Origin_Body_1_A_mips_f32.exr"
+   ],
+   [
+    "mip_remielle_wings_d",
+    "羽翼 · 底色",
+    "Remielle_Wings_D_mips.exr"
+   ],
+   [
+    "mip_remielle_ramiel_wings_n",
+    "羽翼 · 法线与光照",
+    "Remielle_Ramiel_Wings_N_mips.exr"
+   ],
+   [
+    "mip_remielle_ramiel_wings_m",
+    "羽翼 · 材质遮罩",
+    "Remielle_Ramiel_Wings_M_mips.exr"
+   ],
+   [
+    "mip_remielle_wings_a",
+    "羽翼 · 辅助通道",
+    "Remielle_Wings_A_mips.exr"
+   ],
+   [
+    "large",
+    "大字图案",
+    "large.png"
+   ],
+   [
+    "small",
+    "小字图案",
+    "small.png"
+   ],
+   [
+    "screen_shade",
+    "背景明暗底图",
+    "screen_shade.png"
+   ],
+   [
+    "geo_remielle_wings_json",
+    "Remielle_Wings · 原始网格",
+    "Remielle_Wings.json"
+   ],
+   [
+    "geo_remielle_hair_json",
+    "Remielle_Hair · 原始网格",
+    "Remielle_Hair.json"
+   ],
+   [
+    "geo_remielle_origin_body_1_json",
+    "Remielle_Origin_Body_1 · 原始网格",
+    "Remielle_Origin_Body_1.json"
+   ],
+   [
+    "geo_remielle_origin_body_2_json",
+    "Remielle_Origin_Body_2 · 描边网格",
+    "Remielle_Origin_Body_2.json"
+   ],
+   [
+    "geo_remielle_origin_body_1_native_inputs_npz",
+    "Remielle_Origin_Body_1 · 表面顶点数据",
+    "Remielle_Origin_Body_1_native_inputs.npz"
+   ],
+   [
+    "geo_remielle_origin_body_2_outline_inputs_npz",
+    "Remielle_Origin_Body_2 · 表面顶点数据",
+    "Remielle_Origin_Body_2_outline_inputs.npz"
+   ],
+   [
+    "geo_remielle_wings_native_inputs_npz",
+    "Remielle_Wings · 表面顶点数据",
+    "Remielle_Wings_native_inputs.npz"
+   ],
+   [
+    "geo_remielle_face_inputs_npz",
+    "Remielle_Face · 脸部顶点数据",
+    "Remielle_face_inputs.npz"
+   ],
+   [
+    "geo_original_eye_inputs_npz",
+    "Remielle_Face · 眼部顶点数据",
+    "original_eye_inputs.npz"
+   ],
+   [
+    "geo_remielle_caster_npz",
+    "面部投影遮挡数据",
+    "Remielle_caster.npz"
+   ],
+   [
+    "face_outline",
+    "脸部轮廓顶点数据",
+    "face_outline.npz"
+   ]
+  ],
+  "Velina": [
+   [
+    "uv",
+    "辅助 UV 模型 FBX",
+    "uv.fbx"
+   ],
+   [
+    "lut",
+    "角色调色 LUT",
+    "Velina_character_lut.exr"
+   ],
+   [
+    "mip_velina_weapon_map_d",
+    "武器 · 底色",
+    "Velina_Weapon_Map_D_mips_f32.exr"
+   ],
+   [
+    "mip_velina_weapon_map_n",
+    "武器 · 法线与光照",
+    "Velina_Weapon_Map_N_mips_f32.exr"
+   ],
+   [
+    "mip_velina_weapon_map_m",
+    "武器 · 材质遮罩",
+    "Velina_Weapon_Map_M_mips_f32.exr"
+   ],
+   [
+    "mip_velina_weapon_map_a",
+    "武器 · 辅助通道",
+    "Velina_Weapon_Map_A_mips_f32.exr"
+   ],
+   [
+    "mip_velina_body_map2_d",
+    "服装 2 · 底色",
+    "Velina_Body_Map2_D_mips_f32.exr"
+   ],
+   [
+    "mip_velina_body_map2_n",
+    "服装 2 · 法线与光照",
+    "Velina_Body_Map2_N_mips_f32.exr"
+   ],
+   [
+    "mip_velina_body_map2_m",
+    "服装 2 · 材质遮罩",
+    "Velina_Body_Map2_M_mips_f32.exr"
+   ],
+   [
+    "mip_velina_body_map2_a",
+    "服装 2 · 辅助通道",
+    "Velina_Body_Map2_A_mips_f32.exr"
+   ],
+   [
+    "mip_velina_body_map1_d",
+    "服装 1 · 底色",
+    "Velina_Body_Map1_D_mips_f32.exr"
+   ],
+   [
+    "mip_velina_body_map1_n",
+    "服装 1 · 法线与光照",
+    "Velina_Body_Map1_N_mips_f32.exr"
+   ],
+   [
+    "mip_velina_body_map1_m",
+    "服装 1 · 材质遮罩",
+    "Velina_Body_Map1_M_mips_f32.exr"
+   ],
+   [
+    "mip_velina_body_map1_a",
+    "服装 1 · 辅助通道",
+    "Velina_Body_Map1_A_mips_f32.exr"
+   ],
+   [
+    "large",
+    "大字图案",
+    "large.png"
+   ],
+   [
+    "small",
+    "小字图案",
+    "small.png"
+   ],
+   [
+    "screen_shade",
+    "背景明暗底图",
+    "screen_shade.png"
+   ],
+   [
+    "geo_velina_body1_json",
+    "Velina_Body1 · 描边网格",
+    "Velina_Body1.json"
+   ],
+   [
+    "geo_velina_body2_json",
+    "Velina_Body2 · 描边网格",
+    "Velina_Body2.json"
+   ],
+   [
+    "geo_velina_hair1_json",
+    "Velina_Hair1 · 描边网格",
+    "Velina_Hair1.json"
+   ],
+   [
+    "geo_velina_hair2_json",
+    "Velina_Hair2 · 描边网格",
+    "Velina_Hair2.json"
+   ],
+   [
+    "geo_velina_weapon1_json",
+    "Velina_Weapon1 · 描边网格",
+    "Velina_Weapon1.json"
+   ],
+   [
+    "geo_velina_weapon2_json",
+    "Velina_Weapon2 · 描边网格",
+    "Velina_Weapon2.json"
+   ],
+   [
+    "geo_velina_body1_outline_inputs_npz",
+    "Velina_Body1 · 表面顶点数据",
+    "Velina_Body1_outline_inputs.npz"
+   ],
+   [
+    "geo_velina_body2_outline_inputs_npz",
+    "Velina_Body2 · 表面顶点数据",
+    "Velina_Body2_outline_inputs.npz"
+   ],
+   [
+    "geo_velina_weapon2_outline_inputs_npz",
+    "Velina_Weapon2 · 表面顶点数据",
+    "Velina_Weapon2_outline_inputs.npz"
+   ],
+   [
+    "geo_velina_weapon1_outline_inputs_npz",
+    "Velina_Weapon1 · 表面顶点数据",
+    "Velina_Weapon1_outline_inputs.npz"
+   ],
+   [
+    "geo_velina_face_inputs_npz",
+    "Velina_Face · 脸部顶点数据",
+    "Velina_face_inputs.npz"
+   ],
+   [
+    "geo_velina_eye_inputs_npz",
+    "Velina_Face · 眼部顶点数据",
+    "Velina_eye_inputs.npz"
+   ],
+   [
+    "geo_velina_caster_npz",
+    "面部投影遮挡数据",
+    "Velina_caster.npz"
+   ],
+   [
+    "face_outline",
+    "脸部轮廓顶点数据",
+    "face_outline.npz"
+   ]
+  ],
+  "Vivian": [
+   [
+    "uv",
+    "辅助 UV 模型 FBX",
+    "uv.fbx"
+   ],
+   [
+    "lut",
+    "角色调色 LUT",
+    "lut.exr"
+   ],
+   [
+    "overlay",
+    "表面细纹",
+    "CharacterOverlayTex.png"
+   ],
+   [
+    "mip_vivian_weapon_n",
+    "武器 · 法线与光照",
+    "Vivian_Weapon_N_mips.exr"
+   ],
+   [
+    "mip_vivian_weapon_m",
+    "武器 · 材质遮罩",
+    "Vivian_Weapon_M_mips.exr"
+   ],
+   [
+    "mip_vivian_weapon_d",
+    "武器 · 底色",
+    "Vivian_Weapon_D_mips.exr"
+   ],
+   [
+    "mip_vivian_weapon_a",
+    "武器 · 辅助通道",
+    "Vivian_Weapon_A_mips.exr"
+   ],
+   [
+    "mip_vivian_body_1_d",
+    "服装 1 · 底色",
+    "Vivian_Body_1_D_mips.exr"
+   ],
+   [
+    "mip_vivian_body_1_n",
+    "服装 1 · 法线与光照",
+    "Vivian_Body_1_N_mips.exr"
+   ],
+   [
+    "mip_vivian_body_1_m",
+    "服装 1 · 材质遮罩",
+    "Vivian_Body_1_M_mips.exr"
+   ],
+   [
+    "mip_vivian_body_1_a",
+    "服装 1 · 辅助通道",
+    "Vivian_Body_1_A_mips.exr"
+   ],
+   [
+    "large",
+    "大字图案",
+    "large.png"
+   ],
+   [
+    "small",
+    "小字图案",
+    "small.png"
+   ],
+   [
+    "screen_shade",
+    "背景明暗底图",
+    "screen_shade.png"
+   ],
+   [
+    "geo_vivian_weapon_02_json",
+    "Vivian_Weapon_02 · 描边网格",
+    "Vivian_Weapon_02.json"
+   ],
+   [
+    "geo_vivian_weapon_01_json",
+    "Vivian_Weapon_01 · 描边网格",
+    "Vivian_Weapon_01.json"
+   ],
+   [
+    "geo_vivian_body_2_json",
+    "Vivian_Body_2 · 描边网格",
+    "Vivian_Body_2.json"
+   ],
+   [
+    "geo_vivian_body_1_json",
+    "Vivian_Body_1 · 描边网格",
+    "Vivian_Body_1.json"
+   ]
+  ]
  }
 }

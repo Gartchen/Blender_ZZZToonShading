@@ -48,6 +48,14 @@ def texture_label(name):
     return PARTS[3], ('羽翼' if 'wing' in lower else '武器')+' · '+channel
 
 
+def texture_metadata(role, name):
+    group, label = texture_label(name)
+    usage = SOURCE_NAMES['matcaps'][role].get(name, {})
+    if usage:
+        label = 'MatCap '+label+' · '+usage['parts']
+    return group, label, usage
+
+
 def geometry_files(cfg):
     prep,inputs=cfg['prepare'],cfg['inputs']
     outline=prep.get('rest_outline') or inputs['native_outline']
@@ -82,10 +90,7 @@ def slots(role):
     result = []
     for name in SOURCE_NAMES[role]:
         default = replacement if replacement and replacement.name == name else None
-        group, label = texture_label(name)
-        usage=SOURCE_NAMES['matcaps'][role].get(name,{})
-        if usage:
-            label='MatCap '+label+' · '+usage['parts']
+        group, label, usage = texture_metadata(role, name)
         digest = preview.digest(default) if default and default.is_file() else index['textures'][name]
         result.append(Slot('tex_'+Path(name).stem.lower(), name, label, group, default if default and default.is_file() else None, digest,usage.get('slots','')))
     if index['uv']:
@@ -124,11 +129,14 @@ def asset_type(role):
               for key,name,hint in [('model','角色模型 FBX','所选服装的带蒙皮与顶点色模型'),
                                     ('clip','预览待机动画','Unity .anim 或已解析的 AnimationClip JSON'),
                                     ('background','整张滚动背景','可选择一张平铺图替代三层页面素材')]}
-    for item in slots(role):
-        hint = item.default.name if item.default else item.name
-        if item.usage:
-            hint+=' · '+item.usage
-        fields[item.prop] = StringProperty(name=item.title, subtype='FILE_PATH',description=hint)
+    # Blender needs RNA fields at registration time, including when an old
+    # named scene is opened. Register their UI schema without loading a preset.
+    for name in SOURCE_NAMES[role]:
+        _, label, usage = texture_metadata(role, name)
+        hint = name + (' · '+usage['slots'] if usage.get('slots') else '')
+        fields['tex_'+Path(name).stem.lower()] = StringProperty(name=label, subtype='FILE_PATH', description=hint)
+    for prop, label, hint in SOURCE_NAMES['extra_fields'][role]:
+        fields[prop] = StringProperty(name=label, subtype='FILE_PATH', description=hint)
     return type('ZZZ_'+role+'Assets',(bpy.types.PropertyGroup,),{'__module__':__name__,'__annotations__':fields})
 
 
@@ -258,6 +266,7 @@ def make_atlas(source):
             half,2,half,2,4).mean(axis=(1,3))
         size=half
     image=bpy.data.images.new('Mip · '+source['zzz_wardrobe_slot'],w,2*h,alpha=True,float_buffer=True,is_data=True)
+    image['zzz_mip_source_slot']=source['zzz_wardrobe_slot']
     image.file_format='OPEN_EXR'
     image.colorspace_settings.name='Non-Color'
     image.alpha_mode='CHANNEL_PACKED'

@@ -78,7 +78,7 @@ class ScrollingPage:
             self.images={'art':images['large'],'smallArt':images['small'],'shade':images['screen_shade']}
         page=json.loads((wardrobe.DATA/'page.json').read_text(encoding='utf8'))
         self.rows=page['rows']
-        self.motion=page['motion'].get(scene.zzz_toon.wardrobe_role,page['motion']['Remielle'])
+        self.motion=wardrobe.wardrobe_page.scroll_motion(page, scene.zzz_toon.wardrobe_role)
         self.shader=None
         self.batch=None
         self.display=None

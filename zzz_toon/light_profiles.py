@@ -41,7 +41,8 @@ def direction(b, settings, attribute='zzz_surface_hair'):
         node = b.node('ShaderNodeVectorMath', operation='ADD')
         node.inputs[0].default_value = data[role]
         node['zzz_capture_light_role'] = role
-        node.label = 'Captured ' + role + ' light (world)'
+        node.label = ('Studio ' if settings['native_light_profile'].get('scope') == 'Asset-only wardrobe preview'
+                      else 'Source ') + role + ' light (world)'
         vectors[role] = node.outputs[0]
     hair = b.math('SUBTRACT', 1., body)
     # Vector arithmetic avoids colour-node assumptions for negative directions.

@@ -57,7 +57,7 @@ def set_preset(name, overrides=None):
 
 
 # ------------------------------------------------------------------ import
-def import_fbx(path, uv_path=None, collection=None, repair_exports=True):
+def import_fbx(path, uv_path=None, collection=None, repair_exports=True, *, per_mesh_binds=False):
     """Import the prefab FBX (ufbx importer: the legacy one fails on these skeletons). uv_path = optional second
     export of the same prefab with all UV channels (AnimeStudio drops the vertex colours when UV2+ are enabled):
     its extra UV layers are copied onto the first import, loop by loop."""
@@ -106,7 +106,7 @@ def import_fbx(path, uv_path=None, collection=None, repair_exports=True):
             for c in list(o.users_collection):
                 c.objects.unlink(o)
             col.objects.link(o)
-    import_checks.inspect_and_repair(objs, path, enabled=repair_exports)
+    import_checks.inspect_and_repair(objs, path, enabled=repair_exports, per_mesh_binds=per_mesh_binds)
     return objs
 
 
@@ -117,6 +117,10 @@ def read_json(gname):
     except FileNotFoundError:
         return None
     data, kind = assets.load_material(p)
+    return material_info(data, kind)
+
+
+def material_info(data, kind):
     sp = data["m_SavedProperties"]
     as_d = lambda v: dict(v) if isinstance(v, list) else (v or {})
     te = {}
@@ -429,7 +433,7 @@ def setup_bloom(scene, threshold=0.8, strength=0.35, size=0.6):
 
 # ------------------------------------------------------------------ main
 def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key_dir=None, scene=None,
-                    skin_smooth=True, outlines=True, hide=("Weapon",)):
+                    skin_smooth=True, outlines=True, hide=("Weapon",), material_bindings=None):
     """objs: the imported prefab objects (armature + meshes). Returns a report dict."""
     scene = scene or bpy.context.scene
     core.TEX_DIRS[:] = [tex_dir]; core.MAT_DIRS[:] = [mat_dir]
@@ -485,7 +489,7 @@ def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key
     for ob in meshes:
         for g in slots(ob.data):
             if g and g not in info:
-                info[g] = read_json(g)
+                info[g] = material_bindings.get(g) if material_bindings is not None else read_json(g)
     for g, js in info.items():
         if js is None:
             rep["skipped"].append(g); continue
@@ -534,7 +538,7 @@ def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key
             m = core.build_toon(zn, D, None, None, None, prm, "face", face_center=None, sdf=te.get("_LightTex"))
         elif kind == "eye":
             lut = te.get("_EyeColorMap")
-            m = core.build_toon(zn, D, None, None, None, prm, "eye", alpha_mode="PREMUL", iris_fx=not lut,
+            m = core.build_toon(zn, D, None, None, None, prm, "eye", alpha_mode="PREMUL", iris_fx=not lut and not P.get("four_intersection"),
                                 eye_lut=bool(lut))
         elif kind == "brow":
             m = core.build_toon(zn, D, None, None, None, prm, "eye", alpha_mode=P["lash_alpha_mode"])
@@ -577,8 +581,11 @@ def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key
                 res = bake_eye_lut(ob.data, info[g]["tex"]["_EyeColorMap"])
                 rep["notes"].append("%s: eye LUT %s" % (ob.name, res))
                 if res.startswith("skipped"):      # no vertex colours in this export: the inferred alpha formula
+                    if material_bindings is not None:
+                        rep.setdefault('material_warnings', []).append(
+                            f"{ob.name} / {g}: 眼睛查表数据未应用 / Eye lookup fallback: {res}")
                     core.build_toon("ZZZ_" + g.replace("MAT_", ""), info[g]["tex"]["_MainTex"], None, None, None,
-                                    info[g]["params"], "eye", alpha_mode="PREMUL", iris_fx=True, eye_lut=False)
+                                    info[g]["params"], "eye", alpha_mode="PREMUL", iris_fx=not P.get("four_intersection"), eye_lut=False)
 
     # ---- per mesh: lid shadow, skin smoothing, baked outline normals, outline hull
     ogn = core.outline_gn() if outlines else None
@@ -591,6 +598,8 @@ def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key
         first = next((g for g in sl if g in built), None)
         outline_runtime.clear(ob)
         _clear_mods(ob, "ZZZ_SkinSmooth"); _clear_mods(ob, "ZZZ_Outline"); _clear_mods(ob, "ZZZ_HullNormal")
+        if material_bindings is not None:
+            first = next((g for g in sl if g in built and rep["materials"][g]["kind"] == "face"), first)
         if first is None:
             continue
         kind = rep["materials"][first]["kind"]
@@ -599,8 +608,9 @@ def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key
 
         if kind == "face":
             face_ob = ob
+            first_face = first
             fi = sl.index(first)
-            if "zzz_eyeshadow_slot" not in me and "UV0" in me.uv_layers:
+            if material_bindings is None and "zzz_eyeshadow_slot" not in me and "UV0" in me.uv_layers:
                 # lid shadow: loose navy triangles of the shared face layout (UV0 box), drawn as a multiply overlay
                 uv0 = me.uv_layers["UV0"].data
                 hit = [p for p in me.polygons if p.material_index == fi and
@@ -677,6 +687,8 @@ def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key
             col.objects.link(hd)
         hd.empty_display_type = "ARROWS"; hd.empty_display_size = 0.1; hd.hide_render = True
         head = arm and next((b for b in arm.data.bones if b.name.endswith("Head") and "Bip" in b.name), None)
+        if not head and arm and material_bindings is not None:
+            head = next((b for b in arm.data.bones if b.name.casefold() in ("head", "j_bip_c_head")), None)
         if head:
             hd.parent = arm; hd.parent_type = "BONE"; hd.parent_bone = head.name
             hd.matrix_parent_inverse.identity(); hd.matrix_basis.identity()
@@ -689,8 +701,12 @@ def setup_character(objs, tex_dir, mat_dir, preset="UI_FIT", overrides=None, key
         core.set_gn_input(md, ids["Head"], hd); core.set_gn_input(md, ids["Sun"], sun)
         _after_armature(face_ob, md)
 
-        sun.light_linking.receiver_collection = core.ll_coll("ZZZ_LL_NotFace", [face_ob], "EXCLUDE")
-        hs = next((o for o in meshes if "hairshadow" in o.name.lower()), None)
+        if material_bindings is None or (P.get("generic_casters") and info[first_face]["tex"].get("_LightTex")):
+            sun.light_linking.receiver_collection = core.ll_coll("ZZZ_LL_NotFace", [face_ob], "EXCLUDE")
+        if material_bindings is None:
+            hs = next((o for o in meshes if "hairshadow" in o.name.lower()), None)
+        else:
+            hs = next((o for o in meshes if o.name in P.get("generic_casters", ())), None)
         for old in [o for o in bpy.data.objects if o.name.startswith("ZZZ_HairShadowLight")]:
             bpy.data.objects.remove(old)
         if hs is not None:

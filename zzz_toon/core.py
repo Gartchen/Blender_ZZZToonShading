@@ -818,6 +818,8 @@ def build_toon(name, D, N=None, M=None, A=None, params=None, kind="body", alpha_
         vis = b.smooth(ratio, P["hair_shadow_lo"], P["hair_shadow_hi"], x=100, y=1350)
         fade = b.smooth(ndl.outputs["Value"], 0.03, 0.12, x=100, y=1250)
         hs = b.math("MULTIPLY", b.math("SUBTRACT", 1.0, vis, x=250, y=1350), fade, x=400, y=1350)   # 1 = in hair shadow
+        if P.get("generic_casters") == []:
+            hs = 0.0
         lit = b.mixc(hs, lit, (0, 0, 0, 1), x=900, y=600)
         if game_face:          # inside the hair shadow: deep shadow of the same ramp
             s_face = b.math("SUBTRACT", s_face, b.math("MULTIPLY", hs, 2.0, x=900, y=1400), x=1000, y=1350)
@@ -909,7 +911,7 @@ def build_toon(name, D, N=None, M=None, A=None, params=None, kind="body", alpha_
     else:
         tint_sh, tint_sl = P["shadow_tint"], P["shallow_tint"]
     sh_t = b.rgb(tint_sh, x=700, y=-1300); sl_t = b.rgb(tint_sl, x=700, y=-1400)
-    if kind == "face":                 # the hair's shadow on the face has its own (greyer) tone in the video
+    if kind == "face" and sdf:         # the hair's shadow on the face has its own (greyer) tone in the video
         sh_t = b.mixc(hs, sh_t, P["face_hairshadow_tint"], x=780, y=-1300)
         sl_t = b.mixc(hs, sl_t, P["face_hairshadow_tint"], x=780, y=-1400)
     if R is not None and kind == "body" and id_tints:
@@ -1390,7 +1392,7 @@ def build_toon(name, D, N=None, M=None, A=None, params=None, kind="body", alpha_
         col = b.mixc(1.0, col, fcol, blend="ADD", x=2000, y=300)
 
     # ---- wing transmission glow
-    if kind == "wing":
+    if kind == "wing" and "generic_casters" not in P:
         tT = b.tex(img("Remielle_Wings_T", True), x=-1600, y=-950)
         stt = b.node("ShaderNodeSeparateColor", x=-1300, y=-950)
         b.link(tT.outputs["Color"], stt.inputs[0])
@@ -1413,8 +1415,15 @@ def build_toon(name, D, N=None, M=None, A=None, params=None, kind="body", alpha_
         if A:
             if P['game_shading'] and P.get('native_face_layers'):
                 native_face_layers.validate(P['native_face_layers'])
-                aov('zzz_hair', native_face_layers.transmittance(b, sa.outputs[0], face_layers_head)
-                    if prm.get('native_hair_alpha',False) else 0.0)
+                transmission = 0.0
+                if prm.get('native_hair_alpha', False):
+                    transmission = native_face_layers.transmittance(b, sa.outputs[0], face_layers_head)
+                    coverage = P['native_face_layers'].get('coverage_attribute')
+                    if coverage:
+                        verified = b.node('ShaderNodeAttribute')
+                        verified.attribute_name = coverage
+                        transmission = b.math('MULTIPLY', transmission, verified.outputs['Fac'])
+                aov('zzz_hair', transmission)
             else:
                 opacity = b.math("MAXIMUM", sa.outputs[0], prm["floats"].get("_MinStencilAlpha", 0.0), y=-5600, clamp=True)
                 aov("zzz_hair", b.math("SUBTRACT", 1.0, opacity, y=-5650, clamp=True))
@@ -1441,24 +1450,30 @@ def build_toon(name, D, N=None, M=None, A=None, params=None, kind="body", alpha_
     em.inputs["Strength"].default_value = 1.0
     out = b.node("ShaderNodeOutputMaterial", x=2600, y=300)
     if alpha_mode == "PREMUL":
-        # Eye_UI: SrcBlend One / DstBlend OneMinusSrcAlpha -> out = rgb + dst * (1 - a).
-        # a = _D.a * (1 - vertex alpha): iris (vtx a ~0) is opaque, the highlight sprite strip (black sheet with
-        # white shapes, vtx a = 1) and sparkle quads (_D.a = 0) only ADD light. Drawn opaque, that black sprite
-        # sheet was the dark band over the upper iris.
+        # UIEye writes premultiplied RGB and uses One / OneMinusSrcAlpha.
+        # Missing lookup data uses the legacy vertex-alpha approximation below.
         if eye_lut:
             # game (HoyoToon zzz-common.hlsl seperate_eyeshadow): every eye layer is multiplied by a texel of the
             # 16x16 _EyeColorMap picked by the vertex colour R byte (x = R & 15, y = 15 - (R >> 4)), rgb x 2.
             # The addon bakes that texel per corner into the colour attribute "zzz_eye" (character.bake_eye_lut).
             va = b.node("ShaderNodeAttribute", x=1900, y=650); va.attribute_name = "zzz_eye"
-            b.link(b.mixc(1.0, col, va.outputs["Color"], blend="MULTIPLY", x=2050, y=300), em.inputs["Color"])
+            native_eye = P['game_shading'] and native_face_layers.generic_ui_eye(P, prm)
+            if native_eye and P.get('native_environment') and not flags.get('_UseOverlayTex'):
+                rgb = native_face_layers.eye_surface(b, base, prm['Color'], va.outputs['Color'], P['native_environment'])
+            else:
+                rgb = b.mixc(1.0, col, va.outputs["Color"], blend="MULTIPLY", x=2050, y=300)
             a = b.math("MULTIPLY", alpha, va.outputs["Alpha"], x=2200, y=650)
+            # A Generic texture-only eye still declares PREMUL and supplies the
+            # lookup alpha. A different, explicitly identified shader keeps its path.
+            reference = (prm or {}).get('shader_ref') or {}
+            texture_only = 'generic_casters' in P and not (reference.get('Name') or reference.get('m_PathID'))
+            if P['game_shading'] and (native_eye or texture_only or P.get('native_face_layers')):
+                rgb = native_face_layers.premultiply(b, rgb, a)
+            b.link(rgb, em.inputs['Color'])
         else:
             va = b.node("ShaderNodeVertexColor", x=1900, y=650)
             va.layer_name = "Attribute"
             a = b.math("MULTIPLY", alpha, b.math("SUBTRACT", 1.0, va.outputs["Alpha"], x=2050, y=650), x=2200, y=650)
-        if P['game_shading'] and P.get('native_face_layers') and eye_lut:
-            rgb = em.inputs['Color'].links[0].from_socket
-            b.link(native_face_layers.premultiply(b, rgb, a), em.inputs['Color'])
         aov("zzz_eyes", a)
         inv = b.math("SUBTRACT", 1.0, a, x=2350, y=650)
         tr = b.node("ShaderNodeBsdfTransparent", x=2200, y=450)

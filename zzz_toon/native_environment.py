@@ -37,7 +37,8 @@ def light(b,position,profile):
         screen=o.v('SUBTRACT',o.v('ADD',g,color),product)
         target=o.v('ADD',product,o.scale(screen,alpha))
         color=o.cmix(weight,color,target)
-    color.node.label='Native captured world-position light colour'
+    color.node.label = ('Studio world-position light colour' if profile.get('scope') == 'Asset-only wardrobe preview'
+                        else 'Native captured world-position light colour')
     return color,attenuation
 
 def ambient(b,surface,diffuse,profile,vertex_ambient):
