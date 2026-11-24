@@ -1,0 +1,873 @@
+{
+ "inputs": {
+  "native_light_profile": {
+   "schema": "zzz-toon-light-snapshot/1",
+   "scope": "Vivian default outfit; measured frame 2026-11-20 20:08:37 only.",
+   "source": {
+    "capture": "FrameAnalysis-2026-11-20-200837",
+    "body_draw": 37,
+    "pixel_shader": "a24c103adbe204f1",
+    "log_sha256": "deac2890c44adb06ecd86cee8d39478ea0cf6682ffdd20e5bf60ab28288c43e0"
+   },
+   "unity_to_blender_world": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ]
+   ],
+   "body": [
+    0.49429288506507874,
+    0.712461531162262,
+    -0.49806952476501465
+   ],
+   "hair": [
+    0.5459026098251343,
+    -0.26383891701698303,
+    -0.7952228784561157
+   ]
+  },
+  "native_globals": {
+   "post_shallow": [
+    1.0,
+    0.949999988079071,
+    0.9660000205039978,
+    1.0
+   ],
+   "post_shallow_fade": [
+    0.800000011920929,
+    0.7200000286102295,
+    0.7483870983123779,
+    1.0
+   ],
+   "post_shadow": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929,
+    1.0
+   ],
+   "post_shadow_fade": [
+    0.702528715133667,
+    0.6741176843643188,
+    0.7490196228027344,
+    1.0
+   ],
+   "post_front": [
+    1.0,
+    0.9850000143051147,
+    0.9200000166893005,
+    1.0
+   ],
+   "post_sss": [
+    1.0,
+    0.875,
+    0.8500000238418579,
+    1.0
+   ],
+   "skin_shallow": [
+    1.0,
+    0.949999988079071,
+    0.9660000205039978,
+    1.0
+   ],
+   "skin_shallow_fade": [
+    0.800000011920929,
+    0.7200000286102295,
+    0.7483870983123779,
+    1.0
+   ],
+   "skin_shadow": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929,
+    1.0
+   ],
+   "skin_shadow_fade": [
+    0.702528715133667,
+    0.6741176843643188,
+    0.7490196228027344,
+    1.0
+   ],
+   "skin_front": [
+    1.0,
+    0.9850000143051147,
+    0.9200000166893005,
+    1.0
+   ],
+   "skin_sss": [
+    1.0,
+    0.875,
+    0.8500000238418579,
+    1.0
+   ],
+   "entity_info_y": true,
+   "avatar_light_alpha": 1.0,
+   "rim_style": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rim_intensity": 1.0,
+   "rim_color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rim_width": 1.0,
+   "entity_7": 1.0,
+   "entity_8": 1.0,
+   "entity_13": 0.9500033259391785
+  },
+  "native_environment": {
+   "schema": "zzz-toon-environment/1",
+   "scope": "Vivian default outfit; measured frame 2026-11-20 20:08:37 only.",
+   "source": {
+    "capture": "FrameAnalysis-2026-11-20-200837",
+    "body_draw": 37,
+    "pixel_shader": "a24c103adbe204f1",
+    "log_sha256": "deac2890c44adb06ecd86cee8d39478ea0cf6682ffdd20e5bf60ab28288c43e0"
+   },
+   "main_color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "entity_color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "entity_range": 50.0,
+   "entity_position": [
+    20.1153564453125,
+    -14.960183143615723,
+    0.8967793583869934
+   ],
+   "gradient_direction": [
+    -0.4008878171443939,
+    0.2988125681877136,
+    0.0
+   ],
+   "gradient_offset": -0.5342957973480225,
+   "gradient_enabled": true,
+   "gradient_color": [
+    0.7019608020782471,
+    0.7790642380714417,
+    0.8392156958580017,
+    0.19999998807907104
+   ],
+   "ambient_color": [
+    0.04672480374574661,
+    0.07053221017122269,
+    0.09433960914611816
+   ]
+  },
+  "native_character_lut": {
+   "schema": "zzz-toon-character-lut/1",
+   "enabled": true,
+   "size": 32,
+   "exposure": 1.0,
+   "texture": "@files/a329ff3141ffca56e9fc/lut.exr",
+   "layout": "linear-strip-dds-row0-at-uv0",
+   "source": {
+    "capture": "000061-ps-t5=45fd291e-vs=c85e3fc3d2f75d34-ps=f1f227ccc44b3309.dds",
+    "sha256": "42fd6aedb691cbec4b7af542ca2654d346d3a4fe82b5f85347596daf12d0ed1b"
+   },
+   "scope": "Vivian default outfit; measured frame 2026-11-20 20:08:37 only.",
+   "fallback_model": "wardrobe-log-grade-v1"
+  },
+  "native_outline": {
+   "schema": "zzz-toon-outline/1",
+   "source": "FrameAnalysis-2026-11-20-200837",
+   "scope": "Single measured costume preview frame",
+   "visibility": 1.0,
+   "post_tint": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929
+   ],
+   "vertex_ambient": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "clip_offset": [
+    -0.029999999329447746,
+    0.0
+   ],
+   "mesh_inputs": {
+    "Vivian_Weapon_02": {
+     "path": "@files/40b79d5b9d9ac96a7a56/Vivian_Weapon_02.npz",
+     "source": "@files/166c8dfec88613624e5a/Vivian_Weapon_02.json"
+    },
+    "Vivian_Weapon_01": {
+     "path": "@files/cd93a2775a11a664c17f/Vivian_Weapon_01.npz",
+     "source": "@files/a636af5227b58cfd1f89/Vivian_Weapon_01.json"
+    },
+    "Vivian_Body_2": {
+     "path": "@files/628c131ab6919f49616d/Vivian_Body_2.npz",
+     "source": "@files/1b6dcc193812e5202f0c/Vivian_Body_2.json"
+    },
+    "Vivian_Body_1": {
+     "path": "@files/589951c4db6504f093b7/Vivian_Body_1.npz",
+     "source": "@files/8458b1bf75aecf2b8f5e/Vivian_Body_1.json"
+    }
+   }
+  },
+  "native_sampling": {
+   "schema": "zzz-toon-sampling/1",
+   "source": "manifest.json",
+   "scope": "Vivian outfit capture; ordinary opaque body draw 37 and weapon draws 34/35",
+   "sampler_provenance": "Texture settings and captured PS1119 -2 bias; complete D3D sampler state unavailable",
+   "meshes": [
+    "Vivian_Weapon_01",
+    "Vivian_Weapon_02",
+    "Vivian_Weapon_03",
+    "Vivian_Weapon_04",
+    "Vivian_Weapon_05",
+    "Vivian_Body_1"
+   ],
+   "materials": {
+    "ZZZ_Vivian_Weapon_UI": {
+     "Vivian_Weapon_N.png": {
+      "atlas": "@files/ae493579dea419e335e3/Vivian_Weapon_N_mips.exr",
+      "source": "../renders/v70_vivian_capture/source_textures\\Vivian_Weapon_N.bin",
+      "atlas_sha256": "ae493579dea419e335e333c2d3ed0e040b2233f7d18bc997ce4b1507f5f7f20c",
+      "width": 1024,
+      "height": 1024,
+      "mip_count": 11,
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Vivian_Weapon_M.png": {
+      "atlas": "@files/a5809de766ec3825e050/Vivian_Weapon_M_mips.exr",
+      "source": "../renders/v70_vivian_capture/source_textures\\Vivian_Weapon_M.bin",
+      "atlas_sha256": "a5809de766ec3825e05028fe913046372058f32151392c7444cc565479dede74",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Vivian_Weapon_D.png": {
+      "atlas": "@files/c2b8106b884c8db9e9d7/Vivian_Weapon_D_mips.exr",
+      "source": "../renders/v70_vivian_capture/source_textures\\Vivian_Weapon_D.bin",
+      "atlas_sha256": "c2b8106b884c8db9e9d7f7f40f632f0b74d125e81342e6a453def4cbc9baae4b",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": false
+     },
+     "Vivian_Weapon_A.png": {
+      "atlas": "@files/804a359260d01d17e55f/Vivian_Weapon_A_mips.exr",
+      "source": "../renders/v70_vivian_capture/source_textures\\Vivian_Weapon_A.bin",
+      "atlas_sha256": "804a359260d01d17e55fd3bef44957f52425a3324e8fc6125bcca193de3e99c4",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     }
+    },
+    "ZZZ_Vivian_Body_1_UI": {
+     "Vivian_Body_1_D.png": {
+      "atlas": "@files/58e0f727f9262cde7bae/Vivian_Body_1_D_mips.exr",
+      "source": "Vivian_Body_1_D.bin",
+      "atlas_sha256": "58e0f727f9262cde7bae8e5839ee2048260bee2c138d8b5a0eeba54d1217b418",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": false
+     },
+     "Vivian_Body_1_N.png": {
+      "atlas": "@files/4ddccf9f2883d06ae3dc/Vivian_Body_1_N_mips.exr",
+      "source": "Vivian_Body_1_N.bin",
+      "atlas_sha256": "4ddccf9f2883d06ae3dccdf18a861ed4b902ee3ba7d216c82ecc39cbbd20ae72",
+      "width": 1024,
+      "height": 1024,
+      "mip_count": 11,
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Vivian_Body_1_M.png": {
+      "atlas": "@files/82e26e7c174d64444cd3/Vivian_Body_1_M_mips.exr",
+      "source": "Vivian_Body_1_M.bin",
+      "atlas_sha256": "82e26e7c174d64444cd39f0a7a78313252ddd384223ceae24563d28135e69a7f",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     },
+     "Vivian_Body_1_A.png": {
+      "atlas": "@files/6ca6c5e31a4e8aae2d09/Vivian_Body_1_A_mips.exr",
+      "source": "Vivian_Body_1_A.bin",
+      "atlas_sha256": "6ca6c5e31a4e8aae2d092043014e843f01200d78b2d35f733cc08b9985cfd66b",
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "uv": "UV0",
+      "shader_bias": -2.0,
+      "sampler_bias": 0.0,
+      "mip_filter": "nearest",
+      "address": "repeat",
+      "anisotropy": 1,
+      "saturate": true
+     }
+    }
+   }
+  },
+  "native_bloom": {
+   "schema": "zzz-toon-native-bloom/1",
+   "enabled": true,
+   "source": {
+    "capture": "FrameAnalysis-2026-11-20-200837",
+    "events": [
+     85,
+     86,
+     87,
+     88,
+     89,
+     90,
+     91,
+     92,
+     93,
+     94,
+     95,
+     96,
+     97
+    ],
+    "uber": 99
+   },
+   "scope": "Vivian default outfit; measured frame 2026-11-20 20:08:37 only.",
+   "resolution_policy": "normalized-height",
+   "output_alpha": "native",
+   "reference_resolution": [
+    2448,
+    1368
+   ],
+   "base_size": [
+    344,
+    192
+   ],
+   "compose_size": [
+    857,
+    479
+   ],
+   "threshold": 0.44999998807907104,
+   "prefilter_gain": 0.800000011920929,
+   "intensity": 1.2999999523162842,
+   "weights": [
+    0.30000001192092896,
+    0.30000001192092896,
+    0.25999999046325684,
+    0.15000000596046448
+   ],
+   "layers": [
+    {
+     "size": [
+      153,
+      85
+     ],
+     "kernel": 9
+    },
+    {
+     "size": [
+      90,
+      50
+     ],
+     "kernel": 16
+    },
+    {
+     "size": [
+      36,
+      20
+     ],
+     "kernel": 20
+    }
+   ],
+   "intermediate_storage": "r11g11b10_truncate",
+   "atlas": {
+    "size": [
+     153,
+     161
+    ],
+    "rows_from_v0": [
+     76,
+     24,
+     2
+    ]
+   }
+  },
+  "character_overlay": "@files/01c7cb558207649c07c3/CharacterOverlayTex.png"
+ },
+ "stage": {
+  "camera": {
+   "world": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     9.557254998071585e-06
+    ],
+    [
+     0.0,
+     -4.371138828673793e-08,
+     -1.0,
+     -4.019999980926514
+    ],
+    [
+     0.0,
+     1.0,
+     -4.371138828673793e-08,
+     0.8562502861022949
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "optics": {
+    "lens": 56.45555877685547,
+    "sensor_fit": "VERTICAL",
+    "sensor_height": 24.0,
+    "sensor_width": 36.0,
+    "shift_x": 0.026575881987810135,
+    "shift_y": -0.00020306922669988126,
+    "clip_start": 0.10000000149011612,
+    "clip_end": 1000.0
+   }
+  },
+  "render": {
+   "resolution_x": 2448,
+   "resolution_y": 1368,
+   "pixel_aspect_x": 1.0,
+   "pixel_aspect_y": 1.0065789222717285
+  },
+  "samples": 32,
+  "key_dir": [
+   0.8098999857902527,
+   -0.4172999858856201,
+   0.4120999872684479
+  ],
+  "rig_world": [
+   [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    7.549790126404332e-08,
+    -1.0,
+    0.0
+   ],
+   [
+    0.0,
+    1.0,
+    7.549790126404332e-08,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "lights": {
+   "ZZZ_KeyLight": {
+    "world": [
+     [
+      0.4580247104167938,
+      -0.36634954810142517,
+      0.8099390864372253,
+      0.0
+     ],
+     [
+      0.8889394402503967,
+      0.18876099586486816,
+      -0.4173199236392975,
+      0.0
+     ],
+     [
+      5.2355652258029295e-08,
+      0.9111296534538269,
+      0.4121197760105133,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "energy": 3.1415927410125732,
+    "color": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "ZZZ_HairShadowLight": {
+    "world": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      9.557254998071585e-06
+     ],
+     [
+      0.0,
+      -4.371138828673793e-08,
+      -1.0,
+      -4.019999980926514
+     ],
+     [
+      0.0,
+      1.0,
+      -4.371138828673793e-08,
+      0.8562502861022949
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "energy": 394.7841796875,
+    "color": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "objects": {
+   "Vivian_Weapon_02": {
+    "world": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_SampleFootprint",
+     "ZZZ_Outline"
+    ]
+   },
+   "Vivian_Body_2": {
+    "world": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0,
+      1.1520064822868534e-14
+     ],
+     [
+      0.0,
+      0.0,
+      1.0,
+      1.5258788721439487e-07
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_Outline"
+    ]
+   },
+   "Vivian_Weapon_01": {
+    "world": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_SampleFootprint",
+     "ZZZ_Outline"
+    ]
+   },
+   "Vivian_Gem": {
+    "world": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": []
+   },
+   "Vivian_Body_1": {
+    "world": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_Outline",
+     "ZZZ_SampleFootprint"
+    ]
+   },
+   "Vivian_Face": {
+    "world": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0,
+      1.1520064822868534e-14
+     ],
+     [
+      0.0,
+      0.0,
+      1.0,
+      1.5258788721439487e-07
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_FaceVectors",
+     "ZZZ_Outline"
+    ]
+   },
+   "Vivian_HairShadow": {
+    "world": [
+     [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0,
+      1.1520064822868534e-14
+     ],
+     [
+      0.0,
+      0.0,
+      1.0,
+      1.5258788721439487e-07
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "shape": {},
+    "modifiers": [
+     "ZZZ_CasterOffset"
+    ]
+   }
+  },
+  "pose": {}
+ },
+ "prepare": {
+  "rest_outline": {
+   "schema": "zzz-toon-outline/1",
+   "source": "FrameAnalysis-2026-11-20-200837",
+   "scope": "Single measured costume preview frame",
+   "visibility": 1.0,
+   "post_tint": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929
+   ],
+   "vertex_ambient": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "clip_offset": [
+    -0.029999999329447746,
+    0.0
+   ],
+   "mesh_inputs": {
+    "Vivian_Weapon_02": {
+     "path": "@files/166c8dfec88613624e5a/Vivian_Weapon_02.json",
+     "source_sha256": "166c8dfec88613624e5abcbea280bdc6c97a84ad8e5fae0ab716e50922d723b7"
+    },
+    "Vivian_Weapon_01": {
+     "path": "@files/a636af5227b58cfd1f89/Vivian_Weapon_01.json",
+     "source_sha256": "a636af5227b58cfd1f89102061276a4130cc1b298be664223f25fb1605fb6c6a"
+    },
+    "Vivian_Body_2": {
+     "path": "@files/1b6dcc193812e5202f0c/Vivian_Body_2.json",
+     "source_sha256": "1b6dcc193812e5202f0c137cf4a5eaee43771490a0c0a59c93aa61c9090adde8"
+    },
+    "Vivian_Body_1": {
+     "path": "@files/8458b1bf75aecf2b8f5e/Vivian_Body_1.json",
+     "source_sha256": "8458b1bf75aecf2b8f5e46ee2747342964a7ee3b912cece44d9445ee15ebd4ee"
+    }
+   }
+  }
+ },
+ "fbx_recovery": {},
+ "primary_uv_is_back_uv": [
+  "Vivian_Body_2"
+ ]
+}

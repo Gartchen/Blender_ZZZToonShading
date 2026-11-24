@@ -1,0 +1,749 @@
+{
+ "schema": "zzz-wardrobe-preset/1",
+ "shader_id": 2497034685900247571,
+ "shader_name": "",
+ "textures": {
+  "_LightTex": "Female_Face_Lightmap",
+  "_MainTex": "Vivian_Face_D"
+ },
+ "colors": {
+  "_AChannelColor": [
+   1.0,
+   0.0,
+   1.0,
+   1.0
+  ],
+  "_AChannelColorPrecomputed": [
+   0.0,
+   1.0,
+   0.0,
+   1.0
+  ],
+  "_AOParameters": [
+   1.25,
+   1.5,
+   1.0,
+   0.25
+  ],
+  "_AmbientColorCG": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_BChannelColor": [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ],
+  "_BChannelColorPrecomputed": [
+   1.0,
+   1.0,
+   0.0,
+   1.0
+  ],
+  "_BlinkOpacity": [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  "_BlockColorA": [
+   1.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_BlockColorB": [
+   0.5,
+   1.0,
+   0.0,
+   1.0
+  ],
+  "_BlockColorC": [
+   0.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_BlockColorD": [
+   0.5,
+   0.0,
+   1.0,
+   1.0
+  ],
+  "_BlockMoveSpeed": [
+   66.0,
+   88.0,
+   0.0,
+   0.0
+  ],
+  "_CharacterMainLightData": [
+   -1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_CharacterMainLightData1": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_CharacterTempV0104": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_Color": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_ColorA": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_ColorAForCGLighting": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_ColorB": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_ColorBForCGLighting": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_ColorOverrideAlbedo": [
+   1.0,
+   1.0,
+   1.0,
+   0.0
+  ],
+  "_DetailColor": [
+   0.384,
+   0.565,
+   1.498,
+   1.0
+  ],
+  "_FaceShadowPoint": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_FresnelColor": [
+   0.0,
+   0.2,
+   1.625,
+   1.0
+  ],
+  "_GChannelColor": [
+   0.0,
+   1.0,
+   0.0,
+   1.0
+  ],
+  "_GChannelColorPrecomputed": [
+   1.0,
+   0.0,
+   1.0,
+   1.0
+  ],
+  "_HardLightColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_HeadMatrixWS2OS0": [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_HeadMatrixWS2OS1": [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  "_HeadMatrixWS2OS2": [
+   0.0,
+   0.0,
+   1.0,
+   0.0
+  ],
+  "_HeadMatrixWS2OS3": [
+   1.0,
+   1.0,
+   1.0,
+   0.0
+  ],
+  "_LayerIDColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_MainPunctualLightData": [
+   0.0,
+   0.0,
+   0.0,
+   -1.0
+  ],
+  "_MaskRChannelUVSpeed": [
+   1.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  "_MatCapColorTintFx": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_MiddlePointPosition": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_OutlineColor": [
+   1.0,
+   0.5,
+   0.5,
+   1.0
+  ],
+  "_OutlineColor2": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_OutlineColor3": [
+   1.0,
+   0.5,
+   0.5,
+   1.0
+  ],
+  "_OutlineColorFX": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_OverrideColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_OverrideMainLightBody": [
+   0.0,
+   0.0,
+   1.0,
+   0.0
+  ],
+  "_OverrideMainLightColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_OverrideMainLightColor2": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_OverrideMainLightColor3": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_OverrideMainLightDir": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_OverrideMainLightHair": [
+   0.0,
+   0.0,
+   1.0,
+   0.0
+  ],
+  "_OverrideOutlineColor": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_OverrideOutlineSpeed": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_OverrideRimGlowColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_OverrideRimGlowSpeed": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_PointPosition": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_PointPositionForCGLighting": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_PropertyColor": [
+   2.635,
+   3.388,
+   23.968,
+   1.0
+  ],
+  "_PropertyMask2UVSpeed": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_PropertyMaskUVSpeed": [
+   8.0,
+   2.0,
+   0.0,
+   0.0
+  ],
+  "_PropertyNormalUVSpeed": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_PropertyTexUVSpeed": [
+   3.0,
+   3.0,
+   0.0,
+   0.0
+  ],
+  "_RChannelColor": [
+   1.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_RChannelColorPrecomputed": [
+   0.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_RampTexParams0": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_RampTexParams1": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_RampTexParams2": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_RimGlowLightColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_RimGlowLightColor2": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_RimGlowLightColor3": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_RimGlowShadowColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_RimGlowShadowColor2": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_RimGlowShadowColor3": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_ScreenColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_ScreenImageUvMove": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_ScreenTexRotationAxis": [
+   0.5,
+   0.5,
+   0.0,
+   0.0
+  ],
+  "_SecondaryEmissionColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_SecondaryEmissionColorForCGLighting": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_SecondaryEmissionTexSpeed": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_ShadowColor": [
+   0.9450981,
+   0.8509805,
+   0.8509805,
+   1.0
+  ],
+  "_ShadowColor2": [
+   0.9,
+   0.9,
+   0.9,
+   1.0
+  ],
+  "_ShadowColor3": [
+   0.6,
+   0.6,
+   0.6,
+   1.0
+  ],
+  "_ShallowColor": [
+   1.0,
+   0.9607844,
+   0.9490196,
+   1.0
+  ],
+  "_ShallowColor2": [
+   0.95,
+   0.95,
+   0.95,
+   1.0
+  ],
+  "_ShallowColor3": [
+   0.8,
+   0.8,
+   0.8,
+   1.0
+  ],
+  "_SoftLightColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_SpecSocketBindPoseMat0": [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_SpecSocketBindPoseMat1": [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  "_SpecSocketBindPoseMat2": [
+   0.0,
+   0.0,
+   1.0,
+   0.0
+  ],
+  "_SpecSocketBindPoseMat3": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_SpecSocketPosOffset": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_StretchToPoint": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "_StretchVector": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "_TransitionColor": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "_UISunColor": [
+   1.0,
+   0.92,
+   0.9,
+   1.0
+  ],
+  "_UISunColor2": [
+   1.0,
+   0.92,
+   0.9,
+   1.0
+  ],
+  "_UISunColor3": [
+   1.0,
+   0.92,
+   0.9,
+   1.0
+  ]
+ },
+ "parameters": {
+  "_AbnormalProperty": 0.0,
+  "_AbnormalPropertyBurn": 0.0,
+  "_AbnormalPropertyElectro": 0.0,
+  "_AbnormalPropertyFreeze": 0.0,
+  "_AdditionalLightIntensity": 1.0,
+  "_AlbedoSmoothness": 0.05,
+  "_AlbedoSmoothness2": 0.1,
+  "_AlbedoSmoothness3": 0.1,
+  "_AmbientColorScale": 1.0,
+  "_BShift": 0.0,
+  "_Blink": 0.0,
+  "_BlinkFrequency": 1.0,
+  "_BrightMultiplier": 1.0,
+  "_BrightMultiplier2": 1.0,
+  "_BrightMultiplier3": 1.0,
+  "_CameraToLightRadian": 0.0,
+  "_CastUIShadow": 1.0,
+  "_ChannelMixerUsingUV4": 0.0,
+  "_CharacterSimplify": 0.0,
+  "_CharacterStencil": 128.0,
+  "_ClipPlane": 0.0,
+  "_ClipSpaceXOffset": 0.0,
+  "_ClipSpaceYOffset": 0.0,
+  "_ColorBlocks": 0.0,
+  "_ColorCorrectionIntensity": 1.0,
+  "_DarkAOScale": 0.25,
+  "_DiffuseFade": 1.0,
+  "_DiffuseFade2": 1.0,
+  "_DiffuseFade3": 1.0,
+  "_DiffuseFade4": 1.0,
+  "_DiffuseFade5": 1.0,
+  "_Dither": 0.0,
+  "_DitherAlpha": 1.0,
+  "_DitherAlpha2": 1.0,
+  "_FixNeck": 1.0,
+  "_FresnelFlashing": 4.0,
+  "_FresnelMaskWidth": 5.0,
+  "_FresnelWidth": 3.5,
+  "_GShift": 0.0,
+  "_Glitch": 0.0,
+  "_HardLight": 0.0,
+  "_HardLightWidth": 0.1,
+  "_IgnoreTimeScale": 0.0,
+  "_LerpPosition": 0.5,
+  "_LerpPositionForCGLighting": 0.5,
+  "_LightDirectionFromCamera": 0.0,
+  "_LightSource": 0.0,
+  "_LightSourceForCGLighting": 0.0,
+  "_LineBrightness": 1.0,
+  "_LineGlitch": 0.0,
+  "_LineThresholdMax": 0.2,
+  "_LineThresholdMin": 0.0,
+  "_MarkAsGhostMask": 0.0,
+  "_MarkAsGlitchMask": 0.0,
+  "_MaskTexFactor": 1.0,
+  "_MatCap": 0.0,
+  "_MatCapAlphaBurstFx": 1.0,
+  "_MatCapBlendModeFx": 0.0,
+  "_MatCapBumpScaleFx": 1.0,
+  "_MatCapColorBurstFx": 1.0,
+  "_MatCapFX": 0.0,
+  "_MatCapNormalUSpeedFx": 0.0,
+  "_MatCapNormalVSpeedFx": 0.0,
+  "_MatCapUSpeedFx": 0.0,
+  "_MatCapVSpeedFx": 0.0,
+  "_MaterialNum": 0.0,
+  "_MaxOutlineZOffset": 0.01,
+  "_MultiplyAlbedo": 1.0,
+  "_MultiplyAlbedoForCGLighting": 1.0,
+  "_MultiplySrcColor": 0.0,
+  "_NoiseScale": 1.0,
+  "_NormalThreshold": 0.0,
+  "_NoseLineHoriDisp": 0.92,
+  "_NoseLineLkDnDisp": 0.62,
+  "_NoseSpecularScale": 1.0,
+  "_Outline": 1.0,
+  "_OutlineFX": 0.0,
+  "_OutlineWidth": 1.0,
+  "_OutlineWidthFX": 1.0,
+  "_OutlineWidthUIAdjustment": 1.0,
+  "_OverlayTexScale": 1000.0,
+  "_Override": 0.0,
+  "_Override2Tone": 0.0,
+  "_Override2ToneBlendMode": 0.0,
+  "_Override2ToneBlendModeForCGLighting": 0.0,
+  "_Override2ToneForCGLighting": 0.0,
+  "_Override2ToneMultiplyAlbedo": 0.0,
+  "_Override2ToneMultiplyAlbedoForCGLighting": 0.0,
+  "_OverrideMainLight": 0.0,
+  "_OverrideMainLightParam": 0.0,
+  "_OverrideMainLightParam2": 0.0,
+  "_OverrideMainLightParam3": 0.0,
+  "_OverrideOutline": 0.0,
+  "_OverrideOutlineUseUV2": 1.0,
+  "_OverrideRimGlow": 0.0,
+  "_OverrideRimGlowMode": 0.0,
+  "_OverrideRimGlowUseUV2": 0.0,
+  "_PerObjectShadowIntensity": 1.0,
+  "_PerObjectShadowIntensity2": 1.0,
+  "_PerObjectShadowIntensity3": 1.0,
+  "_PointSpace": 0.0,
+  "_PointSpaceForCGLighting": 0.0,
+  "_PowMax": 1.5,
+  "_PowMin": 1.25,
+  "_PropertyMask2Channel": 0.0,
+  "_PropertyMask2UseUV2": 0.0,
+  "_PropertyMaskChannel": 0.0,
+  "_PropertyMaskUVFlipSpeed": 50.0,
+  "_PropertyMaskUseUV2": 0.0,
+  "_PropertyNormalUseUV2": 0.0,
+  "_PropertyTexUVFlipSpeed": 25.0,
+  "_PropertyTexUseUV2": 0.0,
+  "_PropertyType": 0.0,
+  "_RShift": 0.0,
+  "_RampSource": 0.0,
+  "_ReceiveAddShadows": 1.0,
+  "_ReceiveShadows": 1.0,
+  "_ReceiveStencilShadow": 1.0,
+  "_RenderType": 1.0,
+  "_RimGlow": 1.0,
+  "_ScreenImage": 0.0,
+  "_ScreenMaskUV": 0.0,
+  "_ScreenScale": 1.0,
+  "_ScreenTexRotation": 0.0,
+  "_SecondaryEmission": 0.0,
+  "_SecondaryEmissionChannel": 0.0,
+  "_SecondaryEmissionChannelForCGLighting": 0.0,
+  "_SecondaryEmissionForCGLighting": 0.0,
+  "_SecondaryEmissionMaskChannel": 0.0,
+  "_SecondaryEmissionMaskChannelForCGLighting": 0.0,
+  "_SecondaryEmissionTexRotation": 0.0,
+  "_SecondaryEmissionTexRotationForCGLighting": 0.0,
+  "_SecondaryEmissionUseUV2": 0.0,
+  "_SecondaryEmissionUseUV2ForCGLighting": 0.0,
+  "_ShadowColorFadeByZ": 1.0,
+  "_ShadowDitherOff": 0.0,
+  "_ShadowNormalBias": 0.01,
+  "_ShadowZOffset": 0.0,
+  "_ShadowZOffsetWholeMesh": 0.0,
+  "_ShadowmapSmoothness": 0.5,
+  "_ShiftAngle": 120.0,
+  "_ShiftAngleForCGLighting": 120.0,
+  "_SoftLight": 0.0,
+  "_SoftLightWidth": 0.1,
+  "_Softness": 0.0,
+  "_SoftnessForCGLighting": 0.0,
+  "_SpecSocketBoneIndex": 0.0,
+  "_SpecSocketGPUAnimInstanceID": 0.0,
+  "_SpecSocketTotalNumberOfBones": 0.0,
+  "_SssWidth": 0.0,
+  "_SssWidth2": 0.0,
+  "_StencilComFunc": 0.0,
+  "_StencilReadMask": 1.0,
+  "_StencilRef": 144.0,
+  "_StencilRefShadow": 148.0,
+  "_StencilWriteMask": 255.0,
+  "_StencilWriteMaskShadow": 144.0,
+  "_StretchDirection": 0.0,
+  "_StretchDistance": 0.0,
+  "_StretchPercentage": 0.0,
+  "_TabSelection": 0.0,
+  "_TransSpeed": 1.0,
+  "_Transition": 0.0,
+  "_TransitionCompletion": 0.0,
+  "_TransitionWidth": 0.0,
+  "_UseChannelMixer": 0.0,
+  "_UseFaceShadowPoint": 1.0,
+  "_UseInvSecondaryEmissionMask": 0.0,
+  "_UseOverlayTex": 0.0,
+  "_UseShadowFadeMask": 0.0,
+  "_UseVertexMaterialID": 1.0,
+  "_VertexOffset": 0.5,
+  "_VertexStretch": 0.0,
+  "_VolumeLutScale": 1.0,
+  "_ZTest": 3.0,
+  "_ZTestPreZ": 4.0,
+  "_ZWrite": 1.0,
+  "_ZWritePreZ": 1.0
+ }
+}

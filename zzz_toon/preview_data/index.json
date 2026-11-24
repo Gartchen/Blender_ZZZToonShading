@@ -1,0 +1,347 @@
+{
+ "outfits": {
+  "Remielle": {
+   "fbx": "65285621800d49ca55dd3d940a16e08531e8250145b712b7c38960c060ab6e58",
+   "uv": null,
+   "capture_log": "eea188b054ae8d2b218058587d58af2c4b67a938cf9b6993ee9a03b47828ec90",
+   "materials": {
+    "MAT_HairShadow_UI.json": "4011ce0226a2ead0a07386e06f9a258bc8278b35b4891c7b316dcc4d116c7733",
+    "MAT_Remielle_Eye_UI.json": "c636c6af034310cfe815b539d7dd42fa252e9c87570bea8b8c44b0c48c89f37c",
+    "MAT_Remielle_Eyebrow_UI.json": "abf4b3856bf83e712940637ec5fd64a370b06a8ec7f92824533da5fd3c4ae42f",
+    "MAT_Remielle_Face_UI.json": "e79a700166b181163ac3e52903b3fbbb6294470df4ded0cb037308afe9c4e7d9",
+    "MAT_Remielle_Hair_T_UI.json": "3e3007981671bad57829652716862fd9aee5e94d9c57b81aee885b8d0cd80405",
+    "MAT_Remielle_Hair_UI.json": "4520a852d4be4f31374134e8efb901a89e55bc5a68d291abc209869c6dc3124f",
+    "MAT_Remielle_Origin_Body_1_T_UI.json": "e00ff9e1daf7a3676c8e664abe7f5214cca8401c19d76cfa0f1703380f2a74a4",
+    "MAT_Remielle_Origin_Body_1_UI.json": "d0b64c94a6d5ff0e437fc72adf998c6a81890f58546812a8901318cffe189d06",
+    "MAT_Remielle_Origin_Body_2_UI.json": "a068b9806d15f2d3aaa504145f6897b4fab19b9637440541ec2efe66ba7586a3",
+    "MAT_Remielle_Sticker_UI.json": "4257730c5edad56d5eff08d4c582b2c47ae8173b5a9689bb1f3215b8528919e6",
+    "MAT_Remielle_Weapon_01_UI.json": "b9b1dc6c9fd43507d65d1e18731678b93d1274b8634356257bf7d6aca6438cc2",
+    "MAT_Remielle_Weapon_02_UI.json": "411a146bd520b1844477a739b7636f3ff1e51500328ee096db2dba11c546e174",
+    "MAT_Remielle_Wings_UI.json": "3f9fbb304617e53553c25a17627d513f3e40361b1925ac9f96a7e0575a87ac4f"
+   },
+   "textures": {
+    "Eff_MatCap_019.png": "8676039d296d02f747cab07666d246a2d40d2a9e97c6845ba9fce733f9ab1899",
+    "Eff_MatCap_021.png": "b11e1a0c7e925d3a725ecae8e202f1df87f57db6b085ab9f0ca3c63e4f3d5e25",
+    "Eff_Matcap_047.png": "b4da9943185c8d3bcb6739027c03d4e2072cefd03ab8f03e0e4f2cdf30a47e1a",
+    "Eff_Matcap_053.png": "e3974cd7d21d4c77d99acaf651afb5617bc19a8363a7d87a8f2d458df7da38d9",
+    "Eff_MatCap_077.png": "441993a232ff89818efc80d7ed63b9e04cc754f77568d8c8a4ca87dba553c95b",
+    "Eff_Matcap_092.png": "877e8c95c6997f61190b709cda764a2517fe4fc918205f5138340cd317cc2252",
+    "Eff_Matcap_112.png": "1479877f93bfdddeb7b4fed508abb0884dca0c5472785f2488e33202b3c43de2",
+    "Eff_Matcap_115.png": "b08b0a2adb13a92aeae0beeac82e4ee46b447a4920b19b4c11aef63a1141a075",
+    "Eye_E.png": "5354249ebea80be0dea8c3c197dc0ae55a3f3dea24f1466adc08208e34022247",
+    "Female_Face_Lightmap_02.png": "c5d3b068e26aa0bed16dd3511bd5e706c6287fb1559a3d200e34805c47eb6967",
+    "Remielle_Face_D.png": "2a923e0afaa07fb3ee3c6df058b3d3e70dcc939e53b495e2791229dbb56ef413",
+    "Remielle_Hair_A.png": "7477fb52ac6b583394ab34b52a47a581a9042fc88d1450f95fbaf211ea8f7b92",
+    "Remielle_Hair_D.png": "a4ab2359c1d0d5018efd2c098acc9ce892246af08d564bda1d5b1202d4bacb05",
+    "Remielle_Hair_M.png": "82d6fdb85f4d6f2ac43075c99ef749ff127b8f7430398d8d813de8dba7fcfbc4",
+    "Remielle_Hair_N.png": "e95a2d5cd47fc35859094cb78ff6a541574285f6dbfb310f5d4775dce5d27f8c",
+    "Remielle_Origin_Body_1_A.png": "c52a89c802732f8dc0549378397a3294efa5a368d5d10a66cae8683bb65a21a4",
+    "Remielle_Origin_Body_1_D.png": "9f3df5b792a0213f84f7564e8b109901ecad0f38fcf2903bad58b0b46f0912fd",
+    "Remielle_Origin_Body_1_M.png": "f2d1371bfc798247b91c68178653899a16255458799824b640075b526f9d9ae9",
+    "Remielle_Origin_Body_1_N.png": "e296d3d2f216f4204504db753b575b8f5712c480843a997cb0cbe313133c281a",
+    "Remielle_Origin_Body_2_A.png": "1b01e5dc4ee87111798da36c60cb7de2314c411a87e34a5404bd119a9d2a4e0f",
+    "Remielle_Origin_Body_2_D.png": "9472f893debec6743161bca9d389d09c2f4698dd8f6e1d6aae0ce1339ad6c3ac",
+    "Remielle_Origin_Body_2_M.png": "69dd361cd3df86c5c3cd356009a037becea2d52b6f2ff92f94772162aa0e5b7f",
+    "Remielle_Origin_Body_2_N.png": "d54c75104432aee16861ba3aa28a51895d4c31287bda0fb95c6bc2628fd2db7b",
+    "Remielle_Ramiel_Wings_M.png": "dcfa901761f908a01ca599b61c9ddd535814dd6a4cffa0a72280b27d633c639e",
+    "Remielle_Ramiel_Wings_N.png": "c3a5ad09eb5da36fb46f90487177fbec949d3eff73d065f3ce0bb48da001cf7a",
+    "Remielle_Sticker_A.png": "5fc2ffc085f0e141b553ca754e715eacdfdc37c3f307c333b196abcbf0f132c4",
+    "Remielle_Sticker_D.png": "7cd5abd83c0e5e3307fc02efccf6ab5f9583c4b0cede57401b67785d506b9d77",
+    "Remielle_Sticker_M.png": "dcfa901761f908a01ca599b61c9ddd535814dd6a4cffa0a72280b27d633c639e",
+    "Remielle_Sticker_N.png": "a499edbf4fa5b068365ccd3ca5942e129e9a9d6680bb97e58ee00cf723981575",
+    "Remielle_Weapon_01_A.png": "20cddef402919949b3efec6ffa4de95d8e6bcc954c124205b7624a6fd4545419",
+    "Remielle_Weapon_01_D.png": "4493fc1301da3c4612335b59aae5118e9779b59dbb24ebcd3fc0f49814d672d8",
+    "Remielle_Weapon_01_M.png": "192e4beb1ead6043690fc9002d071a4140b44529c13cf9171a3d3c4c78e7ee53",
+    "Remielle_Weapon_01_N.png": "b14241691492ccac1fdef30b0b623745226379c7c64f637caaaba0de9e533b5e",
+    "Remielle_Weapon_02_A.png": "620a5e0aca5f3971755521baf081010abef3133d393735c8308f0145af79cb4d",
+    "Remielle_Weapon_02_D.png": "a983aa59caa19536c367850150b53a6ea589dd024bd2b121f3aa91d945542356",
+    "Remielle_Weapon_02_M.png": "4b51f578edf5572d38995ee917b9169e598b6524edd9e174fdc5ca97de28cc83",
+    "Remielle_Weapon_02_N.png": "dbc0588b6ec470ef02c69916cfdf39c270d46559a01cdf0fe78604e5d126a139",
+    "Remielle_Wings_A.png": "7a4c0e84d9a6f99028e8836312885fcaefcb7e87f919379e7181ea98257504b1",
+    "Remielle_Wings_D.png": "6575814729f37bab6f630e74afb4e71c6abfb9049b5b4b0b0bab8983e6cf7e4e",
+    "Remielle_Wings_T.png": "1233fef28606bdbbc312f8a1b454e81baf03ba761415deb68bf793a6df99f3f7"
+   }
+  },
+  "Velina": {
+   "fbx": "356529be6c1d1d11f47547e85800c0559efc15ea2ca81a13e2b724475c764d96",
+   "uv": "d08ab4111a20b0aa7b062c96619cde889251d309fce564d17d881e98d70c7ce3",
+   "capture_log": "8732d31a6510070df8ff7a321b1a454cec41a7933c4370bb5aec1690d7fc99c8",
+   "materials": {
+    "MAT_Velina_Body_1_T_UI.json": "ee3981013a1da75ad243404e573c77cc82f6d32c0e27dbdb073e23f305c87a8f",
+    "MAT_Velina_Body_1_UI.json": "34e872023543fe8632b06190dc736f0fbbd0006e339af27fdb306eb19e5dc1f4",
+    "MAT_Velina_Body_2_UI.json": "69cb86608c2ee244d02e6c37b6ba0fab8f0258844c835895139e58706cebb155",
+    "MAT_Velina_Eye_UI.json": "55ab1a56b47f4cc7ffd09ca88ae927c719b10f0af92b41abdd007c048400687b",
+    "MAT_Velina_Eyebrows_UI.json": "ff08397598631d2f2f3115a8baff4b59b5bd94164defecb510e7b5ffa8159e0e",
+    "MAT_Velina_Face_UI.json": "9fd02002c421a69a389e984269986191634147998c2a6432cfc8eac86c5199a9",
+    "MAT_Velina_Hair_T_UI.json": "e956ecb0d9a9cf28577c0bf1542bdac5497a7353c269ed3ad3c0e23f459bb795",
+    "MAT_Velina_Hair_UI.json": "58b2b21332ffc802827f57acaac5cb188f44ca10da437fb6400816e770b6b2a1",
+    "MAT_Velina_Leisure_Body_1_T_UI.json": "a45f01b50d6aa8e9da210118ca3586a4992ee52cb0742e2aa9fda8540a9a7d2b",
+    "MAT_Velina_Leisure_Body_1_UI.json": "b71c351750e52a41c20e201c9ad8b16d3a09327b4c794f3514c71aa5cd563cd3",
+    "MAT_Velina_Leisure_Body_2_UI.json": "8753176de0a7291edcd9f33f1a0bc41e8633b8059f56f4e6817a1b5d42fec0f4",
+    "MAT_Velina_Leisure_Body_3_UI.json": "ad08c4863686b2f821357fb4203365e748a681a4d40d13581184d073b7c004b6",
+    "MAT_Velina_Leisure_Hair_1_T_UI.json": "4c5b15e4f49f1a50d31131e3aa66b658c88ea5f39f7137b333c205715d364f7c",
+    "MAT_Velina_Leisure_Hair_2_T_UI.json": "3fc90fb4619c3631ea120661946ef8784990e56f58b3708f31682a7131f040bc",
+    "MAT_Velina_Leisure_Hair_UI.json": "f78b8e913dc41178a7c154c0c6c52baa1f58c7e7f170f48ffce91f93c85926cd",
+    "MAT_Velina_Weapon_UI.json": "af182bf9eb8a0d18e324066cd07f7166b9b035ada624e1aaa92f80f6ebdf852a"
+   },
+   "textures": {
+    "Eff_MatCap_006.png": "8e435772f90319005c2703f2105e8830eafc94b793a0dafee6b0842e1a6e4e11",
+    "Eff_MatCap_019.png": "2d2175c24aa23b74e4e4a82a0fe5d6a3c17ebae61dd6166ab33180a4996e3a23",
+    "Eff_MatCap_021.png": "3326e3e2573e04eb42c7119439a439a8094e5299e804808def3f85b2a6ff3fa7",
+    "Eff_MatCap_073.png": "c07bd311cb7bea08b8bf66b5e0773bbd1902e5c994c17a2a6806a44e66c09605",
+    "Eff_MatCap_074.png": "4c96c62c727e7595ed69a3e61032ae983b613590d78c4d0c60700c654111ab4c",
+    "Eff_MatCap_083.png": "6b86441833dd9f978da0248ada7d30074972c73233125f2327150e25e6163ac8",
+    "Eff_MatCap_121.png": "83c08df85aa9a8d46ceb245c179275aee2693598dc9a850b2697b9195af98f42",
+    "Eff_MatCap_128.png": "78800ef46d85f8009be38133336f5d5032e0de729a7ae2b262ab251624abbad0",
+    "Eff_Matcap_Socks_03.png": "529c556728101089b606ce0252d75f407921c77482ce9b724f65df77b59d8af8",
+    "Eye_E_02.png": "a01d70e9d2f2a8e648f0a31343be8924d3dc721c88a160850098822bb682ea91",
+    "Female_Face_Lightmap_02.png": "17de21891db5cd5b63af112f5e68a320fc3c173a9e46b1aa4ec531ef98f4073e",
+    "Velina_Body_Map1_A.png": "5106197354a38c8de085781d0a56fa58123ccde8db4be44b473ec007d6658cde",
+    "Velina_Body_Map1_D.png": "94965657235e088647a0891cdd7c4dae1cd165f6ac49fc9a672355957367c9c5",
+    "Velina_Body_Map1_M.png": "e220f8e70b2de0a18a462a8a833c740ea3cd8594430f6dfc6441d36eb1feee2b",
+    "Velina_Body_Map1_N.png": "6613381229342f04b80ebad642bc1c772ac5a10e5e49f7b6fdf08c49deca0585",
+    "Velina_Body_Map2_A.png": "438fd0607d855b1e9d0203d864ea1203fa255293edecafb615326ccedde26274",
+    "Velina_Body_Map2_D.png": "0a595e7d6d49bc82f9916f47ac780a87959c97db65886cb785d891f9da572691",
+    "Velina_Body_Map2_M.png": "ad5402171c53a615e409b8f54f16873abb8e24668afcfa174039a3e1fc6dd528",
+    "Velina_Body_Map2_N.png": "1ff8ac063db19f9cb67cc515496de068ca0ff266a8217a9efc066eb574d13593",
+    "Velina_Face_D.png": "1ef90e88e3c9dc6c3d60c9eecbf7fbf09900f38a2da323a1e7e59f49dccd3005",
+    "Velina_Hair_Map_A.png": "d29979c895fb65f7b1db56feb4b56ce23e172f21335416fa5c55d37acb32f5da",
+    "Velina_Hair_Map_D.png": "64dfc4704d692adba0056ffe72ea58609a546ae8a70f051b820d0073ddf1057b",
+    "Velina_Hair_Map_M.png": "f9f5bc7b21464acf8feda0af7e98d2730468e842a02847ea655e1fa495239442",
+    "Velina_Hair_Map_N.png": "9014329b93cb93d7b8972470a29b476ff135055fdbdfd32f67ed71fa76efe3f8",
+    "Velina_Leisure_Body_Map1_A.png": "5da09ba62e07f76c8d79b7e454998c3e0e5f74e4f6da33c3dacf28ac2d543ea0",
+    "Velina_Leisure_Body_Map1_D.png": "6e3e2ac67f70c21f69154d8cc0784efe1afcf94e35c9f8d353697da4ab831709",
+    "Velina_Leisure_Body_Map1_M.png": "0d6e52ff2e135b66c0196df168fb7044ab83ca70458bba26e3608c164b3ed2ec",
+    "Velina_Leisure_Body_Map1_N.png": "39cdc93d90da43e09e7b3a36482863c2f4bfabfb4c044e32c7b5cefac6f777f6",
+    "Velina_Leisure_Body_Map2_A.png": "224f69a340a0312df04271cf41f4447e1ce243f79666954804ec66ad82488027",
+    "Velina_Leisure_Body_Map2_D.png": "4f9afd488f353ee969de14113c1ed47dd71c9e7ad584566db566fb8e6547d663",
+    "Velina_Leisure_Body_Map2_M.png": "2bef919524a74c87623389cde0a8e1a386ec0481c7311df2514d29e3e0124f5b",
+    "Velina_Leisure_Body_Map2_N.png": "5e7c34c5c46a65e7700b1b6ecb7320939bd74364681ebbb2dd34f527fd217e38",
+    "Velina_Leisure_Body_Map3_A.png": "7c6fb8326c1949c27d949c62e933f120863d0686b1031208d0836df013e7cff4",
+    "Velina_Leisure_Body_Map3_D.png": "b73444f834cf78612e76dc3e3bc7e6c6b82757586b56b9e1dfb7a84c70137964",
+    "Velina_Leisure_Body_Map3_M.png": "b31367192f5e4614ec67a35004a54f2acd8f0abdc62dc5959bb4538d8c9f1c07",
+    "Velina_Leisure_Body_Map3_N.png": "dde285d1ce38b57907c7af368f372fac0bf1419063d8d6fc0b7c834c21389598",
+    "Velina_Leisure_Hair_A.png": "6db9a55fd886a6e14570295762d30c3049fe941d10528a066d90b885e129e105",
+    "Velina_Leisure_Hair_D.png": "8fec4a6284e7ac456b855ea93e59c1423417d02843fd1102c1d07fffc5741b29",
+    "Velina_Leisure_Hair_M.png": "dd4e359927ef0b88c4c1fc9635308ea3ff22fd25f6fde11308e789b6b10d07ab",
+    "Velina_Leisure_Hair_N.png": "e4614ac9c5a77a5393bc189f4ec9b458e9b4833397ddfc59cb49516370a07ae3",
+    "Velina_Weapon_Map_A.png": "a6aae841c68fa35e5e0c1f01447e6a4f65a85ca0fb899385f69a3751b46d5060",
+    "Velina_Weapon_Map_D.png": "8910267a51f3795130b559e0133b68b62c5145702872cff79649f9e70dd290bc",
+    "Velina_Weapon_Map_M.png": "c3a7d6a627239a88097751715574fc01ada033c4611c1a4adc30552f5d07a2fb",
+    "Velina_Weapon_Map_N.png": "bd48a7a300650b0bc32ebb832a05b16d269223aaa1ec307066a69f1b9bfeb118"
+   }
+  },
+  "Vivian": {
+   "fbx": "81b11ffe10bb8413acb5fdf6653aac6eef5372908e193ecd266d778e49f8527a",
+   "uv": "524ee07697805205d6aa3ebd2c45992e09c2efafd725841e4ec06d7263292ae2",
+   "capture_log": "deac2890c44adb06ecd86cee8d39478ea0cf6682ffdd20e5bf60ab28288c43e0",
+   "materials": {
+    "MAT_HairShadow_UI.json": "88b528e8df0c565084a90b9e1b89a197c7ef636d183d5d37d38a99e20ed44551",
+    "MAT_Vivian_Body_1_UI.json": "d0880a2f1b6aa5770e9e7c0735cd3522816aa0ac1bf393f8c62409d66e349aa3",
+    "MAT_Vivian_Body_2_UI.json": "2b4cd5042eae74ff836efe87bc3b388ee0b2fb84b5aef2dc9efba844f01f8ed2",
+    "MAT_Vivian_Eye_UI.json": "3af6762756878f182f80e8bd5e01f519916ede6162cc06ed780e49335b8acf3d",
+    "MAT_Vivian_Eyebrows_UI.json": "1a80927fcbd0cd2c04ccd9bbf55b240af5ec8aff8ae67d88b19d0b1ddfa6ab1f",
+    "MAT_Vivian_Face_UI.json": "1fa3a62a238d356aceb7b5907d5ce74c4b7f59ef912bfbb69786d2f258a8d6ee",
+    "MAT_Vivian_Gem_UI.json": "bb8fa3c3fcccce23a65204270bf61ca679eae324241ade2bdf599c07d2f5a065",
+    "MAT_Vivian_Hair_T_UI.json": "a05c8f601558088b51d4ca6614e5311006272464aa31377f42a1661912c752cd",
+    "MAT_Vivian_Weapon_UI.json": "0358641112071babc8fd6931c6e6f924a159ec9020f234a7009b56d19f950206"
+   },
+   "textures": {
+    "Eff_MatCap_021.png": "3326e3e2573e04eb42c7119439a439a8094e5299e804808def3f85b2a6ff3fa7",
+    "Eff_Matcap_025.png": "783176c57f5bf73574c195aee94f6267a0e6cfad13a5bd30013fabdae8b10848",
+    "Eff_MatCap_035.png": "9c458dde7919b2d2d80fa5c05e0aaa5bd761d73ffa04dd28254d7ccb88cda77f",
+    "Eff_MatCap_065.png": "5363f579dd3cd4d626d5f31b051e1d5ecb482356003ee759775b55b7b88d8a98",
+    "Eff_MatCap_077.png": "1aa7504f3c372d06dd63834d9cb4353b56bac2d0f372b2da567491aa41ed144e",
+    "Eff_MatCap_Gem.png": "25c9a7c61a2fd0f73c1b5748294645400eaa2e92cf8b68a97b16e2875f28eb5c",
+    "Eff_Matcap_Socks.png": "31e9e56a6bf0c69bd7115f4c51df9dcd108ff4356387a30078b2849dc4428505",
+    "Eff_Matcap_Socks3.png": "0625695a9da4639ead9f51113e5f1fc7a127f4a1f5c09e800cf3d5bc55dd6595",
+    "Eye_E.png": "2018be7f667eb445c0d335e3765b0b30a0b42d93e40e851025ce2b1f6a8ec3c7",
+    "Female_Face_Lightmap.png": "ba0d97ecdf9a22636f462109ccf14e033e065a6885102c1bd8cea2a9ad6527fb",
+    "Vivian_Body_1_A.png": "7d1ef65832519b529a0fdcde854ce3d528ed2034e7c1c31df2a32d8fe302814e",
+    "Vivian_Body_1_D.png": "ec6265a28042646c0edede111b23eb0f31ba90396457f5b8457da8d82749e18a",
+    "Vivian_Body_1_M.png": "b0767dff1e6c399746e81ed87b962bdd7d0c767cd200cae448e3d56374fa247f",
+    "Vivian_Body_1_N.png": "a814ead622fdfa14b631569ccea34596acbb1d953392353860a54f7621720402",
+    "Vivian_Body_2_A.png": "e078adacb85db2cdd523841f6634b994d2a3a0511beac8fb8fc0f8a35db14b19",
+    "Vivian_Body_2_D.png": "d20d28bfd234d3858d7465f3afff2fc7bca5747f60a030138b48a56cc3df6f4b",
+    "Vivian_Body_2_M.png": "4cb24ca9c7153df16fd925f383b7c34b960e5e130d5edff8699e9a88a99414ec",
+    "Vivian_Body_2_N.png": "8b90cc09b5015a9b09529821b492278ea5604edc0fdaa930125690cd9121ea0e",
+    "Vivian_Face_D.png": "fe38b3008eac73e6154102545e220a94b7ba05f4ca5040262e5516fd22feaa89",
+    "Vivian_Weapon_A.png": "f9ec66b2a14a54b6a363af5d7ac5766db64895064c7ff1b8f701d4003d24f03a",
+    "Vivian_Weapon_D.png": "6dd66acba6574ee7151f4bd1f6e81e01251c8ee4c85b98d9a26dadf6d95167f2",
+    "Vivian_Weapon_M.png": "31b7ab496eabd5b8617b0351a61694f3c2a1e7bda379200a69ea145887f66216",
+    "Vivian_Weapon_N.png": "3af14b351ad3320e6ef58b89579cd64dad0568fd63a478ce8e6601ab1011470a"
+   }
+  }
+ },
+ "common": {
+  "native_globals": {
+   "post_shallow": [
+    1.0,
+    0.949999988079071,
+    0.9660000205039978,
+    1.0
+   ],
+   "post_shallow_fade": [
+    0.800000011920929,
+    0.7200000286102295,
+    0.7483870983123779,
+    1.0
+   ],
+   "post_shadow": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929,
+    1.0
+   ],
+   "post_shadow_fade": [
+    0.702528715133667,
+    0.6741176843643188,
+    0.7490196228027344,
+    1.0
+   ],
+   "post_front": [
+    1.0,
+    0.9850000143051147,
+    0.9200000166893005,
+    1.0
+   ],
+   "post_sss": [
+    1.0,
+    0.875,
+    0.8500000238418579,
+    1.0
+   ],
+   "skin_shallow": [
+    1.0,
+    0.949999988079071,
+    0.9660000205039978,
+    1.0
+   ],
+   "skin_shallow_fade": [
+    0.800000011920929,
+    0.7200000286102295,
+    0.7483870983123779,
+    1.0
+   ],
+   "skin_shadow": [
+    0.7760000228881836,
+    0.7599999904632568,
+    0.800000011920929,
+    1.0
+   ],
+   "skin_shadow_fade": [
+    0.702528715133667,
+    0.6741176843643188,
+    0.7490196228027344,
+    1.0
+   ],
+   "skin_front": [
+    1.0,
+    0.9850000143051147,
+    0.9200000166893005,
+    1.0
+   ],
+   "skin_sss": [
+    1.0,
+    0.875,
+    0.8500000238418579,
+    1.0
+   ],
+   "entity_info_y": true,
+   "entity_7": 1.0,
+   "entity_8": 1.0,
+   "avatar_light_alpha": 1.0,
+   "rim_style": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rim_intensity": 1.0,
+   "rim_color": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "native_bloom": {
+   "schema": "zzz-toon-native-bloom/1",
+   "enabled": true,
+   "resolution_policy": "normalized-height",
+   "output_alpha": "native",
+   "reference_resolution": [
+    2448,
+    1368
+   ],
+   "base_size": [
+    344,
+    192
+   ],
+   "compose_size": [
+    857,
+    479
+   ],
+   "threshold": 0.44999998807907104,
+   "prefilter_gain": 0.800000011920929,
+   "intensity": 1.2999999523162842,
+   "weights": [
+    0.30000001192092896,
+    0.30000001192092896,
+    0.25999999046325684,
+    0.15000000596046448
+   ],
+   "layers": [
+    {
+     "size": [
+      153,
+      85
+     ],
+     "kernel": 9
+    },
+    {
+     "size": [
+      90,
+      50
+     ],
+     "kernel": 16
+    },
+    {
+     "size": [
+      36,
+      20
+     ],
+     "kernel": 20
+    }
+   ],
+   "intermediate_storage": "r11g11b10_truncate",
+   "atlas": {
+    "size": [
+     153,
+     161
+    ],
+    "rows_from_v0": [
+     76,
+     24,
+     2
+    ]
+   },
+   "source": "Three verified outfit previews",
+   "scope": "Preview default"
+  },
+  "native_character_ambient": [
+   0.04672480374574661,
+   0.07053221017122269,
+   0.09433960914611816
+  ],
+  "native_character_lut": {
+   "schema": "zzz-toon-character-lut/1",
+   "enabled": true,
+   "size": 32,
+   "exposure": 1.0,
+   "texture": "@files/a329ff3141ffca56e9fc/Remielle_character_lut.exr",
+   "layout": "linear-strip-dds-row0-at-uv0",
+   "source": "Three verified outfit previews",
+   "scope": "Preview default"
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "revision": 1,
+ "scope": "Vivian default outfit preview, display match from the native frame and independently checked in close-up footage",
+ "linear_material_rgb": {
+  "ZZZ_Vivian_Face_UI": [
+   0.926,
+   0.924,
+   0.954
+  ]
+ }
+}

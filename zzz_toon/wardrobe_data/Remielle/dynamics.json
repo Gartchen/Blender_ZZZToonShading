@@ -1,0 +1,968 @@
+{
+ "clip_hash": "89caafb09329f076dbf1522d5a53302fc7bf6d7c7821ca3a224751df427439ba",
+ "reference_frame": 104,
+ "capture_bones": [
+  "Skn_Ori_L_SkirtA_01",
+  "Skn_Ori_L_SkirtA_02",
+  "Skn_Ori_L_SkirtB_01",
+  "Skn_Ori_R_SkirtA_01",
+  "Skn_L_SkirtC_01",
+  "Skn_L_SkirtC_02",
+  "Skn_L_SkirtD_01",
+  "Skn_L_SkirtD_02",
+  "Skn_B_Skirt_01",
+  "Skn_Ori_L_SkirtC_01",
+  "Skn_Ori_L_SkirtD_01",
+  "Skn_Ori_L_SkirtC_02",
+  "Skn_Ori_L_SkirtD_02",
+  "Skn_Ori_L_SkirtD_03",
+  "Skn_Ori_R_SkirtB_01",
+  "Skn_Ori_R_SkirtA_02",
+  "Skn_R_SkirtC_01",
+  "Skn_R_SkirtD_01",
+  "Skn_R_SkirtC_02",
+  "Skn_R_SkirtD_02",
+  "Skn_Ori_R_SkirtC_01",
+  "Skn_Ori_R_SkirtD_01",
+  "Skn_Ori_R_SkirtD_02",
+  "Skn_Ori_R_SkirtC_02",
+  "Skn_Ori_R_SkirtD_03",
+  "Skn_SkirtTie_01",
+  "Skn_SkirtTie_06",
+  "Skn_SkirtTie_07",
+  "Skn_SkirtTie_04",
+  "Skn_SkirtTie_05",
+  "Skn_SkirtTie_02",
+  "Skn_SkirtTie_03",
+  "Skn_Ori_L_SkirtC_03",
+  "Skn_Ori_L_SkirtC_04",
+  "Skn_Ori_L_SkirtC_05",
+  "Skn_Ori_L_SkirtC_06",
+  "Skn_Ori_R_SkirtC_03",
+  "Skn_Ori_R_SkirtC_04",
+  "Skn_Ori_R_SkirtC_05",
+  "Skn_Ori_R_SkirtC_06",
+  "Ctr_Ori_L_Sui_01",
+  "Ctr_Ori_L_Sui_02",
+  "Ctr_Ori_R_Sui_01",
+  "Ctr_Ori_R_Sui_02"
+ ],
+ "assets": [
+  {
+   "asset": "Remielle_SkirtF_UI.cloth",
+   "sha256": "30120e92b19e695d90cd4f2ead575dabbcff24cdef62e6b667682acf84561ff9",
+   "chains": [
+    [
+     "Skn_Ori_L_SkirtB_01",
+     "Skn_Ori_L_SkirtB_01_End"
+    ],
+    [
+     "Skn_Ori_L_SkirtA_01",
+     "Skn_Ori_L_SkirtA_02",
+     "Skn_Ori_L_SkirtA_02_End"
+    ],
+    [
+     "Skn_Ori_R_SkirtA_01",
+     "Skn_Ori_R_SkirtA_02",
+     "Skn_Ori_R_SkirtA_02_End"
+    ],
+    [
+     "Skn_Ori_R_SkirtB_01",
+     "Skn_Ori_R_SkirtB_01_End"
+    ]
+   ],
+   "fixed": [
+    "Skn_Ori_L_SkirtB_01",
+    "Skn_Ori_L_SkirtA_01",
+    "Skn_Ori_R_SkirtA_01",
+    "Skn_Ori_R_SkirtB_01"
+   ],
+   "particles": {
+    "Skn_Ori_L_SkirtB_01": {
+     "radius": 0.01,
+     "damping": 0.35,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtB_01_End": {
+     "radius": 0.01,
+     "damping": 0.3221,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtA_01": {
+     "radius": 0.01,
+     "damping": 0.35,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtA_02": {
+     "radius": 0.01,
+     "damping": 0.325,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtA_02_End": {
+     "radius": 0.01,
+     "damping": 0.3,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtA_01": {
+     "radius": 0.01,
+     "damping": 0.35,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtA_02": {
+     "radius": 0.01,
+     "damping": 0.325,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtA_02_End": {
+     "radius": 0.01,
+     "damping": 0.3,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtB_01": {
+     "radius": 0.01,
+     "damping": 0.35,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtB_01_End": {
+     "radius": 0.01,
+     "damping": 0.325,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [
+    {
+     "bone": "Bip001 L Thigh",
+     "start": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "end": [
+      -0.29,
+      0.0,
+      0.0
+     ],
+     "radii": [
+      0.08,
+      0.08
+     ],
+     "mode": "Inner"
+    },
+    {
+     "bone": "Bip001 R Thigh",
+     "start": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "end": [
+      -0.29,
+      0.0,
+      0.0
+     ],
+     "radii": [
+      0.075,
+      0.08
+     ],
+     "mode": "Inner"
+    }
+   ],
+   "turn_limit_degrees": 4.0
+  },
+  {
+   "asset": "Remielle_HairSide_UI.cloth",
+   "sha256": "0c4d33d9a3f18531bb19b369da4e1aa75f4f5345b4dc2a9911417e06d0a61129",
+   "chains": [
+    [
+     "Ctr_R_HairA_01",
+     "Ctr_R_HairA_02"
+    ],
+    [
+     "Ctr_R_HairA_02",
+     "Ctr_R_HairA_03",
+     "Ctr_R_HairA_04",
+     "Ctr_R_HairA_05"
+    ],
+    [
+     "Ctr_R_HairA_02",
+     "Ctr_R_HairA_06",
+     "Ctr_R_HairA_07",
+     "Ctr_R_HairA_08"
+    ],
+    [
+     "Ctr_R_HairA_02",
+     "Ctr_R_HairA_13",
+     "Ctr_R_HairA_14"
+    ],
+    [
+     "Ctr_R_HairA_01",
+     "Ctr_T_HairC_02",
+     "Ctr_T_HairC_03"
+    ],
+    [
+     "Ctr_L_HairA_01",
+     "Ctr_L_HairA_02"
+    ],
+    [
+     "Ctr_L_HairA_02",
+     "Ctr_L_HairA_03",
+     "Ctr_L_HairA_04",
+     "Ctr_L_HairA_05"
+    ],
+    [
+     "Ctr_L_HairA_02",
+     "Ctr_L_HairA_08",
+     "Ctr_L_HairA_09"
+    ],
+    [
+     "Ctr_L_HairA_01",
+     "Ctr_L_HairA_10",
+     "Ctr_L_HairA_11"
+    ],
+    [
+     "Ctr_L_HairA_11",
+     "Ctr_L_HairA_12",
+     "Ctr_L_HairA_13",
+     "Ctr_L_HairA_14"
+    ],
+    [
+     "Ctr_L_HairA_11",
+     "Ctr_L_HairA_15",
+     "Ctr_L_HairA_16"
+    ]
+   ],
+   "fixed": [
+    "Ctr_R_HairA_01",
+    "Ctr_R_HairA_01",
+    "Ctr_L_HairA_01",
+    "Ctr_L_HairA_01"
+   ],
+   "particles": {
+    "Ctr_R_HairA_01": {
+     "radius": 0.01,
+     "damping": 0.3,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_02": {
+     "radius": 0.01,
+     "damping": 0.3209,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_03": {
+     "radius": 0.01,
+     "damping": 0.3413,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_04": {
+     "radius": 0.01,
+     "damping": 0.3544,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_05": {
+     "radius": 0.01,
+     "damping": 0.3656,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_06": {
+     "radius": 0.01,
+     "damping": 0.3384,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_07": {
+     "radius": 0.01,
+     "damping": 0.3574,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_08": {
+     "radius": 0.01,
+     "damping": 0.3741,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_13": {
+     "radius": 0.01,
+     "damping": 0.3421,
+     "inertia": 0.5
+    },
+    "Ctr_R_HairA_14": {
+     "radius": 0.01,
+     "damping": 0.3578,
+     "inertia": 0.5
+    },
+    "Ctr_T_HairC_02": {
+     "radius": 0.01,
+     "damping": 0.3237,
+     "inertia": 0.5
+    },
+    "Ctr_T_HairC_03": {
+     "radius": 0.01,
+     "damping": 0.3446,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_01": {
+     "radius": 0.01,
+     "damping": 0.3,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_02": {
+     "radius": 0.01,
+     "damping": 0.324,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_03": {
+     "radius": 0.01,
+     "damping": 0.3463,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_04": {
+     "radius": 0.01,
+     "damping": 0.3633,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_05": {
+     "radius": 0.01,
+     "damping": 0.3799,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_08": {
+     "radius": 0.01,
+     "damping": 0.345,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_09": {
+     "radius": 0.01,
+     "damping": 0.3696,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_10": {
+     "radius": 0.01,
+     "damping": 0.3209,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_11": {
+     "radius": 0.01,
+     "damping": 0.346,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_12": {
+     "radius": 0.01,
+     "damping": 0.3679,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_13": {
+     "radius": 0.01,
+     "damping": 0.384,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_14": {
+     "radius": 0.01,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_15": {
+     "radius": 0.01,
+     "damping": 0.37,
+     "inertia": 0.5
+    },
+    "Ctr_L_HairA_16": {
+     "radius": 0.01,
+     "damping": 0.3915,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [
+    {
+     "bone": "Bip001 Head",
+     "start": [
+      -0.085,
+      0.01,
+      0.0
+     ],
+     "end": [
+      -0.045,
+      0.02,
+      0.0
+     ],
+     "radii": [
+      0.075,
+      0.07
+     ],
+     "mode": "Inner"
+    }
+   ],
+   "turn_limit_degrees": 7.0
+  },
+  {
+   "asset": "Remielle_SkirtB_UI.cloth",
+   "sha256": "842dd765015c429b2c24f10d69a446e9c095970e4a388ae4ee6e8aa34862b0f0",
+   "chains": [
+    [
+     "Skn_R_SkirtC_01",
+     "Skn_R_SkirtC_02",
+     "Skn_R_SkirtC_02_End"
+    ],
+    [
+     "Skn_R_SkirtD_01",
+     "Skn_R_SkirtD_02",
+     "Skn_Ori_R_SkirtC_01",
+     "Skn_Ori_R_SkirtC_02"
+    ],
+    [
+     "Skn_B_Skirt_01",
+     "Skn_Ori_R_SkirtD_01",
+     "Skn_Ori_R_SkirtD_02",
+     "Skn_Ori_R_SkirtD_03",
+     "Skn_Ori_R_SkirtD_03_End"
+    ],
+    [
+     "Skn_B_Skirt_01",
+     "Skn_Ori_L_SkirtD_01",
+     "Skn_Ori_L_SkirtD_02",
+     "Skn_Ori_L_SkirtD_03",
+     "Skn_Ori_L_SkirtD_03_End"
+    ],
+    [
+     "Skn_L_SkirtD_01",
+     "Skn_L_SkirtD_02",
+     "Skn_Ori_L_SkirtC_01",
+     "Skn_Ori_L_SkirtC_02"
+    ],
+    [
+     "Skn_L_SkirtC_01",
+     "Skn_L_SkirtC_02",
+     "Skn_L_SkirtC_02_End"
+    ]
+   ],
+   "fixed": [
+    "Skn_R_SkirtC_01",
+    "Skn_R_SkirtD_01",
+    "Skn_B_Skirt_01",
+    "Skn_B_Skirt_01",
+    "Skn_L_SkirtD_01",
+    "Skn_L_SkirtC_01"
+   ],
+   "particles": {
+    "Skn_R_SkirtC_01": {
+     "radius": 0.01,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Skn_R_SkirtC_02": {
+     "radius": 0.01,
+     "damping": 0.3874,
+     "inertia": 0.5
+    },
+    "Skn_R_SkirtC_02_End": {
+     "radius": 0.01,
+     "damping": 0.3763,
+     "inertia": 0.5
+    },
+    "Skn_R_SkirtD_01": {
+     "radius": 0.01,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Skn_R_SkirtD_02": {
+     "radius": 0.01,
+     "damping": 0.3882,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtC_01": {
+     "radius": 0.01,
+     "damping": 0.3764,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtC_02": {
+     "radius": 0.01,
+     "damping": 0.3624,
+     "inertia": 0.5
+    },
+    "Skn_B_Skirt_01": {
+     "radius": 0.01,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtD_01": {
+     "radius": 0.01,
+     "damping": 0.3878,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtD_02": {
+     "radius": 0.01,
+     "damping": 0.3758,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtD_03": {
+     "radius": 0.01,
+     "damping": 0.3639,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtD_03_End": {
+     "radius": 0.01,
+     "damping": 0.35,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtD_01": {
+     "radius": 0.01,
+     "damping": 0.3878,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtD_02": {
+     "radius": 0.01,
+     "damping": 0.3758,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtD_03": {
+     "radius": 0.01,
+     "damping": 0.3639,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtD_03_End": {
+     "radius": 0.01,
+     "damping": 0.3528,
+     "inertia": 0.5
+    },
+    "Skn_L_SkirtD_01": {
+     "radius": 0.01,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Skn_L_SkirtD_02": {
+     "radius": 0.01,
+     "damping": 0.3882,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtC_01": {
+     "radius": 0.01,
+     "damping": 0.3765,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtC_02": {
+     "radius": 0.01,
+     "damping": 0.3624,
+     "inertia": 0.5
+    },
+    "Skn_L_SkirtC_01": {
+     "radius": 0.01,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Skn_L_SkirtC_02": {
+     "radius": 0.01,
+     "damping": 0.3874,
+     "inertia": 0.5
+    },
+    "Skn_L_SkirtC_02_End": {
+     "radius": 0.01,
+     "damping": 0.3763,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [
+    {
+     "bone": "Bip001 L Thigh",
+     "start": [
+      -0.05,
+      0.0,
+      0.01
+     ],
+     "end": [
+      -0.31,
+      -0.01,
+      0.0
+     ],
+     "radii": [
+      0.08,
+      0.07
+     ],
+     "mode": "Inner"
+    },
+    {
+     "bone": "Bip001 R Thigh",
+     "start": [
+      -0.05,
+      0.0,
+      -0.01
+     ],
+     "end": [
+      -0.31,
+      -0.01,
+      0.0
+     ],
+     "radii": [
+      0.08,
+      0.07
+     ],
+     "mode": "Inner"
+    },
+    {
+     "bone": "Bip001 Pelvis",
+     "start": [
+      0.03,
+      -0.025,
+      0.05
+     ],
+     "end": [
+      0.03,
+      -0.025,
+      -0.05
+     ],
+     "radii": [
+      0.075,
+      0.075
+     ],
+     "mode": "Inner"
+    }
+   ],
+   "turn_limit_degrees": 4.0
+  },
+  {
+   "asset": "Remielle_SkirtTail_UI.cloth",
+   "sha256": "a4cdb593e85d9db5b58dc26ef49ac5227fd251ddb2cd3bdd93c9ebd0491e997a",
+   "chains": [
+    [
+     "Skn_Ori_L_SkirtC_02",
+     "Skn_Ori_L_SkirtC_03",
+     "Skn_Ori_L_SkirtC_04",
+     "Skn_Ori_L_SkirtC_05",
+     "Skn_Ori_L_SkirtC_06",
+     "Skn_Ori_L_SkirtC_07"
+    ],
+    [
+     "Skn_Ori_R_SkirtC_02",
+     "Skn_Ori_R_SkirtC_03",
+     "Skn_Ori_R_SkirtC_04",
+     "Skn_Ori_R_SkirtC_05",
+     "Skn_Ori_R_SkirtC_06",
+     "Skn_Ori_R_SkirtC_07"
+    ]
+   ],
+   "fixed": [
+    "Skn_Ori_L_SkirtC_02",
+    "Skn_Ori_R_SkirtC_02"
+   ],
+   "particles": {
+    "Skn_Ori_L_SkirtC_02": {
+     "radius": 0.0374,
+     "damping": 0.6,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtC_03": {
+     "radius": 0.0314,
+     "damping": 0.5629,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtC_04": {
+     "radius": 0.0251,
+     "damping": 0.5238,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtC_05": {
+     "radius": 0.0186,
+     "damping": 0.4839,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtC_06": {
+     "radius": 0.0118,
+     "damping": 0.4419,
+     "inertia": 0.5
+    },
+    "Skn_Ori_L_SkirtC_07": {
+     "radius": 0.005,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtC_02": {
+     "radius": 0.0374,
+     "damping": 0.6,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtC_03": {
+     "radius": 0.0314,
+     "damping": 0.5629,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtC_04": {
+     "radius": 0.0251,
+     "damping": 0.5238,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtC_05": {
+     "radius": 0.0186,
+     "damping": 0.4839,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtC_06": {
+     "radius": 0.0118,
+     "damping": 0.4419,
+     "inertia": 0.5
+    },
+    "Skn_Ori_R_SkirtC_07": {
+     "radius": 0.0067,
+     "damping": 0.4105,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [],
+   "turn_limit_degrees": 9.0
+  },
+  {
+   "asset": "Remielle_SkirtTie_UI.cloth",
+   "sha256": "7b9b813c948bcca9af0a8efdd209b0617c52961a048e516e8831da3ac03366f5",
+   "chains": [
+    [
+     "Skn_SkirtTie_06",
+     "Skn_SkirtTie_07",
+     "Skn_SkirtTie_07_End"
+    ],
+    [
+     "Skn_SkirtTie_04",
+     "Skn_SkirtTie_05",
+     "Skn_SkirtTie_05_End"
+    ]
+   ],
+   "fixed": [
+    "Skn_SkirtTie_06",
+    "Skn_SkirtTie_04"
+   ],
+   "particles": {
+    "Skn_SkirtTie_06": {
+     "radius": 0.01,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Skn_SkirtTie_07": {
+     "radius": 0.01,
+     "damping": 0.34,
+     "inertia": 0.5
+    },
+    "Skn_SkirtTie_07_End": {
+     "radius": 0.01,
+     "damping": 0.3,
+     "inertia": 0.5
+    },
+    "Skn_SkirtTie_04": {
+     "radius": 0.01,
+     "damping": 0.4,
+     "inertia": 0.5
+    },
+    "Skn_SkirtTie_05": {
+     "radius": 0.01,
+     "damping": 0.34,
+     "inertia": 0.5
+    },
+    "Skn_SkirtTie_05_End": {
+     "radius": 0.01,
+     "damping": 0.3,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [],
+   "turn_limit_degrees": 4.0
+  },
+  {
+   "asset": "Remielle_ChestTassel_UI.cloth",
+   "sha256": "aec37dfadf5c2b507f52249c3e9ddf245ec9457d7e999a510d3916fb66f4e2f2",
+   "chains": [
+    [
+     "Ctr_Ori_L_Sui_01",
+     "Ctr_Ori_L_Sui_02",
+     "Ctr_Ori_L_Sui_02_DE"
+    ],
+    [
+     "Ctr_Ori_R_Sui_01",
+     "Ctr_Ori_R_Sui_02",
+     "Ctr_Ori_R_Sui_02_DE"
+    ]
+   ],
+   "fixed": [
+    "Ctr_Ori_L_Sui_01",
+    "Ctr_Ori_R_Sui_01"
+   ],
+   "particles": {
+    "Ctr_Ori_L_Sui_01": {
+     "radius": 0.005,
+     "damping": 0.1,
+     "inertia": 0.5
+    },
+    "Ctr_Ori_L_Sui_02": {
+     "radius": 0.0075,
+     "damping": 0.09,
+     "inertia": 0.5
+    },
+    "Ctr_Ori_L_Sui_02_DE": {
+     "radius": 0.01,
+     "damping": 0.08,
+     "inertia": 0.5
+    },
+    "Ctr_Ori_R_Sui_01": {
+     "radius": 0.005,
+     "damping": 0.1,
+     "inertia": 0.5
+    },
+    "Ctr_Ori_R_Sui_02": {
+     "radius": 0.0075,
+     "damping": 0.09,
+     "inertia": 0.5
+    },
+    "Ctr_Ori_R_Sui_02_DE": {
+     "radius": 0.01,
+     "damping": 0.08,
+     "inertia": 0.5
+    }
+   },
+   "virtual": {},
+   "colliders": [
+    {
+     "bone": "Skn_L_Chest_Cj_01",
+     "start": [
+      0.0,
+      -0.005,
+      0.0
+     ],
+     "end": [
+      -0.03,
+      -0.005,
+      0.0
+     ],
+     "radii": [
+      0.05,
+      0.055
+     ],
+     "mode": "Inner"
+    },
+    {
+     "bone": "Skn_R_Chest_Cj_01",
+     "start": [
+      0.0,
+      -0.005,
+      0.0
+     ],
+     "end": [
+      -0.03,
+      -0.005,
+      0.0
+     ],
+     "radii": [
+      0.05,
+      0.055
+     ],
+     "mode": "Inner"
+    }
+   ],
+   "turn_limit_degrees": 10.0,
+   "preview_goal_follow": 0.1,
+   "preview_swing_limit_degrees": 12.0
+  }
+ ],
+ "measured_basis": {
+  "Ctr_Ori_L_Sui_01": [
+   [
+    0.9968479871749878,
+    0.06864489614963531,
+    -0.03990830481052399,
+    -9.655952453613281e-06
+   ],
+   [
+    -0.06895332038402557,
+    0.9975994825363159,
+    -0.006432287395000458,
+    -5.4895877838134766e-05
+   ],
+   [
+    0.039373137056827545,
+    0.009162165224552155,
+    0.9991843700408936,
+    -7.191300392150879e-05
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "Ctr_Ori_L_Sui_02": [
+   [
+    0.9954964518547058,
+    0.0554051473736763,
+    -0.07693375647068024,
+    -2.6226043701171875e-06
+   ],
+   [
+    -0.05665481835603714,
+    0.9982945322990417,
+    -0.014056771993637085,
+    4.694610834121704e-05
+   ],
+   [
+    0.0760224312543869,
+    0.0183543860912323,
+    0.9969367980957031,
+    -1.862645149230957e-07
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "Ctr_Ori_R_Sui_01": [
+   [
+    0.9955958127975464,
+    0.09097382426261902,
+    -0.02265782840549946,
+    -2.1457672119140625e-06
+   ],
+   [
+    -0.09118872880935669,
+    0.9957939982414246,
+    -0.008910082280635834,
+    -7.152557373046875e-06
+   ],
+   [
+    0.021750779822468758,
+    0.010936655104160309,
+    0.9997031092643738,
+    2.3677945137023926e-05
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "Ctr_Ori_R_Sui_02": [
+   [
+    0.993796706199646,
+    0.07047700881958008,
+    -0.08603283017873764,
+    1.2516975402832031e-05
+   ],
+   [
+    -0.0723385140299797,
+    0.9972031116485596,
+    -0.018715139478445053,
+    -1.2621283531188965e-05
+   ],
+   [
+    0.08446982502937317,
+    0.02482353150844574,
+    0.9961163997650146,
+    1.4901161193847656e-07
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ]
+ }
+}
