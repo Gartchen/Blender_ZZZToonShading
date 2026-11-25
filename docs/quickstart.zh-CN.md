@@ -4,6 +4,8 @@
 
 想在 Blender 里像游戏试衣间那样看角色？准备好角色文件，点一下 **配置并打开服装预览**，就能看角色站在滚动背景前播放待机动作。你可以转动角色，也可以拉近看脸。
 
+先找你的角色。清单逐项给出文件名和对应输入框，先勾基础文件，再按需补参考工程的辅助文件。[三套服装的完整资产清单](asset-checklist.zh-CN.md)
+
 ## 第一次用，先选哪一项？
 
 | 我想做什么 | 在插件里选什么 | 要准备什么 |
@@ -15,7 +17,7 @@
 
 ## 把插件装进 Blender
 
-1. 下载 **zzz_toon-0.52.0.zip**，保留 ZIP 原样。我们用 Windows 上的 Blender 5.3.0 做了测试。[下载安装包](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip)
+1. 下载 **zzz_toon-0.52.1.zip**，保留 ZIP 原样。我们用 Windows 上的 Blender 5.3.0 做了测试。[下载安装包](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.1/zzz_toon-0.52.1.zip)
 2. 打开 Blender，点 **编辑 → 偏好设置 → 插件**。点右上角的小菜单，选 **从磁盘安装**，选中刚下载的 ZIP。
 3. 找到 **ZZZ Toon**，确认它已启用。如果之前已经装过，更新后重启 Blender。
 4. 把鼠标移到能看见模型的 **3D 视图**，按 **N**。在右边的栏里点 **ZZZ Toon → 中文**。

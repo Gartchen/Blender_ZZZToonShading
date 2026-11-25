@@ -4,6 +4,8 @@
 
 Watch a character play their idle animation against a scrolling background, like the outfit screen in the game. Drag to turn the character around, or zoom in to see their face.
 
+Find your character in the checklist. Each row gives the filename and the field where it goes. Start with the base files, then check the extras if you want to match the reference build. [Complete asset checklist](asset-checklist.en.md)
+
 ## Where should I start?
 
 | I want to… | Choose | Files I need |
@@ -15,7 +17,7 @@ You supply the character files for both the add-on and the starter scenes. A **t
 
 ## Install the add-on
 
-1. Download **zzz_toon-0.52.0.zip** and leave it zipped. We tested it on Windows with Blender 5.3.0. [Get the ZIP](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip)
+1. Download **zzz_toon-0.52.1.zip** and leave it zipped. We tested it on Windows with Blender 5.3.0. [Get the ZIP](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.1/zzz_toon-0.52.1.zip)
 2. Open Blender and go to **Edit → Preferences → Add-ons**. Open the menu at the top right, choose **Install from Disk** and pick the ZIP.
 3. Find **ZZZ Toon** and make sure it is enabled. If you already had it installed, restart Blender after the update.
 4. Move your mouse over the **3D Viewport**, where you see the model. Press **N** to open the sidebar. Select **ZZZ Toon → English**.

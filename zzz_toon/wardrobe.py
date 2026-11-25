@@ -305,7 +305,8 @@ def build(scene,request):
     # Apply the outfit placement while leaving its local bones to the supplied action.
     placement=Matrix.Identity(4)
     registered=page['models'][role].get('idle_placement')
-    if registered and clip_io.curve_signature(clip)==registered['curve_hash']:
+    clip_hash=clip_io.curve_signature(clip)
+    if registered and clip_hash==registered['curve_hash']:
         placement=Matrix(registered['world'])
     arm.matrix_world=placement@Matrix(stage['rig_world'])
     bpy.context.view_layer.update()
@@ -342,8 +343,9 @@ def build(scene,request):
     scene.sync_mode='FRAME_DROP'
     scene.frame_start=1
     scene.frame_end=max(1,round(60*clip['stop']))
-    from . import wardrobe_dynamics
+    from . import wardrobe_attachments, wardrobe_dynamics
     wardrobe_dynamics.bake(scene,arm,clip,role,stage)
+    wardrobe_attachments.bake(scene,arm,role,clip_hash)
     scene.render.resolution_x,scene.render.resolution_y=1920,1080
     scene.render.resolution_percentage=100
     scene.render.pixel_aspect_x=scene.render.pixel_aspect_y=1

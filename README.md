@@ -1,10 +1,12 @@
 # ZZZ Toon · Outfit preview rendering for Blender
 
-[简体中文](README.zh-CN.md) · [Download v0.52.0](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip) · [Installation and first preview](docs/quickstart.en.md) · [Generic mode and its limits](docs/generic-scope.en.md)
+[简体中文](README.zh-CN.md) · [Download v0.52.1](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.1/zzz_toon-0.52.1.zip) · [Installation and first preview](docs/quickstart.en.md) · [Generic mode and its limits](docs/generic-scope.en.md) · [Asset checklist by outfit](docs/asset-checklist.en.md)
 
 ZZZ Toon is a character-rendering add-on for **Blender EEVEE**. It reconstructs the *Zenless Zone Zero* **outfit preview** from a user-supplied model, textures and idle animation. The result is an editable Blender scene with a character, scrolling background and continuous full-body to close-up framing. The outfit-selection UI is omitted so the scene can be used for material inspection, comparison with the game and rendered character showcases.
 
 **For a first preview, choose the tested outfit for Remielle, Velina or Vivian.** The quick start covers installation, file selection, playback and export. [Build your first scene](docs/quickstart.en.md)
+
+**v0.52.1** applies bone corrections when building a preview with a matching idle. They improve Remielle’s sleeves and wings, Velina’s bow ribbons, and Vivian’s sleeves, back hair and parasol attachments. Rebuild the preview with your original files after updating to see the changes.
 
 ## Two workflows
 
@@ -28,7 +30,7 @@ Both workflows share rendering code. The body shadow and reflection calculations
 
 ## Assets, compatibility and validation
 
-- **Environment.** v0.52.0 was tested on Windows with Blender 5.3.0. The installer contains the add-on, presets and resources for the generated background. Users supply character models, game textures, animation and any optional frame captures.
+- **Environment.** v0.52.1 was tested on Windows with Blender 5.3.0. The installer contains the add-on, presets and resources for the generated background. Users supply character models, game textures, animation and any optional frame captures.
 - **Formats.** Use an FBX model and a matching Unity text `.anim` or supported AnimationClip JSON. Certain surfaces can take a matching multi-UV model, native material table or auxiliary file. Three [starter scenes](examples) have their character preset selected.
 - **Test coverage.** The four test FBXs contain 75 source material slots. Each slot was located before generation and after reopening the built project. Shading was assessed separately at capture-aligned cameras, with attention to face shadows, eyes, translucent fringe and body materials. The slot counts describe inspector coverage.
 
@@ -37,6 +39,7 @@ Both workflows share rendering code. The body shadow and reflection calculations
 | Reader goal | Guide |
 | --- | --- |
 | Install the add-on and play an outfit idle | [First preview, step by step](docs/quickstart.en.md) |
+| Check your files against the tested set for each outfit | [Complete asset checklist for all three outfits](docs/asset-checklist.en.md) |
 | Select the right assets and understand an inspector message | [File and material inspection guide](docs/inputs.en.md) |
 | Understand the D/N/M/A maps, face shadows and metal highlights | [Illustrated shading guide](docs/shading.en.md) |
 | Decide what Generic can establish and what a new outfit needs | [Generic scope and preset design](docs/generic-scope.en.md) |

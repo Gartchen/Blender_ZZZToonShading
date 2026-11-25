@@ -2,7 +2,7 @@
 bl_info = {
     "name": "ZZZ Toon",
     "author": "ZZZToonShading project",
-    "version": (0, 52, 0),
+    "version": (0, 52, 1),
     "blender": (5, 3, 0),
     "location": "3D View > Sidebar > ZZZ Toon",
     "description": "从模型、贴图和待机动画生成角色服装预览，支持三个已验证预设和通用导入",

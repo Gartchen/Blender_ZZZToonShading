@@ -20,7 +20,7 @@ def main():
     roles = {"Remielle", "Velina", "Vivian"}
     globals_ = {"preview_data/index.json", "wardrobe_data/page.json",
                 "wardrobe_data/slots.json", "wardrobe_data/studio-tile.png"}
-    presets = {"geometry.json", "render_look.json", "dynamics.json", "face_outline.json"}
+    presets = {"geometry.json", "render_look.json", "dynamics.json", "face_outline.json", "attachments.json"}
     for name in names:
         path = Path(name).relative_to("zzz_toon")
         parts = path.parts

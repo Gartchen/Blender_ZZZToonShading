@@ -1,10 +1,12 @@
 # ZZZ Toon · 绝区零服装预览渲染插件
 
-[English](README.md) · [下载 v0.52.0](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.0/zzz_toon-0.52.0.zip) · [安装与第一次预览](docs/quickstart.zh-CN.md) · [通用入口的限制](docs/generic-scope.zh-CN.md)
+[English](README.md) · [下载 v0.52.1](https://github.com/Gartchen/Blender_ZZZToonShading/releases/download/v0.52.1/zzz_toon-0.52.1.zip) · [安装与第一次预览](docs/quickstart.zh-CN.md) · [通用入口的限制](docs/generic-scope.zh-CN.md) · [按角色查完整资产清单](docs/asset-checklist.zh-CN.md)
 
 ZZZ Toon 是一个面向 **Blender EEVEE** 的角色渲染插件。项目以《绝区零》的**服装预览页**为参考，从用户提供的模型、贴图和待机动画构建可编辑的 Blender 场景。输出保留角色、滚动背景，以及从全身到近景的连续取景；画面中省去服装选择 UI，适合观察材质、对照游戏画面或导出角色展示片段。
 
 **第一次使用，建议先用 Remielle、Velina 或 Vivian 的已验证服装生成一个预览。** 安装、填文件、播放和导出都在这份白话教程里。[跟着做一次](docs/quickstart.zh-CN.md)
+
+**v0.52.1** 在生成服装预览时，会给匹配的待机动作加上骨骼修正，改善 Remielle 的双袖和翼片、Velina 的蝴蝶结飘带，以及 Vivian 的双袖、后发和伞挂件。更新后用原文件重新生成预览，即可看到变化。
 
 ## 两种工作方式
 
@@ -28,7 +30,7 @@ ZZZ Toon 是一个面向 **Blender EEVEE** 的角色渲染插件。项目以《�
 
 ## 资源、兼容性与验证
 
-- **运行环境。** v0.52.0 已在 Windows、Blender 5.3.0 上验证。安装包提供插件、预设和生成背景所需的资源。角色模型、游戏贴图、动画及可选的抓帧文件由用户自行准备。
+- **运行环境。** v0.52.1 已在 Windows、Blender 5.3.0 上验证。安装包提供插件、预设和生成背景所需的资源。角色模型、游戏贴图、动画及可选的抓帧文件由用户自行准备。
 - **输入格式。** 主模型使用 FBX，待机使用匹配的 Unity 文本 `.anim` 或受支持的 AnimationClip JSON。针对某些表面，可以补充同源多 UV 模型、原始材质表或辅助文件。仓库提供三个已选好角色的[起始工程](examples)。
 - **验证范围。** 四套测试模型共 75 个原始材质槽，逐槽测试了生成前和工程保存重开后的定位。着色效果另以匹配机位的抓帧比较，重点检查脸部阴影、眼睛、透明刘海及身体材质。跨角色统计衡量的是槽位检查覆盖范围。
 
@@ -37,6 +39,7 @@ ZZZ Toon 是一个面向 **Blender EEVEE** 的角色渲染插件。项目以《�
 | 想了解什么 | 从哪里开始 |
 | --- | --- |
 | 安装插件，让第一个角色动起来 | [白话入门](docs/quickstart.zh-CN.md) |
+| 按角色和文件名核对手里缺什么 | [三套服装的完整资产清单](docs/asset-checklist.zh-CN.md) |
 | 模型、动作和图片分别填哪一格，检查提示怎么读 | [文件与材质检查指南](docs/inputs.zh-CN.md) |
 | D/N/M/A、脸部阴影和金属反射怎样形成画面 | [着色图文教程](docs/shading.zh-CN.md) |
 | 通用模式能识别什么，新服装为何需要专用配置 | [通用范围与预设设计](docs/generic-scope.zh-CN.md) |

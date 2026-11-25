@@ -21,6 +21,9 @@ def _metadata(role):
 
 
 def _matches_motion(scene,expected):
+    from .wardrobe_attachments import KEY
+    if scene.get(KEY) != expected.get('attachment_revision'):
+        return False
     version=expected.get('dynamics_revision')
     if version is None:
         return True

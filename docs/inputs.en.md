@@ -4,6 +4,8 @@
 
 **To watch a character move**, get the model, textures and idle animation for the same outfit. **To find a part on the model**, choose **Generic**. You can start with just the model.
 
+Find your character in the checklist. Each row gives the filename and the field where it goes. Start with the base files, then check the extras if you want to match the reference build. [Complete asset checklist](asset-checklist.en.md)
+
 ## The files to find first
 
 | File | Where to put it | What it does |
